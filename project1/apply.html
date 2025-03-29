@@ -17,7 +17,7 @@
                <label for="job_ref">Job Reference Number:</label>
                <select name="job_ref" id="job_ref" required>
                     <!-- Change sample1 and sample2 to the actual job reference numbers -->
-                    <option value=""></option>
+                    <option value="">Select a job reference number</option>
                     <option value="sample1">sample1</option>
                     <option value="sample2">sample2</option>
                </select>
@@ -45,6 +45,28 @@
                     <label for="other">Other/prefer not to say</label>
                     <input type="radio" id="other" name="gender" value="other" required>
                </fieldset>
+               <p>
+                    <label for="street_address">Street address:</label>
+                    <input id="street_address" name="street_address" type="text" pattern="^\w{1,40$}" required>
+               </p>
+               <p>
+                    <label for="suburb_or_town">Suburb/town:</label>
+                    <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required>
+               </p>
+               <p>
+                    <label for="state">State:</label>
+                    <select name="state" id="state">
+                         <option value="">Select a state</option>
+                         <option value="VIC">VIC</option>
+                         <option value="NSW">NSW</option>
+                         <option value="QLD">QLD</option>
+                         <option value="NT">NT</option>
+                         <option value="WA">WA</option>
+                         <option value="SA">SA</option>
+                         <option value="TAS">TAS</option>
+                         <option value="ACT">ACT</option>
+                    </select>
+               </p>
           </fieldset>
           <input type="submit" value="Apply">
      </form>
