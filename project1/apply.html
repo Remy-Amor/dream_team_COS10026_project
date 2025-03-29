@@ -22,6 +22,7 @@
                     <option value="sample2">sample2</option>
                </select>
           </p>
+          <!-- fieldset for details -->
           <fieldset>
                <legend>Your Details</legend>
                <p>
@@ -36,6 +37,7 @@
                     <label for="date_of_birth">Date of birth:</label>
                     <input type="date" id="date_of_birth" name="date_of_birth" required>
                </p>
+               <!-- nested fieldset for gender radio buttons -->
                <fieldset>
                     <legend>Gender</legend>
                     <label for="male">Male</label>
@@ -73,8 +75,50 @@
                     <label for="email">Email address:</label>
                     <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
                     <label for="phone_number">Phone number:</label>
-                    <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^[\d| ]{8,12}$" required>
+                    <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
                </p>
+               <fieldset>
+                    <legend>Technical Skills</legend>
+                    <fieldset>
+                         <legend>Network Administration Skills</legend>
+                         <p>
+                              <label for="cloud_technologies">Working with cloud technologies (AWS, Azure, Google Cloud)</label>
+                              <input type="checkbox" name="skills[]" id="cloud_technologies">
+                         </p>
+                         <p>
+                              <label for="network_diagnostics">Network diagnostic and troubleshooting skills</label>
+                              <input type="checkbox" name="skills[]" id="network_diagnostics">
+                         </p>
+                         <p>
+                              <label for="network_security">Network security protocols</label>
+                              <input type="checkbox" name="skills[]" id="network_security">
+                         </p>
+                         <p>
+                              <label for="network_configuration">Network configuration practices</label>
+                              <input type="checkbox" name="skills[]" id="network_configuration">
+                         </p>
+                    </fieldset>
+                    <fieldset>
+                         <legend>Software Development Skills</legend>
+                         <p>
+                              <label for="programming">Programming languages (C/C++, JS, Java)</label>
+                              <input type="checkbox" name="skills[]" id="programming">
+                         </p>
+                         <p>
+                              <label for="version_control">Version control (i.e. git)</label>
+                              <input type="checkbox" name="skills[]" id="version_control">
+                         </p>
+                         <p>
+                              <label for="database_management">Database management (SQL, NoSQL)</label>
+                              <input type="checkbox" name="skills[]" id="database_management">
+                         </p>
+                         <p>
+                              <label for="development_lifecycle">Software development lifecycle (agile methodologies, TDD)</label>
+                              <input type="checkbox" name="skills[]" id="development_lifecycle">
+                         </p>
+                    </fieldset>
+               </fieldset>
+               <!-- Technical skills list were created using chatGPT with the following prompt: "Generate a list of technical skills you would need to be a network administrator or software developer" -->
           </fieldset>
           <input type="submit" value="Apply">
      </form>
