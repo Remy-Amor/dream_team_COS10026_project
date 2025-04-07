@@ -6,3 +6,10 @@ last modified: 28/3/2025
 description: refers to index.html, jobs.html, apply.html, about.html
 */
 
+/* Styles for header and footer - RA */
+
+.flex_header {
+     margin: 4%;
+     display: flex;
+     justify-content: center;
+}
