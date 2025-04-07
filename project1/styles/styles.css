@@ -84,24 +84,23 @@ footer {
      border-right: 0.25em solid #8B8C89;
      margin: 3em;
      background-color: #E7ECFF;
+     padding: 1%;
 }
 
 .footer_id {
      display: inline-block;
-     margin-left: 10%;
+     margin-left: 3em;
 }
 
 footer a {
-     display: inline;
      text-align: right;
-     margin-left: 35%;
-     margin-right: 10%;
-
      color: #274C77;
      text-decoration: none;
+     margin-left: 35em;
+     margin-right: 3em;
 }
 
 footer a:hover {
      color: #6096BA;
-     font-weight: bold;
+     text-decoration: underline;
 }
