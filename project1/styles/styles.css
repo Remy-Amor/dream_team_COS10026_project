@@ -6,9 +6,26 @@ last modified: 28/3/2025
 description: refers to index.html, jobs.html, apply.html, about.html
 */
 
+/* Style for whole site */
+body {
+     font-family: ;
+}
+
+
 /* Styles for header and footer - RA */
 
 .grid_header {
-     
+     display: grid;
+     grid-template-columns: repeat(10, 10%);
+     grid-template-rows: 5% 5%;
 }
 
+.header_heading {
+     grid-area: 1 / 4 / 1 / 8;
+     text-align: center;
+}
+
+.header_navbar {
+     grid-area: 2 / 1 / 2 / 11;
+     text-align: center;
+}
