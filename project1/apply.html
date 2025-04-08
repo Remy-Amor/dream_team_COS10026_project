@@ -7,18 +7,25 @@
      <meta name="description" content="Application page for Dream Team IT Solutions">
      <meta name="keywords" content="application, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Apply</title>
+     <!-- link to styles.css -->
+     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-     <header>
-          <h1>Welcome to Dream Team IT Solutions</h1>
-          <nav>
-               <a href = "index.html">Home Page</a> 
-               <a href = "jobs.html">Jobs</a> 
-               <a href = "about.html">About Us</a> 
-               <a href="apply.html">Apply</a>
-               </nav>
-               <hr />
-     </header>
+          <header>
+               <div class="grid_header">
+                    <div class="header_heading">
+                         <h1>Welcome to Dream Team IT Solutions</h1>
+                    </div>
+                    <div class="header_navbar">
+                         <nav>
+                              <a href = "index.html">Home Page</a> 
+                              <a href = "jobs.html">Jobs</a> 
+                              <a href = "about.html">About Us</a> 
+                              <a href="apply.html">Apply</a>
+                         </nav>
+                    </div>
+               </div>
+          </header>
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
@@ -139,8 +146,8 @@
           </form>
      </main>
      <footer>  
-          &copy; 2023 Dream Team IT Solutions. All rights reserved. <br>
-          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Mangment</a>
+          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
+          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
      </footer>
 </body>
 </html>
