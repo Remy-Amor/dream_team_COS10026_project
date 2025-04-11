@@ -113,8 +113,55 @@ footer a:hover {
      text-decoration: underline;
 }
 
-#apply_form {
-     text-align: center;
-     margin-left: 10%;
-     margin-right: 10%;
+#apply_form_fieldset {
+     margin: 10%;
+     padding: 0;
 }
+
+#other_skills {
+     width: 50%;
+     height: 10%;
+}
+
+
+.form_grid {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     grid-template-rows: repeat(12, 1fr);
+     gap: 8px;
+ }
+     
+ .name_and_dob {
+     grid-column: span 3 / span 3;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+ 
+ .gender {
+     grid-column: span 3 / span 3;
+     grid-column-start: 2;
+     grid-row-start: 4;
+ }
+ 
+ .address_and_contact {
+     grid-column: span 3 / span 3;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 5;
+ }
+ 
+ .apply_skills {
+     grid-column: span 3 / span 3;
+     grid-row: span 4 / span 4;
+     grid-column-start: 2;
+     grid-row-start: 7;
+ }
+ 
+ .apply_other_skills {
+     grid-column: span 3 / span 3;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 11;
+ }
+         

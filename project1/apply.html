@@ -31,115 +31,127 @@
           <!-- Application form, regex pattern validation included in each form field -->
           <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="apply_form">
                <!-- below is grid div -->
-                    <label for="job_ref">Job Reference Number:</label>
-                    <select name="job_ref" id="job_ref" required>
-                         <!-- Change sample1 and sample2 to the actual job reference numbers -->
-                         <option value="">Select a job reference number</option>
-                         <option value="sample1">sample1</option>
-                         <option value="sample2">sample2</option>
-                    </select>
-               <!-- fieldset for details -->
-               <fieldset>
-                    <legend>Your Details</legend>
-                    <p>
-                         <label for="first_name">First Name:</label>
-                         <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
-                    </p>
-                    <p>
-                         <label for="last_name">Last Name:</label>
-                         <input type="text" id="last_name" name="last_name" pattern="^[a-z]{1,20}$" required>
-                    </p>
-                    <p>
-                         <label for="date_of_birth">Date of birth:</label>
-                         <input type="date" id="date_of_birth" name="date_of_birth" required>
-                    </p>
-                    <!-- nested fieldset for gender radio buttons -->
-                    <fieldset>
-                         <legend>Gender</legend>
-                         <label for="male">Male</label>
-                         <input type="radio" id="male" name="gender" value="male" required>
-                         <label for="female">Female</label>
-                         <input type="radio" id="female" name="gender" value="female" required>
-                         <label for="other">Other/prefer not to say</label>
-                         <input type="radio" id="other" name="gender" value="other" required>
-                    </fieldset>
-                    <p>
-                         <label for="street_address">Street address:</label>
-                         <input id="street_address" name="street_address" type="text" pattern="^\w{1,40$}" required>
-                    </p>
-                    <p>
-                         <label for="suburb_or_town">Suburb/town:</label>
-                         <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required>
-                    </p>
-                    <p>
-                         <label for="state">State:</label>
-                         <select name="state" id="state" required>
-                              <option value="">Select a state</option>
-                              <option value="VIC">VIC</option>
-                              <option value="NSW">NSW</option>
-                              <option value="QLD">QLD</option>
-                              <option value="NT">NT</option>
-                              <option value="WA">WA</option>
-                              <option value="SA">SA</option>
-                              <option value="TAS">TAS</option>
-                              <option value="ACT">ACT</option>
+                         <label for="job_ref">Job Reference Number:</label>
+                         <select name="job_ref" id="job_ref" required>
+                              <!-- Change sample1 and sample2 to the actual job reference numbers -->
+                              <option value="">Select a job reference number</option>
+                              <option value="sample1">sample1</option>
+                              <option value="sample2">sample2</option>
                          </select>
-                         <label for="post_code">Postcode:</label>
-                         <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
-                    </p>
-                    <p>
-                         <label for="email">Email address:</label>
-                         <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
-                         <label for="phone_number">Phone number:</label>
-                         <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
-                    </p>
-                    <fieldset>
-                         <legend>Technical Skills</legend>
+               <!-- fieldset for details -->
+               <fieldset id="apply_form_fieldset">
+                    <div class="form_grid">
+                    <div class="name_and_dob">
+                         <legend>Your Details</legend>
+                         <p>
+                              <label for="first_name">First Name:</label>
+                              <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
+                         </p>
+                         <p>
+                              <label for="last_name">Last Name:</label>
+                              <input type="text" id="last_name" name="last_name" pattern="^[a-z]{1,20}$" required>
+                         </p>
+                         <p>
+                              <label for="date_of_birth">Date of birth:</label>
+                              <input type="date" id="date_of_birth" name="date_of_birth" required>
+                         </p>
+                    </div>
+                    <!-- nested fieldset for gender radio buttons -->
+                    <div class="gender">
                          <fieldset>
-                              <legend>Network Administration Skills</legend>
-                              <p>
-                                   <label for="cloud_technologies">Working with cloud technologies (AWS, Azure, Google Cloud)</label>
-                                   <input type="checkbox" name="skills[]" id="cloud_technologies">
-                              </p>
-                              <p>
-                                   <label for="network_diagnostics">Network diagnostic and troubleshooting skills</label>
-                                   <input type="checkbox" name="skills[]" id="network_diagnostics">
-                              </p>
-                              <p>
-                                   <label for="network_security">Network security protocols</label>
-                                   <input type="checkbox" name="skills[]" id="network_security">
-                              </p>
-                              <p>
-                                   <label for="network_configuration">Network configuration practices</label>
-                                   <input type="checkbox" name="skills[]" id="network_configuration">
-                              </p>
+                              <legend>Gender</legend>
+                              <label for="male">Male</label>
+                              <input type="radio" id="male" name="gender" value="male" required>
+                              <label for="female">Female</label>
+                              <input type="radio" id="female" name="gender" value="female" required>
+                              <label for="other">Other/prefer not to say</label>
+                              <input type="radio" id="other" name="gender" value="other" required>
                          </fieldset>
+                    </div>
+                    <div class="address_and_contact">
+                         <p>
+                              <label for="street_address">Street address:</label>
+                              <input id="street_address" name="street_address" type="text" pattern="^\w{1,40$}" required>
+                         </p>
+                         <p>
+                              <label for="suburb_or_town">Suburb/town:</label>
+                              <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required>
+                         </p>
+                         <p>
+                              <label for="state">State:</label>
+                              <select name="state" id="state" required>
+                                   <option value="">Select a state</option>
+                                   <option value="VIC">VIC</option>
+                                   <option value="NSW">NSW</option>
+                                   <option value="QLD">QLD</option>
+                                   <option value="NT">NT</option>
+                                   <option value="WA">WA</option>
+                                   <option value="SA">SA</option>
+                                   <option value="TAS">TAS</option>
+                                   <option value="ACT">ACT</option>
+                              </select>
+                              <label for="post_code">Postcode:</label>
+                              <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
+                         </p>
+                         <p>
+                              <label for="email">Email address:</label>
+                              <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
+                              <label for="phone_number">Phone number:</label>
+                              <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
+                         </p>
+                    </div>
+                    <div class="apply_skills">
                          <fieldset>
-                              <legend>Software Development Skills</legend>
-                              <p>
-                                   <label for="programming">Programming languages (C/C++, JS, Java)</label>
-                                   <input type="checkbox" name="skills[]" id="programming">
-                              </p>
-                              <p>
-                                   <label for="version_control">Version control (i.e. git)</label>
-                                   <input type="checkbox" name="skills[]" id="version_control">
-                              </p>
-                              <p>
-                                   <label for="database_management">Database management (SQL, NoSQL)</label>
-                                   <input type="checkbox" name="skills[]" id="database_management">
-                              </p>
-                              <p>
-                                   <label for="development_lifecycle">Software development lifecycle (agile methodologies, TDD)</label>
-                                   <input type="checkbox" name="skills[]" id="development_lifecycle">
-                              </p>
+                              <legend>Technical Skills</legend>
+                              <fieldset>
+                                   <legend>Network Administration Skills</legend>
+                                   <p>
+                                        <label for="cloud_technologies">Working with cloud technologies (AWS, Azure, Google Cloud)</label>
+                                        <input type="checkbox" name="skills[]" id="cloud_technologies">
+                                   </p>
+                                   <p>
+                                        <label for="network_diagnostics">Network diagnostic and troubleshooting skills</label>
+                                        <input type="checkbox" name="skills[]" id="network_diagnostics">
+                                   </p>
+                                   <p>
+                                        <label for="network_security">Network security protocols</label>
+                                        <input type="checkbox" name="skills[]" id="network_security">
+                                   </p>
+                                   <p>
+                                        <label for="network_configuration">Network configuration practices</label>
+                                        <input type="checkbox" name="skills[]" id="network_configuration">
+                                   </p>
+                              </fieldset>
+                              <fieldset>
+                                   <legend>Software Development Skills</legend>
+                                   <p>
+                                        <label for="programming">Programming languages (C/C++, JS, Java)</label>
+                                        <input type="checkbox" name="skills[]" id="programming">
+                                   </p>
+                                   <p>
+                                        <label for="version_control">Version control (i.e. git)</label>
+                                        <input type="checkbox" name="skills[]" id="version_control">
+                                   </p>
+                                   <p>
+                                        <label for="database_management">Database management (SQL, NoSQL)</label>
+                                        <input type="checkbox" name="skills[]" id="database_management">
+                                   </p>
+                                   <p>
+                                        <label for="development_lifecycle">Software development lifecycle (agile methodologies, TDD)</label>
+                                        <input type="checkbox" name="skills[]" id="development_lifecycle">
+                                   </p>
+                              </fieldset>
                          </fieldset>
-                    </fieldset>
+                    </div>
                     <!-- Technical skills list were created using chatGPT with the following prompt: "Generate a list of technical skills you would need to be a network administrator or software developer" -->
-                    <p>
-                         <label for="other_skills">Other Skills:</label>
-                         <br>
-                         <textarea name="other_skills" id="other_skills" placeholder="List other skills here"></textarea>
-                    </p>
+                    <div class="apply_other_skills">
+                         <p>
+                              <label for="other_skills">Other Skills:</label>
+                              <br>
+                              <textarea name="other_skills" id="other_skills" placeholder="List other skills here"></textarea>
+                         </p>
+                    </div>
+               </div>
                </fieldset>
                <input type="submit" value="Apply">
           </form>
