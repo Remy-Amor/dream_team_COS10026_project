@@ -5,3 +5,69 @@ created: 28/3/2025
 last modified: 28/3/2025
 description: refers to index.html, jobs.html, apply.html, about.html
 */
+
+/* Styles for header - RA */
+
+header {
+    background-color: #E7ECFF;
+}
+
+header a {
+    margin: 2em;
+    color: #274C77;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #6096BA;
+    font-weight: bold;
+}
+
+.grid_header {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 5% 5%;
+
+    /* Text styling */
+    font-size: 1em;
+}
+
+.header_heading {
+    grid-area: 1 / 3 / 1 / 9;
+    text-align: center;
+}
+
+.header_navbar {
+    grid-area: 2 / 1 / 2 / 11;
+    text-align: center;
+    padding-bottom: 1.1em;
+}
+
+
+/* Styles for footer */
+
+footer {
+    border-left: 0.25em solid #8B8C89;
+    border-right: 0.25em solid #8B8C89;
+    margin: 3em;
+    background-color: #E7ECFF;
+    padding: 1%;
+}
+
+.footer_id {
+    display: inline-block;
+    margin-left: 3em;
+}
+
+footer a {
+    text-align: right;
+    color: #274C77;
+    text-decoration: none;
+    margin-left: 35em;
+    margin-right: 3em;
+}
+
+footer a:hover {
+    color: #6096BA;
+    text-decoration: underline;
+}
