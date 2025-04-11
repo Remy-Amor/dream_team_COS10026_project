@@ -39,9 +39,6 @@ body {
 /* Styles for header - RA */
 
 header {
-     border-left: 0.25em solid #8B8C89;
-     border-right: 0.25em solid #8B8C89;
-     margin: 3em;
      background-color: #E7ECFF;
 }
 
@@ -104,3 +101,115 @@ footer a:hover {
      color: #6096BA;
      text-decoration: underline;
 }
+
+
+/* Styling for apply.html specific */
+
+#form_contact {
+     margin-top: 8%;
+}
+
+#phone_number_label {
+     margin-left: 18%;
+}
+
+#apply_form_fieldset input:hover {
+     background-color: #E7ECEF;
+}
+
+#apply_form_fieldset label, legend{
+     font-weight: bold;
+}
+
+legend {
+     font-size: 1.2em;
+     border: 1px solid #274C77;
+}
+
+#details_legend {
+     margin-right: 65%;
+}
+
+#postcode_label {
+     margin-left: 42%;
+}
+
+#apply_header {
+     text-align: center;
+     text-decoration: underline;
+     font-size: 2em;
+}
+
+#apply_form_fieldset {
+     margin-left: 10%;
+     margin-right: 10%;
+}
+
+#other_skills {
+     width: 50%;
+}
+
+#job_ref_field {
+     text-align: center;
+}
+
+#job_ref {
+     background-color: #E7ECFF;
+}
+
+#job_ref:hover {
+     border: 2px solid #274C77;
+}
+
+.submit_button {
+     text-align: center;
+     margin-top: 2.5%;
+}
+
+#form_apply_button {
+     font-size: 2em;
+     border: 2px solid #274C77;
+}
+
+#form_apply_button:hover {
+     background-color: #E7ECEF;
+     border: 4px solid #274C77;
+}
+
+/* Grid styling for apply.html */
+.form_grid {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(7, 1fr);
+ }
+     
+ .name_and_dob {
+     grid-column: span 2 / span 2;
+     grid-column-start: 2;
+ }
+ 
+ .gender {
+     grid-column: span 2 / span 2;
+     grid-column-start: 4;
+ }
+ 
+ .address_and_contact {
+     grid-column: span 4 / span 4;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+ 
+ .apply_skills {
+     grid-column: span 4 / span 4;
+     grid-row: span 3 / span 3;
+     grid-column-start: 2;
+     grid-row-start: 4;
+ }
+ 
+ .apply_other_skills {
+     grid-column: span 4 / span 4;
+     grid-column-start: 2;
+     grid-row-start: 7;
+ }
+         
