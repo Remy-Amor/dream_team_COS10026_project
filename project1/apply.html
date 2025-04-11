@@ -66,6 +66,7 @@
                               <input type="radio" id="male" name="gender" value="male" required>
                               <label for="female">Female</label>
                               <input type="radio" id="female" name="gender" value="female" required>
+                              <br>
                               <label for="other">Other/prefer not to say</label>
                               <input type="radio" id="other" name="gender" value="other" required>
                          </fieldset>
@@ -95,10 +96,10 @@
                               <label for="post_code">Postcode:</label>
                               <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
                          </p>
-                         <p>
+                         <p id="form_contact">
                               <label for="email">Email address:</label>
                               <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
-                              <label for="phone_number">Phone number:</label>
+                              <label for="phone_number" id="phone_number_label">Phone number:</label>
                               <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
                          </p>
                     </div>
