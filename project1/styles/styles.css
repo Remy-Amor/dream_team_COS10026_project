@@ -106,11 +106,16 @@ footer a:hover {
 /* Styling for apply.html specific */
 
 #form_contact {
-     margin-top: 5%;
+     margin-top: 8%;
+     margin-bottom: 8%;
 }
 
 #phone_number_label {
      margin-left: 20%;
+}
+
+#postcode_label {
+     margin-left: 43.7%;
 }
 
 #apply_header {
@@ -126,7 +131,6 @@ footer a:hover {
 
 #other_skills {
      width: 50%;
-     height: 10%;
 }
 
 #job_ref_field {
@@ -134,7 +138,7 @@ footer a:hover {
 }
 
 #job_ref {
-     background-color: #A3CEF1;
+     background-color: #E7ECFF;
 }
 
 #job_ref:hover {
@@ -145,20 +149,19 @@ footer a:hover {
 .form_grid {
      display: grid;
      grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: repeat(11, 1fr);
-     gap: 8px;
+     grid-template-rows: repeat(8, 1fr);
  }
      
  .name_and_dob {
      grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
+     grid-row: span 1 / span 1;
      grid-column-start: 2;
      grid-row-start: 2;
  }
  
  .gender {
      grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
+     grid-row: span 1 / span 1;
      grid-column-start: 4;
      grid-row-start: 2;
  }
@@ -167,20 +170,19 @@ footer a:hover {
      grid-column: span 4 / span 4;
      grid-row: span 2 / span 2;
      grid-column-start: 2;
-     grid-row-start: 4;
+     grid-row-start: 3;
  }
  
  .apply_skills {
      grid-column: span 4 / span 4;
-     grid-row: span 4 / span 4;
+     grid-row: span 3 / span 3;
      grid-column-start: 2;
-     grid-row-start: 6;
+     grid-row-start: 5;
  }
  
  .apply_other_skills {
      grid-column: span 4 / span 4;
-     grid-row: span 2 / span 2;
      grid-column-start: 2;
-     grid-row-start: 10;
+     grid-row-start: 8;
  }
          
