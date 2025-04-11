@@ -44,7 +44,7 @@
                     <!-- below is grid div -->
                     <div class="form_grid">
                     <div class="name_and_dob">
-                         <legend>Your Details</legend>
+                         <legend id="details_legend">Your Details</legend>
                          <p>
                               <label for="first_name">First Name:</label>
                               <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
@@ -157,7 +157,9 @@
                     </div>
                </div>
                </fieldset>
-               <input type="submit" value="Apply">
+               <div class="submit_button">
+                    <input type="submit" value="Apply" id="form_apply_button">
+               </div>
           </form>
      </main>
      <footer>  
