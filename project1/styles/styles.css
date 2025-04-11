@@ -104,3 +104,17 @@ footer a:hover {
      color: #6096BA;
      text-decoration: underline;
 }
+
+
+/* Styling for apply.html specific */
+
+#apply_header {
+     text-align: center;
+     text-decoration: underline;
+}
+
+#apply_form {
+     text-align: center;
+     margin-left: 10%;
+     margin-right: 10%;
+}

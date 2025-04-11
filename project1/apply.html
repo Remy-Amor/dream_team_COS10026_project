@@ -29,8 +29,8 @@
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
-          <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-               <p>
+          <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="apply_form">
+               <!-- below is grid div -->
                     <label for="job_ref">Job Reference Number:</label>
                     <select name="job_ref" id="job_ref" required>
                          <!-- Change sample1 and sample2 to the actual job reference numbers -->
@@ -38,7 +38,6 @@
                          <option value="sample1">sample1</option>
                          <option value="sample2">sample2</option>
                     </select>
-               </p>
                <!-- fieldset for details -->
                <fieldset>
                     <legend>Your Details</legend>
