@@ -12,34 +12,34 @@ description: refers to about.html
 .about_grid {
      display: grid;
      grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: repeat(4, 1fr);
+     grid-template-rows: repeat(3, 1fr);
      gap: 8px;
  }
      
  .headings_and_intro {
      grid-column: span 2 / span 2;
      grid-column-start: 2;
-     grid-row-start: 2;
+     grid-row-start: 1;
  }
  
  .student_id_list {
      grid-row: span 2 / span 2;
      grid-column-start: 5;
-     grid-row-start: 2;
+     grid-row-start: 1;
  }
  
  .group_image {
      grid-column: span 2 / span 2;
      grid-row: span 2 / span 2;
      grid-column-start: 5;
-     grid-row-start: 3;
+     grid-row-start: 2;
  }
  
  .member_info {
      grid-column: span 2 / span 2;
      grid-row: span 2 / span 2;
      grid-column-start: 2;
-     grid-row-start: 3;
+     grid-row-start: 2;
  }
          
          
@@ -50,4 +50,34 @@ description: refers to about.html
      float: right;
      max-width: 100%;
      margin-right: 20%;
+     border: 2px solid black;
+ }
+
+ #interests_table {
+     text-align: center;
+     font-size: 1.2em;
+ }
+
+th {
+     font-weight: bold;
+ }
+
+ td, th {
+     border: 1px solid black;
+ }
+
+ td {
+     background-color: #E7ECEF;
+ }
+
+ th {
+     background-color: #A3CEF1;
+ }
+
+ td:hover, th:hover {
+     border: 2px solid black;
+ }
+
+ caption {
+     text-decoration: underline;
  }
