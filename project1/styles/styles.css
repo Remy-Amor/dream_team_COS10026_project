@@ -6,7 +6,7 @@ last modified: 28/3/2025
 description: refers to index.html, jobs.html, apply.html, about.html
 */
 
-/* Styles for header - RA */
+/* Styles for header - Remy */
 
 header {
     background-color: #E7ECFF;
@@ -44,12 +44,9 @@ header a:hover {
 }
 
 
-/* Styles for footer */
+/* Styles for footer Remy*/
 
 footer {
-    border-left: 0.25em solid #8B8C89;
-    border-right: 0.25em solid #8B8C89;
-    margin: 3em;
     background-color: #E7ECFF;
     padding: 1%;
 }
