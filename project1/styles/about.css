@@ -26,6 +26,7 @@ description: refers to about.html
      grid-row: span 2 / span 2;
      grid-column-start: 5;
      grid-row-start: 1;
+     padding-top: 20%;
  }
  
  .group_image {
@@ -53,6 +54,12 @@ description: refers to about.html
      border: 2px solid black;
  }
 
+ dt {
+     font-weight: bold;
+ }
+
+ /* table styles */
+
  #interests_table {
      text-align: center;
      font-size: 1.2em;
@@ -67,7 +74,7 @@ th {
  }
 
  td {
-     background-color: #E7ECEF;
+     background-color: #ffffff;
  }
 
  th {
@@ -81,3 +88,5 @@ th {
  caption {
      text-decoration: underline;
  }
+
+ 
