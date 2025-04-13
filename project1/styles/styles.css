@@ -242,3 +242,14 @@ legend {
      margin: 10px;
      border-radius: 8px;
    }
+
+   #left a {
+     color: red ;
+     text-decoration: none;
+   }
+
+   #right a {
+     color: red ;
+     text-decoration: none;
+   }
+
