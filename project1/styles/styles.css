@@ -228,3 +228,17 @@ legend {
      padding: 15px; /* Adds padding for the content in each section */
      border-radius: 8px; /*  rounded corners */
    }
+
+   #left {
+     border: 3px solid blueviolet;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 8px;
+   }
+
+   #right {
+     border: 3px solid blueviolet;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 8px;
+   }
