@@ -213,6 +213,7 @@ legend {
      grid-row-start: 7;
  }
          
+ /* jobs container and left/right - WA */
  .jobs-container {
      display: flex;
      gap: 30px; /* gap of 30 px between sections */
@@ -223,9 +224,7 @@ legend {
    
    #left, #right {
      flex: 1 1 45%; /* makes sections adaptive */
-     box-sizing: border-box;
-     padding: 15px; /*  */
-     background-color: #f9f9f9; /*  light background */
-     border: 1px solid #ddd;    /*  subtle border */
-     border-radius: 8px;        /*  rounded corners */
+     box-sizing: border-box; /* borders and padding are now in the element rather than out */
+     padding: 15px; /* Adds padding for the content in each section */
+     border-radius: 8px; /*  rounded corners */
    }
