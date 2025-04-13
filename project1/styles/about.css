@@ -1,0 +1,92 @@
+/*
+filename: about.css
+authors: Remy Amor
+created: 11/4/2025
+last modified: 11/4/2025
+description: refers to about.html
+*/
+
+/* grid styles */
+
+
+.about_grid {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     gap: 8px;
+ }
+     
+ .headings_and_intro {
+     grid-column: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 1;
+ }
+ 
+ .student_id_list {
+     grid-row: span 2 / span 2;
+     grid-column-start: 5;
+     grid-row-start: 1;
+     padding-top: 20%;
+ }
+ 
+ .group_image {
+     grid-column: span 2 / span 2;
+     grid-row: span 2 / span 2;
+     grid-column-start: 5;
+     grid-row-start: 2;
+ }
+ 
+ .member_info {
+     grid-column: span 2 / span 2;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+         
+         
+    
+ /*  other styles */
+
+ img {
+     float: right;
+     max-width: 100%;
+     margin-right: 20%;
+     border: 2px solid black;
+ }
+
+ dt {
+     font-weight: bold;
+ }
+
+ /* table styles */
+
+ #interests_table {
+     text-align: center;
+     font-size: 1.2em;
+ }
+
+th {
+     font-weight: bold;
+ }
+
+ td, th {
+     border: 1px solid black;
+ }
+
+ td {
+     background-color: #ffffff;
+ }
+
+ th {
+     background-color: #A3CEF1;
+ }
+
+ td:hover, th:hover {
+     border: 2px solid black;
+ }
+
+ caption {
+     text-decoration: underline;
+ }
+
+ 
