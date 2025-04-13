@@ -210,3 +210,19 @@ legend {
      grid-row-start: 7;
  }
          
+ .jobs-container {
+     display: flex;
+     gap: 30px; /* gap of 30 px between sections */
+     align-items: flex-start; /* Alighned to the top of the container */
+     justify-content: space-between; /* Evenly space out sections */
+     flex-wrap: wrap; /* wrap on small screens */
+   }
+   
+   #left, #right {
+     flex: 1 1 45%; /* makes sections adaptive */
+     box-sizing: border-box;
+     padding: 15px; /*  */
+     background-color: #f9f9f9; /*  light background */
+     border: 1px solid #ddd;    /*  subtle border */
+     border-radius: 8px;        /*  rounded corners */
+   }
