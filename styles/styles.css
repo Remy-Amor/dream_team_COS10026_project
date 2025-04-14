@@ -205,6 +205,7 @@ legend {
  }
          
  /* jobs container and left/right - WA */
+ /* jobs container and left/right - WA */
  .jobs-container {
      display: flex;
      gap: 30px; /* gap of 30 px between sections */
@@ -235,12 +236,30 @@ legend {
    }
 
    #left a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: green;
+     border-radius: 8px ; 
    }
 
    #right a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: green;
+     border-radius: 8px;
+
    }
+
+   #left a:hover {
+     background-color: skyblue;
+     border-color: blue;
+     color: black;
+   }
+
+   #right a:hover {
+     background-color: skyblue;
+     border-color: blue; 
+     color: black;
+   }
+
 
