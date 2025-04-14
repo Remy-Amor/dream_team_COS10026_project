@@ -224,16 +224,16 @@ legend {
      color: green ;
      text-decoration: none;
      border: 4px solid green;
-     display:inline-block;
      border-radius: 8px;
+     display:inline-block;
    }
 
    #right a {
      color: green ;
      text-decoration: none;
      border: 4px solid green;
-     display:inline-block;
      border-radius: 8px;
+     display:inline-block;
    }
 
    #left a:hover {
