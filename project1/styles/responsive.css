@@ -10,5 +10,12 @@ description: refers to all pages about resizing page layout based on screen size
 
 @media screen and (max-width: 428px) {
      /* header styling */
-     
+     .header_heading {
+          font-size: 0.8em;
+          grid-area: 1 / 2 / 1 / 10;
+     }
+
+     .header_navbar {
+          font-size: 0.75em;
+     }
 }
