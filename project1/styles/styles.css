@@ -244,12 +244,32 @@ legend {
    }
 
    #left a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: solid green;
+     padding: 4px;
+     display: Inline-block; /* border and padding wrap around text*/ 
+     border-radius: 8px;
    }
 
    #right a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: solid green;
+     padding: 4px;
+     display: Inline-block; /* border and padding wrap around text*/ 
+     border-radius: 8px;
    }
 
+   /* changes colour of hyperlink box and border when hovered over*/
+   #left a:hover {
+     border-color: blue; 
+     background-color: lightskyblue;
+     color: black;
+   }
+
+   #right a:hover {
+     color: black;
+     border-color: blue;
+     background-color: lightskyblue;
+   }
