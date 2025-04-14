@@ -239,7 +239,8 @@ legend {
      color: green ;
      text-decoration: none;
      border: green;
-     border-radius: 8px ; 
+     border-radius: 8px ;
+     padding: 4px; 
    }
 
    #right a {
@@ -247,6 +248,8 @@ legend {
      text-decoration: none;
      border: green;
      border-radius: 8px;
+     padding: 4px;
+     display: inline-block;
 
    }
 
@@ -254,6 +257,7 @@ legend {
      background-color: skyblue;
      border-color: blue;
      color: black;
+     display: inline-block;
    }
 
    #right a:hover {
