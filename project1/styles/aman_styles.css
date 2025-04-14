@@ -242,8 +242,8 @@ footer a {
     text-align: right;
     color: #274C77;
     text-decoration: none;
-    margin-left: 35em;
-    margin-right: 3em;
+    margin-left: 10em;
+    margin-right: 0;
 }
 
 footer a:hover {

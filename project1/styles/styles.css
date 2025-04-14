@@ -87,11 +87,11 @@ footer {
 }
 
 footer a {
-     text-align: right;
+     /* text-align: right; */
      color: #274C77;
      text-decoration: none;
-     margin-left: 35em;
-     margin-right: 3em;
+     /* margin-left: 35em;
+     margin-right: 3em; */
 }
 
 footer a:hover {
