@@ -1,0 +1,34 @@
+/*
+filename: about.css
+authors: Remy Amor
+created: 14/4/2025
+last modified: 14/4/2025
+description: refers to all pages about resizing page layout based on screen size
+*/
+
+/* for hone size */
+
+@media screen and (max-width: 546px) {
+     /* header styling */
+     .header_heading {
+          font-size: 0.8em;
+          grid-area: 1 / 2 / 1 / 10;
+     }
+
+     .header_navbar {
+          font-size: 0.75em;
+     }
+
+     /* footer styling */
+     footer {
+          font-size: 0.7em;
+     }
+     .footer_id {
+          margin: 0;
+     }
+     
+     footer a {
+          margin: 0;
+          display: inline-block;
+     }
+}

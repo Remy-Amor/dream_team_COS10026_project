@@ -77,9 +77,6 @@ header a:hover {
 /* Styles for footer */
 
 footer {
-     border-left: 0.25em solid #8B8C89;
-     border-right: 0.25em solid #8B8C89;
-     margin: 3em;
      background-color: #E7ECFF;
      padding: 1%;
 }
