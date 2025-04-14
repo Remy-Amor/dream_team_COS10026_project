@@ -106,9 +106,6 @@ footer a:hover {
      margin-top: 8%;
 }
 
-#phone_number_label {
-     margin-left: 18%;
-}
 
 #apply_form_fieldset input:hover {
      background-color: #E7ECEF;
@@ -127,9 +124,6 @@ legend {
      margin-right: 65%;
 }
 
-#postcode_label {
-     margin-left: 42%;
-}
 
 #apply_header {
      text-align: center;

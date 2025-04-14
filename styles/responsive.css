@@ -86,5 +86,42 @@ description: refers to all pages about resizing page layout based on screen size
           float: none;
           margin-top: 0;
       }
+
+
+      /* apply page */
+      #apply_header {
+          font-size: 1em;
+      }
+
+      #job_ref_field {
+          font-size: 0.8em;
+      }
+
+      .form_grid {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          font-size: 0.9em;
+      }
+
+      #postcode_label {
+          margin-left: 0;
+      }
+
+      #phone_number_label {
+          margin-left: 0;
+      }
+
+      #state_and_postcode {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+
+      #form_contact {
+          display: flex;
+          flex-wrap: wrap;
+      }
 }
+
 
