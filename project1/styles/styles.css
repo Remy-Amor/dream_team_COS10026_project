@@ -393,12 +393,28 @@ legend {
    }
 
    #left a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: green;
+     border-radius: 8px ; 
    }
 
    #right a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: green;
+     border-radius: 8px;
+
    }
 
+   #left a:hover {
+     background-color: skyblue;
+     border-color: blue;
+     color: black;
+   }
+
+   #right a:hover {
+     background-color: skyblue;
+     border-color: blue; 
+     color: black;
+   }
