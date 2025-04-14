@@ -79,7 +79,7 @@ description: refers to all pages about resizing page layout based on screen size
           grid-row: span 2 / span 2;
           grid-column-start: 2;
           grid-row-start: 8;
-          margin-top: 10%;
+          margin-left: 10%;
       }
 
       #group_image {
