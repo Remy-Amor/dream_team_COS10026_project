@@ -35,6 +35,8 @@ description: refers to all pages about resizing page layout based on screen size
 
      /* About page */
 
+
+     /* restyled the grid display to fit on screen */
      .about_grid {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
@@ -89,6 +91,7 @@ description: refers to all pages about resizing page layout based on screen size
 
 
       /* apply page */
+
       #apply_header {
           font-size: 1em;
       }
@@ -97,6 +100,7 @@ description: refers to all pages about resizing page layout based on screen size
           font-size: 0.8em;
       }
 
+      /* decided to style with flex display */
       .form_grid {
           display: flex;
           flex-direction: row;
