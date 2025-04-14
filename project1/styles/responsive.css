@@ -18,4 +18,17 @@ description: refers to all pages about resizing page layout based on screen size
      .header_navbar {
           font-size: 0.75em;
      }
+
+     /* footer styling */
+     footer {
+          font-size: 0.7em;
+     }
+     .footer_id {
+          margin: 0;
+     }
+     
+     footer a {
+          margin: 0;
+          display: inline-block;
+     }
 }
