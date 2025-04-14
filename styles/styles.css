@@ -220,31 +220,19 @@ legend {
      border-radius: 8px; /*  rounded corners */
    }
 
-   #left {
-     border: 3px solid blueviolet;
-     padding: 10px;
-     margin: 10px;
-     border-radius: 8px;
-   }
-
-   #right {
-     border: 3px solid blueviolet;
-     padding: 10px;
-     margin: 10px;
-     border-radius: 8px;
-   }
-
    #left a {
      color: green ;
      text-decoration: none;
-     border: green;
-     border-radius: 8px ; 
+     border: 4px solid green;
+     display:inline-block;
+     border-radius: 8px;
    }
 
    #right a {
      color: green ;
      text-decoration: none;
-     border: green;
+     border: 4px solid green;
+     display:inline-block;
      border-radius: 8px;
    }
 
