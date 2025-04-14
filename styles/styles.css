@@ -234,6 +234,20 @@ legend {
      border-radius: 8px;
    }
 
+   #left a {
+     color: green ;
+     text-decoration: none;
+     border: green;
+     border-radius: 8px ; 
+   }
+
+   #right a {
+     color: green ;
+     text-decoration: none;
+     border: green;
+     border-radius: 8px;
+   }
+
    #left a:hover {
      background-color: skyblue;
      border-color: blue;
