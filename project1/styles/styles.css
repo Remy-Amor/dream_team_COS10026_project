@@ -6,7 +6,12 @@ last modified: 28/3/2025
 description: refers to index.html, jobs.html, apply.html, about.html
 */
 
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Styles for header - Remy */
+
 
 header {
     background-color: #E7ECFF;
@@ -43,7 +48,7 @@ header a:hover {
     padding-bottom: 1.1em;
 }
 
-/* Styling mission and who we are sections */
+/* Styling mission and who we are sections - Aman*/
 
 #about-sections {
     position: relative;
@@ -53,7 +58,7 @@ header a:hover {
 }
 
 
-/* Float sections */
+/* Float sections - Aman*/
 #mission {
     background-color: #A3CEF1;
     padding: 2em;
@@ -72,7 +77,7 @@ header a:hover {
     border-radius: 10px;
 }
 
-/* First Paragraph */
+/* First Paragraph Styling - Aman*/
 
 /* Use of Chatgpt - how can I target only the first paragraph in main parent */
 main > p:first-of-type {
@@ -95,7 +100,7 @@ main > p:first-of-type:hover {
     transform: scale(1.01);
 }
 
-/* Servises List Styling */
+/* Servises List Styling - Aman*/
 #heading_toclear{
     clear: both;
 }
@@ -143,9 +148,10 @@ h1{
     font-weight: bold;
 }
 
+/* Styles for the value grid (Why Choose us sections) - Amanuial */
 .value-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Change to 4 for 4x1 or 4x2 etc. */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 2em;
     padding: 2em;
     background-color: #E7ECFF;
@@ -168,6 +174,54 @@ h1{
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* Styling for image and last section */
+
+.logo-cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e0f0ff, #ffffff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-heading {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #0a66c2;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #0a66c2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #084a9a;
+}
+
 
 
 /* Styles for footer - Remy*/
