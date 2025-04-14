@@ -80,6 +80,7 @@ header a:hover {
 /* First Paragraph Styling - Aman*/
 
 /* Use of Chatgpt - how can I target only the first paragraph in main parent */
+/* Stack overflow - CSS styling for paragraphs */
 main > p:first-of-type {
     font-size: 1.2em;
     margin: 1em auto 2em auto;
@@ -149,12 +150,13 @@ h1{
 }
 
 /* Styles for the value grid (Why Choose us sections) - Amanuial */
+/* Stack overflow - techniques for CSS grid layout and border radius styling*/
 .value-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 2em;
     padding: 2em;
-    background-color: #E7ECFF;
+    background-color: #d4dde1;
     border-radius: 10px;
     margin: 2em auto;
     max-width: 1000px;
@@ -186,7 +188,7 @@ h1{
     padding: 30px;
     max-width: 900px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #e0f0ff, #ffffff);
+    background: linear-gradient(135deg, #a6b8c6, #ffffff);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
