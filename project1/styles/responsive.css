@@ -1,0 +1,14 @@
+/*
+filename: about.css
+authors: Remy Amor
+created: 14/4/2025
+last modified: 14/4/2025
+description: refers to all pages about resizing page layout based on screen size
+*/
+
+/* for hone size */
+
+@media screen and (max-width: 428px) {
+     /* header styling */
+     
+}
