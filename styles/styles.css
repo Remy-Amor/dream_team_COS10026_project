@@ -222,10 +222,10 @@ legend {
 
    #left a {
      color: green ;
-     text-decoration: none;
+     text-decoration: none; /* removes bottom line */
      border: 4px solid green;
-     border-radius: 8px;
-     display:inline-block;
+     border-radius: 8px; 
+     display:inline-block; /* border and padding are around text */
    }
 
    #right a {
@@ -242,6 +242,7 @@ legend {
      color: black;
    }
 
+   /* when hovering over the hyperlinks the border and background will change colour*/
    #right a:hover {
      background-color: skyblue;
      border-color: blue; 
