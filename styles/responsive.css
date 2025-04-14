@@ -8,7 +8,7 @@ description: refers to all pages about resizing page layout based on screen size
 
 /* for hone size */
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 546px) {
      /* header styling */
      .header_heading {
           font-size: 0.8em;
