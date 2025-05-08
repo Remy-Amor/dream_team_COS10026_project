@@ -36,68 +36,80 @@ body {
 }
 
 
-/* Styles for header - RA */
+/* ===== Header Styling - Made & Updated by Aman ===== */
 
 header {
-     background-color: #E7ECFF;
-}
-
-header a {
-     margin: 2em;
+     background-color: #8B8C89; /* Changed to a cooler, distinct tone */
+     padding: 1em 2em;
+ }
+ 
+ .grid_header {
+     display: grid;
+     grid-template-columns: 100px auto;
+     align-items: center;
+     gap: 1em;
+ }
+ 
+ /* Logo placement */
+ .header_logo img {
+     max-width: 100px;
+     height: auto;
+ }
+ 
+ /* Title text */
+ .header_heading h1 {
+     margin: 0;
+     font-size: 1.5em; /* Smaller than before */
+     font-weight: bold;
+     color: #274C77;
+ }
+ 
+ /* Navbar below title */
+ .header_navbar {
+     grid-column: 1 / -1;
+     text-align: center;
+     margin-top: 0.5em;
+ }
+ 
+ header a {
+     margin: 0 1em;
      color: #274C77;
      text-decoration: none;
-}
-
-header a:hover {
+ }
+ 
+ header a:hover {
      color: #6096BA;
      font-weight: bold;
-}
-
-.grid_header {
-     display: grid;
-     grid-template-columns: repeat(10, 10%);
-     grid-template-rows: 5% 5%;
-
-     /* Text styling */
-     font-size: 1em;
-}
-
-.header_heading {
-     grid-area: 1 / 3 / 1 / 9;
-     text-align: center;
-}
-
-.header_navbar {
-     grid-area: 2 / 1 / 2 / 11;
-     text-align: center;
-     padding-bottom: 1.1em;
-}
-
-
-/* Styles for footer */
-
-footer {
-     background-color: #E7ECFF;
-     padding: 1%;
-}
-
-.footer_id {
-     display: inline-block;
-     margin-left: 3em;
-}
-
-footer a {
-     text-align: right;
+ }
+ 
+ /* ===== Footer Styling - Made & Updated by Aman ===== */
+ 
+ footer {
+     background-color: #8B8C89;
+     padding: 1.5em;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ 
+ .footer_id {
+     margin-left: 1em;
+     font-size: 0.9em;
      color: #274C77;
+ }
+ 
+ footer a {
+     color: #274C77;
+     margin-right: 1em;
      text-decoration: none;
-     margin-left: 35em;
-     margin-right: 3em;
-}
-
-footer a:hover {
+     font-weight: bold;
+ }
+ 
+ footer a:hover {
      color: #6096BA;
      text-decoration: underline;
-}
+ }
 
 
 /* Styling for apply.html specific */

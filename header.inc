@@ -1,5 +1,8 @@
 <header>
     <div class="grid_header">
+        <div class="header_logo">
+                <img src="images/logo_transparent.png" alt="Company Logo">
+        </div>
         <div class="header_heading">
             <h1>Welcome to Dream Team IT Solutions</h1>
         </div>
