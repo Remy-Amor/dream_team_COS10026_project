@@ -8,11 +8,14 @@
      <meta name="keywords" content="about, group, project, swinburne">
      <title>Dream Team IT Solutions - About</title>
      <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
-     <!-- link to page specific css -->
-     <link rel="stylesheet" href="styles/about.css">
+
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
+     
+     <!-- link to page specific css -->
+     <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
      <?php include 'header.inc'; ?>

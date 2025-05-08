@@ -8,11 +8,13 @@
      <meta name="keywords" content="description, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Jobs</title>
      <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
-     <!-- link to jobs.css -->
-     <link rel="stylesheet" href="styles/jobs.css">
+
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
+     <!-- link to jobs.css -->
+     <link rel="stylesheet" href="styles/jobs.css">
 </head>
 <body>
      <?php include 'header.inc'; ?>

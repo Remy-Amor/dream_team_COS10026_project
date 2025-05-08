@@ -8,7 +8,9 @@
      <meta name="keywords" content="application, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Apply</title>
      <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
+
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
 </head>

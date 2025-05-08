@@ -5,10 +5,10 @@
         </div>
         <div class="header_navbar">
             <nav>
-                    <a href = "index.html">Home Page</a> 
-                    <a href = "jobs.html">Jobs</a> 
-                    <a href = "about.html">About Us</a> 
-                    <a href="apply.html">Apply</a>
+                    <a href = "index.php">Home Page</a> 
+                    <a href = "jobs.php">Jobs</a> 
+                    <a href = "about.php">About Us</a> 
+                    <a href="apply.php">Apply</a>
             </nav>
         </div>
     </div>

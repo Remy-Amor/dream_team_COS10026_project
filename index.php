@@ -7,10 +7,12 @@
      <meta name="description" content="Homepage of Dream Team IT Solutions">
      <meta name="keywords" content="homepage, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Home Page</title>
+     
+     
      <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
 
-     <link rel="stylesheet" href="project1/styles/styles.css">
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
 </head>
