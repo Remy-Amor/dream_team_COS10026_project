@@ -15,21 +15,7 @@
      <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
-     <header>
-          <div class="grid_header">
-               <div class="header_heading">
-                    <h1>Welcome to Dream Team IT Solutions</h1>
-               </div>
-               <div class="header_navbar">
-                    <nav>
-                         <a href = "index.html">Home Page</a> 
-                         <a href = "jobs.html">Jobs</a> 
-                         <a href = "about.html">About Us</a> 
-                         <a href="apply.html">Apply</a>
-                    </nav>
-               </div>
-          </div>
-     </header>
+     <?php include 'header.inc'; ?>
      <main class="about_grid">
           <div class="headings_and_intro">
                <h1>Our Group</h1>
@@ -101,9 +87,6 @@
                </table>
           </div>
      </main>
-     <footer>  
-          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
-          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
-     </footer>
+     <?php include 'footer.inc'; ?>
 </body>
 </html>

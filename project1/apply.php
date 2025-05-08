@@ -11,7 +11,7 @@
      <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-     <?php include '../project1/header.php'; ?>
+     <?php include '../project1/header.inc'; ?>
      
      <main>
           <h2 id="apply_header">Apply Now!</h2>

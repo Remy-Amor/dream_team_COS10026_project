@@ -16,7 +16,7 @@
 </head>
 <body>
      <!-- Header section with company name and navigation - Aman -->
-     <?php include 'header.php'; ?>
+     <?php include 'header.inc'; ?>
      
      <main>
           <!-- Introduction paragraph -->
@@ -75,6 +75,6 @@
      </main>
 
      <!-- Footer with copyright and external link - Aman -->
-     <?php include 'footer.php'; ?>
+     <?php include 'footer.inc'; ?>
 </body>
 </html>
