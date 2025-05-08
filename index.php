@@ -16,21 +16,7 @@
 </head>
 <body>
      <!-- Header section with company name and navigation - Aman -->
-     <header>
-          <div class="grid_header">
-               <div class="header_heading">
-                    <h1>Welcome to Dream Team IT Solutions</h1>
-               </div>
-               <div class="header_navbar">
-                    <nav>
-                         <a href = "index.html">Home Page</a> 
-                         <a href = "jobs.html">Jobs</a> 
-                         <a href = "about.html">About Us</a> 
-                         <a href="apply.html">Apply</a>
-                    </nav>
-               </div>
-          </div>
-     </header>
+     <?php include 'header.php'; ?>
      
      <main>
           <!-- Introduction paragraph -->
@@ -89,9 +75,6 @@
      </main>
 
      <!-- Footer with copyright and external link - Aman -->
-     <footer>  
-          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
-          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
-     </footer>
+     <?php include 'footer.php'; ?>
 </body>
 </html>
