@@ -1,0 +1,252 @@
+/*
+filename: styles.css
+authors: Remy Amor, William Anthony, Amanuial Ashagrie
+created: 28/3/2025
+last modified: 11/4/2025
+description: refers to index.html, jobs.html, apply.html, about.html
+*/
+
+
+/* Importing font family to be used */
+@font-face {
+     font-family: Montserrat;
+     src: url(montserrat-font/MontserratMedium-nRxlJ.ttf);
+}
+@font-face {
+     font-family: Montserrat;
+     src: url(montserrat-font/MontserratBold-DOWZd.ttf);
+     font-weight: bold;
+}
+@font-face {
+     font-family: Montserrat;
+     src: url(montserrat-font/MontserratBlackItalic-owBnV.ttf);
+     font-style: italic;
+}
+@font-face {
+     font-family: Montserrat;
+     src: url(montserrat-font/MontserratBoldItalic-4B3w9.ttf);
+     font-weight: bold;
+     font-style: italic;
+}
+
+/* Style for whole site */
+body {
+     font-family: Montserrat, sans-serif;
+     background-color: #E7ECEF;
+}
+
+
+/* Styles for header - RA */
+
+header {
+     background-color: #E7ECFF;
+}
+
+header a {
+     margin: 2em;
+     color: #274C77;
+     text-decoration: none;
+}
+
+header a:hover {
+     color: #6096BA;
+     font-weight: bold;
+}
+
+.grid_header {
+     display: grid;
+     grid-template-columns: repeat(10, 10%);
+     grid-template-rows: 5% 5%;
+
+     /* Text styling */
+     font-size: 1em;
+}
+
+.header_heading {
+     grid-area: 1 / 3 / 1 / 9;
+     text-align: center;
+}
+
+.header_navbar {
+     grid-area: 2 / 1 / 2 / 11;
+     text-align: center;
+     padding-bottom: 1.1em;
+}
+
+
+/* Styles for footer */
+
+footer {
+     background-color: #E7ECFF;
+     padding: 1%;
+}
+
+.footer_id {
+     display: inline-block;
+     margin-left: 3em;
+}
+
+footer a {
+     /* text-align: right; */
+     color: #274C77;
+     text-decoration: none;
+     /* margin-left: 35em;
+     margin-right: 3em; */
+}
+
+footer a:hover {
+     color: #6096BA;
+     text-decoration: underline;
+}
+
+
+/* Styling for apply.html specific */
+
+#form_contact {
+     margin-top: 8%;
+}
+
+
+#apply_form_fieldset input:hover {
+     background-color: #E7ECEF;
+}
+
+#apply_form_fieldset label, legend{
+     font-weight: bold;
+}
+
+legend {
+     font-size: 1.2em;
+     border: 1px solid #274C77;
+}
+
+#details_legend {
+     margin-right: 65%;
+}
+
+
+#apply_header {
+     text-align: center;
+     text-decoration: underline;
+     font-size: 2em;
+}
+
+#apply_form_fieldset {
+     margin-left: 10%;
+     margin-right: 10%;
+}
+
+#other_skills {
+     width: 50%;
+}
+
+#job_ref_field {
+     text-align: center;
+}
+
+#job_ref {
+     background-color: #E7ECFF;
+}
+
+#job_ref:hover {
+     border: 2px solid #274C77;
+}
+
+.submit_button {
+     text-align: center;
+     margin-top: 2.5%;
+}
+
+#form_apply_button {
+     font-size: 2em;
+     border: 2px solid #274C77;
+}
+
+#form_apply_button:hover {
+     background-color: #E7ECEF;
+     border: 4px solid #274C77;
+}
+
+/* Grid styling for apply.html */
+.form_grid {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(7, 1fr);
+ }
+     
+ .name_and_dob {
+     grid-column: span 2 / span 2;
+     grid-column-start: 2;
+ }
+ 
+ .gender {
+     grid-column: span 2 / span 2;
+     grid-column-start: 4;
+ }
+ 
+ .address_and_contact {
+     grid-column: span 4 / span 4;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+ 
+ .apply_skills {
+     grid-column: span 4 / span 4;
+     grid-row: span 3 / span 3;
+     grid-column-start: 2;
+     grid-row-start: 4;
+ }
+ 
+ .apply_other_skills {
+     grid-column: span 4 / span 4;
+     grid-column-start: 2;
+     grid-row-start: 7;
+ }
+         
+ /* jobs container and left/right - WA */
+ .jobs-container {
+     display: flex;
+     gap: 30px; /* gap of 30 px between sections */
+     align-items: flex-start; /* Alighned to the top of the container */
+     justify-content: space-between; /* Evenly space out sections */
+     flex-wrap: wrap; /* wrap on small screens */
+   }
+   
+   #left, #right {
+     flex: 1 1 45%; /* makes sections adaptive */
+     box-sizing: border-box; /* borders and padding are now in the element rather than out */
+     padding: 15px; /* Adds padding for the content in each section */
+     border-radius: 8px; /*  rounded corners */
+   }
+
+   #left a {
+     color: green ;
+     text-decoration: none; /* removes bottom line */
+     border: 4px solid green;
+     border-radius: 8px; 
+     display:inline-block; /* border and padding are around text */
+   }
+
+   #right a {
+     color: green ;
+     text-decoration: none;
+     border: 4px solid green;
+     border-radius: 8px;
+     display:inline-block;
+   }
+
+   #left a:hover {
+     background-color: skyblue;
+     border-color: blue;
+     color: black;
+   }
+
+   /* when hovering over the hyperlinks the border and background will change colour*/
+   #right a:hover {
+     background-color: skyblue;
+     border-color: blue; 
+     color: black;
+   }
+
+

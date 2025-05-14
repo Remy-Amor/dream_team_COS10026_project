@@ -1,0 +1,420 @@
+/*
+filename: styles.css
+authors: Remy Amor, William Anthony, Amanuial Ashagrie
+created: 28/3/2025
+last modified: 28/3/2025
+description: refers to index.html, jobs.html, apply.html, about.html
+*/
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles for header - Remy */
+
+
+header {
+    background-color: #E7ECFF;
+}
+
+header a {
+    margin: 2em;
+    color: #274C77;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #6096BA;
+    font-weight: bold;
+}
+
+.grid_header {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 5% 5%;
+
+    /* Text styling */
+    font-size: 1em;
+}
+
+.header_heading {
+    grid-area: 1 / 3 / 1 / 9;
+    text-align: center;
+}
+
+.header_navbar {
+    grid-area: 2 / 1 / 2 / 11;
+    text-align: center;
+    padding-bottom: 1.1em;
+}
+
+/* Styling mission and who we are sections - Aman*/
+
+#about-sections {
+    position: relative;
+    background-color: #e2e8ec;
+    padding: 3em;
+    overflow: hidden;
+}
+
+
+/* Float sections - Aman*/
+#mission {
+    background-color: #A3CEF1;
+    padding: 2em;
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    border-radius: 10px;
+}
+
+#who_we_are {
+    background-color: #A3CEF1;
+    padding: 2em;
+    float: right;
+    width: 48%;
+    margin-left: 4%;
+    border-radius: 10px;
+}
+
+/* First Paragraph Styling - Aman*/
+
+/* Use of Chatgpt - how can I target only the first paragraph in main parent */
+/* Stack overflow - CSS styling for paragraphs */
+main > p:first-of-type {
+    font-size: 1.2em;
+    margin: 1em auto 2em auto;
+    line-height: 1.6em;
+    max-width: 75ch;
+    text-align: justify;
+    color: #333;
+    background-color: #f5f9ff;
+    padding: 1.2em 1.5em;
+    border-left: 4px solid #274C77;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+main > p:first-of-type:hover {
+    background: linear-gradient(145deg, #e7ecff, #dbe9f5);
+    transform: scale(1.01);
+}
+
+/* Servises List Styling - Aman*/
+#heading_toclear{
+    clear: both;
+}
+.services-list {
+    clear: both;
+    list-style: none;
+    padding: 0;
+    margin: 2em 0;
+}
+
+.services-list li {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #f2f7ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.services-list li span {
+    font-size: 1.5em;
+    margin-top: 0.2em;
+}
+
+h1{
+    font-size: 3em; /* Makes it big */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+    color: #274C77; /* Deep blue to match your palette */
+    text-align: center;
+    margin-top: 1em;
+    letter-spacing: 1px; /* Slight spacing for style */
+    font-weight: bold;
+}
+
+#header_heading_font {
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #274C77;
+    text-align: center;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Styles for the value grid (Why Choose us sections) - Amanuial */
+/* Stack overflow - techniques for CSS grid layout and border radius styling*/
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2em;
+    padding: 2em;
+    background-color: #d4dde1;
+    border-radius: 10px;
+    margin: 2em auto;
+    max-width: 1000px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.value-grid div {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.value-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for image and last section */
+
+.logo-cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #a6b8c6, #ffffff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-heading {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #0a66c2;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #0a66c2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #084a9a;
+}
+
+
+
+/* Styles for footer - Remy*/
+
+footer {
+    background-color: #E7ECFF;
+    padding: 1%;
+}
+
+.footer_id {
+    display: inline-block;
+    margin-left: 3em;
+}
+
+footer a {
+    text-align: right;
+    color: #274C77;
+    text-decoration: none;
+    margin-left: 10em;
+    margin-right: 0;
+}
+
+footer a:hover {
+    color: #6096BA;
+    text-decoration: underline;
+}
+
+
+/* Styling for apply.html specific */
+
+#form_contact {
+     margin-top: 8%;
+}
+
+#phone_number_label {
+     margin-left: 18%;
+}
+
+#apply_form_fieldset input:hover {
+     background-color: #E7ECEF;
+}
+
+#apply_form_fieldset label, legend{
+     font-weight: bold;
+}
+
+legend {
+     font-size: 1.2em;
+     border: 1px solid #274C77;
+}
+
+#details_legend {
+     margin-right: 65%;
+}
+
+#postcode_label {
+     margin-left: 42%;
+}
+
+#apply_header {
+     text-align: center;
+     text-decoration: underline;
+     font-size: 2em;
+}
+
+#apply_form_fieldset {
+     margin-left: 10%;
+     margin-right: 10%;
+}
+
+#other_skills {
+     width: 50%;
+}
+
+#job_ref_field {
+     text-align: center;
+}
+
+#job_ref {
+     background-color: #E7ECFF;
+}
+
+#job_ref:hover {
+     border: 2px solid #274C77;
+}
+
+.submit_button {
+     text-align: center;
+     margin-top: 2.5%;
+}
+
+#form_apply_button {
+     font-size: 2em;
+     border: 2px solid #274C77;
+}
+
+#form_apply_button:hover {
+     background-color: #E7ECEF;
+     border: 4px solid #274C77;
+}
+
+/* Grid styling for apply.html */
+.form_grid {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(7, 1fr);
+ }
+     
+ .name_and_dob {
+     grid-column: span 2 / span 2;
+     grid-column-start: 2;
+ }
+ 
+ .gender {
+     grid-column: span 2 / span 2;
+     grid-column-start: 4;
+ }
+ 
+ .address_and_contact {
+     grid-column: span 4 / span 4;
+     grid-row: span 2 / span 2;
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+ 
+ .apply_skills {
+     grid-column: span 4 / span 4;
+     grid-row: span 3 / span 3;
+     grid-column-start: 2;
+     grid-row-start: 4;
+ }
+ 
+ .apply_other_skills {
+     grid-column: span 4 / span 4;
+     grid-column-start: 2;
+     grid-row-start: 7;
+ }
+         
+ /* jobs container and left/right - WA */
+ .jobs-container {
+     display: flex;
+     gap: 30px; /* gap of 30 px between sections */
+     align-items: flex-start; /* Alighned to the top of the container */
+     justify-content: space-between; /* Evenly space out sections */
+     flex-wrap: wrap; /* wrap on small screens */
+   }
+   
+   #left, #right {
+     flex: 1 1 45%; /* makes sections adaptive */
+     box-sizing: border-box; /* borders and padding are now in the element rather than out */
+     padding: 15px; /* Adds padding for the content in each section */
+     border-radius: 8px; /*  rounded corners */
+   }
+
+   #left {
+     border: 3px solid blueviolet;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 8px;
+   }
+
+   #right {
+     border: 3px solid blueviolet;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 8px;
+   }
+
+   #left a {
+     color: green ;
+     text-decoration: none;
+     border: green;
+     border-radius: 8px ; 
+   }
+
+   #right a {
+     color: green ;
+     text-decoration: none;
+     border: green;
+     border-radius: 8px;
+
+   }
+
+   #left a:hover {
+     background-color: skyblue;
+     border-color: blue;
+     color: black;
+   }
+
+   #right a:hover {
+     background-color: skyblue;
+     border-color: blue; 
+     color: black;
+   }
