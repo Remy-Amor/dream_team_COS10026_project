@@ -39,11 +39,6 @@ body {
 
 
 /* ===== Header Styling -  Aman ===== */
-main {
-    padding-top: 10em;
-    padding-left: 2em;
-    padding-right: 2em;
-}
 
 header {
     background-color: #274C77;
@@ -64,13 +59,26 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2em;
+    gap: 2em;
 }
 
+/* Title */
 .header_heading h1 {
     font-size: 2.4em;
     font-weight: bold;
     margin: 0;
     color: white;
+}
+
+.header_heading {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.header_center {
+    flex: 1;
+    text-align: center;  
 }
  
  /* Logo */
@@ -80,17 +88,10 @@ header {
      height: auto;
 }
 
-
-.header_heading {
-  text-align: center;
-  justify-self: center;
-}
-
-/* Title */
-
  .header_contact {
   justify-self: end;
 }
+
  /* Email Button */
 .header_contact a {
     background-color: white;
@@ -114,8 +115,7 @@ header {
  .header_navbar {
     display: flex;
     justify-content: center;
-    gap: 2em;
-    margin-top: 1em;
+    gap: 1.5em;
     flex-wrap: wrap;
 }
 
@@ -129,6 +129,11 @@ header {
  header nav a:hover {
      color: #A3CEF1;
  }
+
+ main {
+    padding-top: 10em;
+}
+
  
  /* ===== Footer Styling - Aman ===== */
  
