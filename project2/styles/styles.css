@@ -29,6 +29,8 @@ description: refers to index.html, jobs.html, apply.html, about.html
      font-style: italic;
 }
 
+
+
 /* Style for whole site */
 body {
      font-family: Montserrat, sans-serif;
@@ -36,68 +38,133 @@ body {
 }
 
 
-/* Styles for header - RA */
+/* ===== Header Styling -  Aman ===== */
 
 header {
-     background-color: #E7ECFF;
+    background-color: #274C77;
+    color: white;
+    padding: 1.5em 0; /* clean vertical spacing */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header a {
-     margin: 2em;
-     color: #274C77;
-     text-decoration: none;
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+    gap: 2em;
 }
 
-header a:hover {
-     color: #6096BA;
-     font-weight: bold;
-}
-
-.grid_header {
-     display: grid;
-     grid-template-columns: repeat(10, 10%);
-     grid-template-rows: 5% 5%;
-
-     /* Text styling */
-     font-size: 1em;
+/* Title */
+.header_heading h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
 }
 
 .header_heading {
-     grid-area: 1 / 3 / 1 / 9;
-     text-align: center;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0;
 }
 
-.header_navbar {
-     grid-area: 2 / 1 / 2 / 11;
-     text-align: center;
-     padding-bottom: 1.1em;
+.header_center {
+    flex: 1;
+    text-align: center;  
+}
+ 
+ /* Logo */
+
+ .header_logo img {
+     max-width: 100px;
+     height: auto;
 }
 
-
-/* Styles for footer */
-
-footer {
-     background-color: #E7ECFF;
-     padding: 1%;
+ .header_contact {
+  justify-self: end;
 }
 
-.footer_id {
-     display: inline-block;
-     margin-left: 3em;
+ /* Email Button */
+.header_contact a {
+    background-color: white;
+    color: #274C77;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
+ .header_contact a:hover {
+     background-color: #A3CEF1;
+     color: #274C77;
+ }
+ 
+ /* Navbar */
+
+
+ .header_navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+=======
 footer a {
      /* text-align: right; */
      color: #274C77;
      text-decoration: none;
      /* margin-left: 35em;
      margin-right: 3em; */
+>>>>>>> main
 }
 
-footer a:hover {
-     color: #6096BA;
-     text-decoration: underline;
+.header_navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
+ 
+ header nav a:hover {
+     color: #A3CEF1;
+ }
+
+ main {
+    padding-top: 10em;
+}
+
+ 
+ /* ===== Footer Styling - Aman ===== */
+ 
+ footer {
+     background-color: #274C77;
+     color: white;
+     padding: 2em;
+     text-align: center;
+     font-weight: bold;
+ }
+ 
+ footer a {
+     color: white;
+     text-decoration: none;
+     margin-left: 1em;
+ }
+ 
+ footer a:hover {
+     color: #A3CEF1;
+     text-decoration: underline;
+ }
+ 
 
 
 /* Styling for apply.html specific */
