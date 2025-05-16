@@ -17,9 +17,6 @@
      <!-- link to page specific css -->
      <link rel="stylesheet" href="styles/about.css">
 
-
-     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
-
 </head>
 <body>
      <?php include 'header.inc'; ?>
@@ -78,8 +75,8 @@
                     </thead>
                     <tr>
                          <th>Remy</th>
-                         <td>Metal Music</td>
-                         <td>Muay Thai</td>
+                         <td>Music</td>
+                         <td>Exercise</td>
                     </tr>
                     <tr>
                          <th>William</th>
