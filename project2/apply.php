@@ -13,7 +13,7 @@
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
-     <link rel="stylesheet" href="styles/aman_styles.css">
+     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
 
 </head>
 <body>

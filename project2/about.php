@@ -13,15 +13,13 @@
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
-<<<<<<<< HEAD:project2/about.php
-     
+
      <!-- link to page specific css -->
      <link rel="stylesheet" href="styles/about.css">
-========
 
-     <link rel="stylesheet" href="styles/aman_styles.css">
 
->>>>>>>> main:project1/about.html
+     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
+
 </head>
 <body>
      <?php include 'header.inc'; ?>

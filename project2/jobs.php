@@ -15,7 +15,7 @@
      <!-- link to jobs.css -->
      <link rel="stylesheet" href="styles/jobs.css">
 
-     <link rel="stylesheet" href="styles/aman_styles.css">
+     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
 </head>
 <body>
      <?php include 'header.inc'; ?>

@@ -13,9 +13,9 @@
             
                 <div class="header_navbar">
                     <nav>
-                            <a href = "index.php">Home Page</a> 
+                            <a href = "index.php">Home</a> 
                             <a href = "jobs.php">Jobs</a> 
-                            <a href = "about.php">About Us</a> 
+                            <a href = "about.php">About</a> 
                             <a href="apply.php">Apply</a>
                     </nav>
                 </div>
