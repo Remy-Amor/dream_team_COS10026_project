@@ -9,4 +9,11 @@
      if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
      }
+
+     function sanitize_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
 ?>
