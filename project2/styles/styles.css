@@ -104,6 +104,7 @@ header {
     transition: background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
  .header_contact a:hover {
      background-color: #A3CEF1;
      color: #274C77;
@@ -117,6 +118,14 @@ header {
     justify-content: center;
     gap: 1.5em;
     flex-wrap: wrap;
+=======
+footer a {
+     /* text-align: right; */
+     color: #274C77;
+     text-decoration: none;
+     /* margin-left: 35em;
+     margin-right: 3em; */
+>>>>>>> main
 }
 
 .header_navbar a {
@@ -278,27 +287,33 @@ legend {
      border-radius: 8px; /*  rounded corners */
    }
 
-   #left {
-     border: 3px solid blueviolet;
-     padding: 10px;
-     margin: 10px;
-     border-radius: 8px;
-   }
-
-   #right {
-     border: 3px solid blueviolet;
-     padding: 10px;
-     margin: 10px;
-     border-radius: 8px;
-   }
-
    #left a {
-     color: red ;
-     text-decoration: none;
+     color: green ;
+     text-decoration: none; /* removes bottom line */
+     border: 4px solid green;
+     border-radius: 8px; 
+     display:inline-block; /* border and padding are around text */
    }
 
    #right a {
-     color: red ;
+     color: green ;
      text-decoration: none;
+     border: 4px solid green;
+     border-radius: 8px;
+     display:inline-block;
    }
+
+   #left a:hover {
+     background-color: skyblue;
+     border-color: blue;
+     color: black;
+   }
+
+   /* when hovering over the hyperlinks the border and background will change colour*/
+   #right a:hover {
+     background-color: skyblue;
+     border-color: blue; 
+     color: black;
+   }
+
 

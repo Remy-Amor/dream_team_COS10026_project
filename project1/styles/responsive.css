@@ -1,0 +1,131 @@
+/*
+filename: about.css
+authors: Remy Amor
+created: 14/4/2025
+last modified: 14/4/2025
+description: refers to all pages about resizing page layout based on screen size
+*/
+
+/* for phone size */
+
+
+@media screen and (max-width: 546px) {
+     /* header styling */
+     .header_heading {
+          font-size: 0.8em;
+          grid-area: 1 / 2 / 1 / 10;
+     }
+
+     .header_navbar {
+          font-size: 0.75em;
+     }
+
+     /* footer styling */
+     footer {
+          font-size: 0.7em;
+     }
+     .footer_id {
+          margin: 0;
+     }
+     
+     footer a {
+          margin: 0;
+          display: inline-block;
+     }
+
+     /* About page */
+
+
+     /* restyled the grid display to fit on screen */
+     .about_grid {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-rows: repeat(9, 1fr);
+          font-size: 0.8em;
+     }
+
+     .headings_and_intro {
+          grid-column: span 4 / span 4;
+          grid-row: span 3 / span 3;
+          grid-column-start: 2;
+          grid-row-start: 1;
+          text-align: center;
+      }
+      
+      .student_id_list {
+          grid-column: span 4 / span 4;
+          grid-row: span 4 / span 4;
+          grid-column-start: 3;
+          grid-row-start: 2;
+          padding-top: 10%;
+
+      }
+      
+      .group_image {
+          grid-column: span 4 / span 4;
+          grid-row: span 2 / span 2;
+          grid-column-start: 2;
+          grid-row-start: 4;
+          margin-top: 5%;
+      }
+      
+      .member_info {
+          grid-column: span 4 / span 4;
+          grid-row: span 4 / span 4;
+          grid-column-start: 2;
+          grid-row-start: 6;
+      }
+      
+      .interests_table {
+          grid-column: span 4 / span 4;
+          grid-row: span 2 / span 2;
+          grid-column-start: 2;
+          grid-row-start: 8;
+          margin-left: 10%;
+      }
+
+      #group_image {
+          float: none;
+          margin-top: 0;
+      }
+
+
+      /* apply page */
+
+      #apply_header {
+          font-size: 1em;
+      }
+
+      #job_ref_field {
+          font-size: 0.8em;
+      }
+
+      /* decided to style with flex display */
+      .form_grid {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          font-size: 0.9em;
+      }
+
+      #postcode_label {
+          margin-left: 0;
+      }
+
+      #phone_number_label {
+          margin-left: 0;
+      }
+
+      #state_and_postcode {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+
+      #form_contact {
+          display: flex;
+          flex-wrap: wrap;
+      }
+}
+
+

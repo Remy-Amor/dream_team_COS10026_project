@@ -10,6 +10,7 @@
      <!-- link to styles.css -->
      <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
+<<<<<<< HEAD:project1/apply.php
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
@@ -17,6 +18,29 @@
 <body>
      <?php include '../project1/header.inc'; ?>
      
+=======
+     <!-- link to responsive css -->
+     <link rel="stylesheet" href="styles/responsive.css">
+     <link rel="stylesheet" href="styles/aman_styles.css">
+
+</head>
+<body>
+          <header>
+               <div class="grid_header">
+                    <div class="header_heading">
+                         <h1>Welcome to Dream Team IT Solutions</h1>
+                    </div>
+                    <div class="header_navbar">
+                         <nav>
+                              <a href = "index.html">Home Page</a> 
+                              <a href = "jobs.html">Jobs</a> 
+                              <a href = "about.html">About Us</a> 
+                              <a href="apply.html">Apply</a>
+                         </nav>
+                    </div>
+               </div>
+          </header>
+>>>>>>> main:project1/apply.html
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
@@ -26,8 +50,8 @@
                               <select name="job_ref" id="job_ref" required>
                                    <!-- Change sample1 and sample2 to the actual job reference numbers -->
                                    <option value="">Select a job reference number</option>
-                                   <option value="sample1">sample1</option>
-                                   <option value="sample2">sample2</option>
+                                   <option value="SE41B">SE41B</option>
+                                   <option value=" NA23X"> NA23X</option>
                               </select>
                          </p>
                <!-- fieldset for details -->
@@ -72,7 +96,7 @@
                               <label for="suburb_or_town">Suburb/town:</label>
                               <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required>
                          </p>
-                         <p>
+                         <p id="state_and_postcode">
                               <label for="state">State:</label>
                               <select name="state" id="state" required>
                                    <option value="">Select a state</option>
@@ -85,14 +109,18 @@
                                    <option value="TAS">TAS</option>
                                    <option value="ACT">ACT</option>
                               </select>
-                              <label for="post_code" id="postcode_label">Postcode:</label>
-                              <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
+                              <div>
+                                   <label for="post_code" id="postcode_label">Postcode:</label>
+                                   <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
+                              </div>
                          </p>
                          <p id="form_contact">
                               <label for="email">Email address:</label>
                               <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
-                              <label for="phone_number" id="phone_number_label">Phone number:</label>
-                              <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
+                              <div>
+                                   <label for="phone_number" id="phone_number_label">Phone number:</label>
+                                   <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
+                              </div>
                          </p>
                     </div>
                     <div class="apply_skills">
@@ -153,8 +181,18 @@
                </div>
           </form>
      </main>
+<<<<<<< HEAD:project1/apply.php
 
 
      <?php include '../project1/footer.inc' ?>
      </body>
 </html>
+=======
+     <footer>  
+          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
+          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
+          <a href="https://github.com/Remy-Amor/dream_team_COS10026_project1">Github Repository</a>
+     </footer>
+</body>
+</html>
+>>>>>>> main:project1/apply.html
