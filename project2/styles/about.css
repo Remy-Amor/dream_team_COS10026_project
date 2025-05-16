@@ -2,100 +2,168 @@
 filename: about.css
 authors: Remy Amor
 created: 11/4/2025
-last modified: 11/4/2025
+last modified: 16/5/2025
 description: refers to about.html
 */
 
-/* grid styles */
-
-
+/* Flex Layout for Main */
 .about_grid {
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: repeat(4, 1fr);
-     gap: 8px;
- }
-     
- .headings_and_intro {
-     grid-column: span 2 / span 2;
-     grid-column-start: 2;
-     grid-row-start: 1;
- }
- 
- .student_id_list {
-     grid-row: span 2 / span 2;
-     grid-column-start: 5;
-     grid-row-start: 1;
-     padding-top: 20%;
- }
- 
- .group_image {
-     grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
-     grid-column-start: 5;
-     grid-row-start: 2;
- }
- 
- .member_info {
-     grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
-     grid-column-start: 2;
-     grid-row-start: 2;
- }
-
- .interests_table {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    margin-top: 20%;
- }
-         
-         
-    
- /*  other styles */
-
- img {
-     float: right;
-     max-width: 90%;
-     margin-right: 20%;
-     margin-top: 20%;
-     border: 2px solid black;
- }
-
- dt {
-     font-weight: bold;
- }
-
- /* table styles */
-
- #interests_table {
-     text-align: center;
-     font-size: 1.2em;
- }
-
-th {
-     font-weight: bold;
- }
-
- td, th {
-     border: 1px solid black;
- }
-
- td {
-     background-color: #ffffff;
- }
-
- th {
-     background-color: #A3CEF1;
- }
-
- td:hover, th:hover {
-     border: 2px solid black;
- }
-
- caption {
-     text-decoration: underline;
- }
-
- 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Common card-like section styling */
+  .about_grid > div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Headings and Intro */
+  .headings_and_intro h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .headings_and_intro h2 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+  }
+  
+  .headings_and_intro p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Tutor and Student List */
+  .student_id_list h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .student_id_list p {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .student_id_list ul {
+    list-style-type: none;
+    padding-left: 1rem;
+  }
+  
+  .student_id_list > ul > li {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .student_id_list ul ul {
+    margin-top: 0.3rem;
+    padding-left: 1rem;
+    font-weight: normal;
+    color: #555;
+  }
+  
+  /* Group Image */
+  .group_image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .group_image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Member Contributions Definition List */
+  .definition-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .definition-list dt {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+  }
+  
+  .definition-list dd {
+    margin-left: 1rem;
+    color: #555;
+  }
+  
+  /* Interests Table */
+  .interests_table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .interests_table caption {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .interests_table th,
+  .interests_table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .interests_table th {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .interests_table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+  }
+  
+  /* Responsive layout */
+  @media (min-width: 768px) {
+    .about_grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .headings_and_intro,
+    .student_id_list,
+    .group_image,
+    .member_info,
+    .interests_table {
+      flex: 1 1 calc(48% - 1rem);
+    }
+  
+    .group_image {
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .headings_and_intro h1 {
+      font-size: 2rem;
+    }
+  
+    .interests_table th,
+    .interests_table td {
+      font-size: 0.95rem;
+    }
+  }

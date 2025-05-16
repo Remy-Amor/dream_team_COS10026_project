@@ -8,7 +8,6 @@
      <meta name="keywords" content="about, group, project, swinburne">
      <title>Dream Team IT Solutions - About</title>
      <!-- link to styles.css -->
-     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
 
      <!-- link to responsive css -->
@@ -16,7 +15,6 @@
 
      <!-- link to page specific css -->
      <link rel="stylesheet" href="styles/about.css">
-
 </head>
 <body>
      <?php include 'header.inc'; ?>
@@ -50,9 +48,9 @@
           <div class="group_image">
                <img id="group_image" src="images/about_me_group_photo.jpg" alt="a group photo of Aman, Remy, and William">
           </div>
-          <div class="member_info">
+          <div class="member_info" >
                <h3>Member Contributions</h3>
-               <dl>
+               <dl class="definition-list">
                     <dt>Remy</dt>
                     <dd>HTML and CSS for apply.html and about.html, group coordinator</dd>
                     
