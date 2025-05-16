@@ -104,7 +104,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-<<<<<<< HEAD
  .header_contact a:hover {
      background-color: #A3CEF1;
      color: #274C77;
@@ -118,14 +117,6 @@ header {
     justify-content: center;
     gap: 1.5em;
     flex-wrap: wrap;
-=======
-footer a {
-     /* text-align: right; */
-     color: #274C77;
-     text-decoration: none;
-     /* margin-left: 35em;
-     margin-right: 3em; */
->>>>>>> main
 }
 
 .header_navbar a {

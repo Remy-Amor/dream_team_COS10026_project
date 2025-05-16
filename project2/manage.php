@@ -1,7 +1,6 @@
 <?php
-require("settings.php");
-
-
+     session_start()
+     require("settings.php");
 ?>
 
 
