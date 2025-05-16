@@ -12,10 +12,10 @@
      <title>Document</title>
 </head>
 <body>
-     <!-- INSERT header inc when implemented -->
+     <?php include("header.inc"); ?>
      <main>
 
      </main>
-     <!-- INSERT footer inc when implemented -->
+     <?php include("footer.inc"); ?>
 </body>
 </html>
