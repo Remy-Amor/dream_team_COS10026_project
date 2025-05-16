@@ -8,19 +8,14 @@
      <meta name="keywords" content="description, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Jobs</title>
      <!-- link to styles.css -->
-     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
-<<<<<<<< HEAD:project2/jobs.php
      <!-- link to jobs.css -->
      <link rel="stylesheet" href="styles/jobs.css">
-========
 
      <link rel="stylesheet" href="styles/aman_styles.css">
-
->>>>>>>> main:project1/jobs.html
 </head>
 <body>
      <?php include 'header.inc'; ?>
@@ -134,14 +129,8 @@
                </aside>
      </main>
 
-<<<<<<<< HEAD:project2/jobs.php
+
      <?php include 'footer.inc'; ?>
-========
-     <footer>
-          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
-          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
-          <a href="https://github.com/Remy-Amor/dream_team_COS10026_project1">Github Repository</a>
-     </footer>
->>>>>>>> main:project1/jobs.html
+
 </body>
 </html>
