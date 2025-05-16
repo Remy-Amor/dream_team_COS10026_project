@@ -29,7 +29,7 @@
           <?php
                $sql = "SELECT * from eoi_tb";
                $result = mysqli_query($conn, $sql);
-               if($result) {
+               if(mysqli_fetch_assoc($result)>0) {
                          echo "<table>";
                          echo "<tr><th>ID</th><th>Make</th><th>Model</th><th>Price</th><th>Year</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
