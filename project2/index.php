@@ -59,27 +59,11 @@
                     <div>💡 <strong>Expert Team</strong><br>Our skilled professionals bring experience, creativity, and technical excellence.</div>
                     <div>📈 <strong>Proven Success</strong><br>We’ve helped businesses streamline operations, enhance security, and scale efficiently.</div>
                </div>
-                
-               <!-- Company logo -->
-                <!-- This logo was generated using Open Ai'a Sora image generator with the prompt " using a dark blue and grey colout scheme produce a logo for a technology administration company using the folling initials W,A,R"-->
-                <!-- Use of ChatGPT - give me Ideas on how to position this image so that it is more visually appealling, how can I position image and the apply now button on the same type of box with pleasing visual -->
-               
-                <div class="logo-cta-wrapper">
-                    <img src="styles/images/logo.png" alt="Company Logo" class="logo-img">
-                    
-                    <div class="cta-content">
-                         <h2 class="cta-heading">Let’s Build Something Great Together 💼</h2>
-                         <a href="apply.html" class="cta-button">Join the Dream Team</a>
-                    </div>
-               </div>
-                
-                
           </div>
      </main>
 
      <!-- Footer with copyright and external link - Aman -->
 
      <?php include 'footer.inc'; ?>
-
 </body>
 </html>

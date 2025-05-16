@@ -94,14 +94,6 @@
                </table>
           </div>
      </main>
-<<<<<<<< HEAD:project2/about.php
      <?php include 'footer.inc'; ?>
-========
-     <footer>  
-          <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
-          <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
-          <a href="https://github.com/Remy-Amor/dream_team_COS10026_project1">Github Repository</a>
-     </footer>
->>>>>>>> main:project1/about.html
 </body>
 </html>
