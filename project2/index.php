@@ -12,11 +12,8 @@
      <!-- link to styles.css -->
      <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
+     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
 
-<<<<<<<< HEAD:project2/index.php
-========
-     <link rel="stylesheet" href="styles/aman_styles.css">
->>>>>>>> main:project1/index.html
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
 </head>
