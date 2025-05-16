@@ -8,7 +8,17 @@
      <meta name="keywords" content="application, IT, software, software development, network, network administrator, jobs">
      <title>Dream Team IT Solutions - Apply</title>
      <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
+<<<<<<< HEAD:project1/apply.php
+
+     <!-- link to responsive css -->
+     <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+     <?php include '../project1/header.inc'; ?>
+     
+=======
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
      <link rel="stylesheet" href="styles/aman_styles.css">
@@ -30,6 +40,7 @@
                     </div>
                </div>
           </header>
+>>>>>>> main:project1/apply.html
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
@@ -170,6 +181,13 @@
                </div>
           </form>
      </main>
+<<<<<<< HEAD:project1/apply.php
+
+
+     <?php include '../project1/footer.inc' ?>
+     </body>
+</html>
+=======
      <footer>  
           <p class="footer_id">&copy; 2023 Dream Team IT Solutions. All rights reserved.</p>
           <a href="https://remyoliverjack.atlassian.net/jira/software/projects/CWTDTGP1/boards/34">Jira Project Management</a>
@@ -177,3 +195,4 @@
      </footer>
 </body>
 </html>
+>>>>>>> main:project1/apply.html
