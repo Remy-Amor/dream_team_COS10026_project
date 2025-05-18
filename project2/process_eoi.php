@@ -25,7 +25,7 @@
         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, street_address, suburb_town, state, post_code, email, phone_number, network_admin_skills, software_developer_skills, other_skills) VALUES ('$job_ref_no', '$first_name', '$last_name', '$street_address', '$suburb_town', '$state', '$post_code', '$email', '$phone_number', '$network_admin_skills', '$software_developer_skills', '$other_skills')";
     }
 
-    
+    $eoi_number = "SELECT EOInumber FROM eoi_tb WHERE firs_name LIKE '%$first_name%'";
 ?>
 
 <!DOCTYPE html>
