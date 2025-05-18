@@ -31,7 +31,10 @@
                $result = mysqli_query($conn, $sql);
                if(mysqli_fetch_assoc($result)>0) {
                          echo "<table>";
-                         echo "<tr><th>ID</th><th>Make</th><th>Model</th><th>Price</th><th>Year</th></tr>";
+                         echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
+                              <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th><th>email</th>
+                              <th>Phone number</th><th>Network admin skills</th><th>Software developer skills</th>
+                              <th>Other skills</th><th>status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
                          echo "<tr>";
                          echo "<td>" . $row['EOInumber'] . "</td>";
