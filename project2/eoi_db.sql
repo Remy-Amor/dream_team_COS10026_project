@@ -32,6 +32,8 @@ CREATE TABLE `eoi_tb` (
   `job_ref_no` varchar(5) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
+  'dob' date NOT NULL,
+  `gender` ENUM('male', 'female', 'other') NOT NULL,
   `street_address` varchar(50) NOT NULL,
   `suburb_town` varchar(50) NOT NULL,
   `state` varchar(20) NOT NULL,

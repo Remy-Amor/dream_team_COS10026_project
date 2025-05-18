@@ -8,6 +8,8 @@
         $job_ref_no = sanitize_input($_POST["job_ref"]);
         $first_name = sanitize_input($_POST["first_name"]);
         $last_name = sanitize_input($_POST["last_name"]);
+        $dob = sanitize_input($_POST["date_of_birth"]);
+        $gender = sanitize_input($_POST["gender"]);
         $street_address = sanitize_input($_POST["street_address"]);
         $suburb_town = sanitize_input($_POST["suburb_or_town"]);
         $state = sanitize_input($_POST["state"]);
