@@ -32,8 +32,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Message</title>
+    <!-- link to styles.css -->
+     <link rel="stylesheet" href="project1/styles/styles.css">
+     <link rel="stylesheet" href="styles/styles.css">
+
+     <!-- link to responsive css -->
+     <link rel="stylesheet" href="styles/responsive.css">
+     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
 </head>
 <body>
-    <p>Your interest has been Successfully Saved!!</p>
+    <?php include 'header.inc';?>
+
+    <h2>Thank you for your application!</h2>
+    <p>Your Expression of Interest has been recorded successfully.</p>
+    <p>Your EOInumber is: <strong>" . htmlspecialchars($eoi_number) . "</strong></p>
+    <p><a href='manage.php'>Go to Manage Page</a></p>
+    <?php include 'footer.inc';?>
 </body>
 </html>
