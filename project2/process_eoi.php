@@ -49,8 +49,8 @@
         <h2>Thank you for your application!</h2>
         <p>Your Expression of Interest has been recorded successfully.</p>
         <p>Your EOInumber is: <strong>" . htmlspecialchars($eoi_number) . "</strong></p>
-        <?php include 'footer.inc';?>
 
     </main>
+    <?php include 'footer.inc';?>
 </body>
 </html>
