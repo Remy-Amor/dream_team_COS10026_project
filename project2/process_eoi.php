@@ -2,6 +2,7 @@
      session_start();
      require("settings.php");
 
+     
     // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Sanitize and validate input data
@@ -23,9 +24,16 @@
         
         // Insert data into the database
         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, dob, gender, street_address, suburb_town, state, post_code, email, phone_number, network_admin_skills, software_developer_skills, other_skills) VALUES ('$job_ref_no', '$first_name', '$last_name', '$dob', '$gender', '$street_address', '$suburb_town', '$state', '$post_code', '$email', '$phone_number', '$network_admin_skills', '$software_developer_skills', '$other_skills')";
-        echo "Hello";
+        echo 'Hello';            
+        echo "Hello<br>";        
+        echo "Hello ";
     }
 
+    if (mysqli_query($conn, $sql)) {
+        echo "Insert successful<br>";
+    } else {
+        echo "Insert failed: " . mysqli_error($conn) . "<br>";
+    }
     $sql = "SELECT EOInumber FROM eoi_tb WHERE first_name LIKE '%$first_name%' ORDER BY EOInumber DESC LIMIT 1";
     $result = mysqli_query($conn, $sql);
 
