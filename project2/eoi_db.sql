@@ -35,7 +35,7 @@ CREATE TABLE `eoi_tb` (
   `street_address` varchar(50) NOT NULL,
   `suburb_town` varchar(50) NOT NULL,
   `state` varchar(20) NOT NULL,
-  `postcode` int(4) NOT NULL,
+  `post_code` int(4) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone_number` varchar(50) NOT NULL,
   `network_admin_skills` tinyint(1) NOT NULL,
