@@ -39,11 +39,11 @@
                          <legend id="details_legend">Your Details</legend>
                          <p>
                               <label for="first_name">First Name:</label>
-                              <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
+                              <input type="text" id="first_name" name="first_name" pattern="^[A-Za-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="last_name">Last Name:</label>
-                              <input type="text" id="last_name" name="last_name" pattern="^[a-z]{1,20}$" required>
+                              <input type="text" id="last_name" name="last_name" pattern="^[A-Za-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="date_of_birth">Date of birth:</label>

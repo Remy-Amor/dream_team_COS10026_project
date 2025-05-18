@@ -24,6 +24,8 @@
         // Insert data into the database
         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, street_address, suburb_town, state, post_code, email, phone_number, network_admin_skills, software_developer_skills, other_skills) VALUES ('$job_ref_no', '$first_name', '$last_name', '$street_address', '$suburb_town', '$state', '$post_code', '$email', '$phone_number', '$network_admin_skills', '$software_developer_skills', '$other_skills')";
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +45,12 @@
 <body>
     <?php include 'header.inc';?>
 
-    <h2>Thank you for your application!</h2>
-    <p>Your Expression of Interest has been recorded successfully.</p>
-    <p>Your EOInumber is: <strong>" . htmlspecialchars($eoi_number) . "</strong></p>
-    <?php include 'footer.inc';?>
+    <main>
+        <h2>Thank you for your application!</h2>
+        <p>Your Expression of Interest has been recorded successfully.</p>
+        <p>Your EOInumber is: <strong>" . htmlspecialchars($eoi_number) . "</strong></p>
+        <?php include 'footer.inc';?>
+
+    </main>
 </body>
 </html>
