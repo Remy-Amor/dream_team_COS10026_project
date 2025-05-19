@@ -36,7 +36,7 @@
                          echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
                          <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th>
                          <th>email</th><th>Phone number</th><th>Network admin skills</th>
-                         <th>Software developer skills</th><th>Other skills</th><th>status</th></tr>";
+                         <th>Software developer skills</th><th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
                          echo "<tr>
                          <td>" . $row['EOInumber'] . "</td>"
@@ -53,6 +53,15 @@
                          . "<td>" . $row['software_developer_skills'] . "</td>"
                          . "<td>" . $row['other_skills'] . "</td>"
                          . "<td>" . $row['status'] . "</td>"
+                         . "<td> <form action='change_eoi.php' method='post'>
+               <select name='status' id='status' required>
+                    <option value=''>Change Status</option>
+                    <option value='New'>New</option>
+                    <option value='Current'>Current</option>
+                    <option value='Final'>Final</option>
+               </select>
+               <input type='submit' value='change'> 
+          </form> </td>"
                          . "</tr>";
                     }
                      echo "</table></div>";
@@ -60,6 +69,7 @@
                     echo "<h3>No Records Found</h3>";
                }
           ?>
+          
      </main>
      <?php include("footer.inc"); ?>
 </body>
