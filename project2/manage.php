@@ -52,7 +52,7 @@
                          . "<td>" . $row['network_admin_skills'] . "</td>"
                          . "<td>" . $row['software_developer_skills'] . "</td>"
                          . "<td>" . $row['other_skills'] . "</td>"
-                         . "<td>" . $row['status'] . "</td>"
+                         . "<td>" . $row['eoi_status'] . "</td>"
                          . "<td> <form action='change_eoi.php' method='post' novalidate='novalidate'>
                               <select name='status' id='status' required>
                                    <option value=''>Change Status</option>
@@ -60,6 +60,7 @@
                                    <option value='Current'>Current</option>
                                    <option value='Final'>Final</option>
                               </select>
+                              <input type='hidden' name='EOInumber' value='" . $row['EOInumber'] . "'>
                               <input type='submit' value='change'> 
                          </form> </td>"
                          . "</tr>";
