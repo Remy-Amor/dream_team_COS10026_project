@@ -19,6 +19,8 @@
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
+     <!-- link to manage_styles.css -->
+     <link rel="stylesheet" href="styles/manage_styles.css">
      <title>Manage</title>
 </head>
 <body>
@@ -32,7 +34,9 @@
                if(mysqli_num_rows($result)>0) {
                          echo "<table>";
                          echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
-                              <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th></tr>";
+                         <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th>
+                         <th>email</th><th>Phone number</th><th>Network admin skills</th>
+                         <th>Software developer skills</th><th>Other skills</th><th>status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
                          echo "<tr>"
                          . "<td>" . $row['EOInumber'] . "</td>"
@@ -44,9 +48,7 @@
                          . "<td>" . $row['state'] . "</td>"
                          . "<td>" . $row['postcode'] . "</td>"
                          . "</tr>" . "<tr><th>email</th>
-                         <th>Phone number</th><th>Network admin skills</th><th>Software developer skills</th>
-                         <th>Other skills</th><th>status</th></tr><tr>"
-                         . "<td>" . $row['email'] . "</td>"
+                         . <td>" . $row['email'] . "</td>"
                          . "<td>" . $row['phone_number'] . "</td>"
                          . "<td>" . $row['network_admin_skills'] . "</td>"
                          . "<td>" . $row['software_developer_skills'] . "</td>"
