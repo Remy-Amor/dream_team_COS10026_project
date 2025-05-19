@@ -19,6 +19,8 @@
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
+     <!-- link to manage_styles.css -->
+     <link rel="stylesheet" href="styles/manage_styles.css">
      <title>Manage</title>
 </head>
 <body>
@@ -30,34 +32,45 @@
                $sql = "SELECT * from eoi_tb";
                $result = mysqli_query($conn, $sql);
                if(mysqli_num_rows($result)>0) {
-                         echo "<table>";
+                         echo "<div class='table-wrapper'><table>";
                          echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
-                              <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th><th>email</th>
-                              <th>Phone number</th><th>Network admin skills</th><th>Software developer skills</th>
-                              <th>Other skills</th><th>status</th></tr>";
+                         <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th>
+                         <th>email</th><th>Phone number</th><th>Network admin skills</th>
+                         <th>Software developer skills</th><th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
-                         echo "<tr>"
-                         . "<td>" . $row['EOInumber'] . "</td>"
+                         echo "<tr>
+                         <td>" . $row['EOInumber'] . "</td>"
                          . "<td>" . $row['job_ref_no'] . "</td>"
                          . "<td>" . $row['first_name'] . "</td>"
                          . "<td>" . $row['last_name'] . "</td>"
                          . "<td>" . $row['street_address'] . "</td>"
                          . "<td>" . $row['suburb_town'] . "</td>"
                          . "<td>" . $row['state'] . "</td>"
-                         . "<td>" . $row['postcode'] . "</td>"
-                         . "<td>" . $row['email'] . "</td>"
+                         . "<td>" . $row['postcode'] . "</td>
+                         <td>" . $row['email'] . "</td>"
                          . "<td>" . $row['phone_number'] . "</td>"
                          . "<td>" . $row['network_admin_skills'] . "</td>"
                          . "<td>" . $row['software_developer_skills'] . "</td>"
                          . "<td>" . $row['other_skills'] . "</td>"
-                         . "<td>" . $row['status'] . "</td>"
+                         . "<td>" . $row['eoi_status'] . "</td>"
+                         . "<td> <form action='change_eoi.php' method='post' novalidate='novalidate'>
+                              <select name='status' id='status' required>
+                                   <option value=''>Change Status</option>
+                                   <option value='New'>New</option>
+                                   <option value='Current'>Current</option>
+                                   <option value='Final'>Final</option>
+                              </select>
+                              <input type='hidden' name='EOInumber' value='" . $row['EOInumber'] . "'>
+                              <input type='submit' value='change'> 
+                         </form> </td>"
                          . "</tr>";
                     }
-                     echo "</table>";
+                     echo "</table></div>";
                } else {
                     echo "<h3>No Records Found</h3>";
                }
           ?>
+          
      </main>
      <?php include("footer.inc"); ?>
 </body>
