@@ -2,16 +2,36 @@
      session_start();
      require("settings.php");
 
+     function isValidName($name) {
+    // Check if the name contains only letters and is 1 to 20 characters long
+    if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
+        return $name; // Valid input returne
+    }
+
+    return false; // Invalid input
+    }
+
+    function isValidStreetAddress($address) {
+    // Regex: allows letters (a-zA-Z), numbers (0-9), commas, spaces; length 1 to 40
+    if (preg_match("/^[a-zA-Z0-9, ]{1,40}$/", $address)) {
+        return $address;
+    }
+
+    return false;
+    }
+
+
+
      
     // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Sanitize and validate input data
         $job_ref_no = sanitize_input($_POST["job_ref"]);
-        $first_name = sanitize_input($_POST["first_name"]);
-        $last_name = sanitize_input($_POST["last_name"]);
+        $first_name = isValidName(sanitize_input($_POST["first_name"]));
+        $last_name = isValidName(sanitize_input($_POST["last_name"]));
         $dob = sanitize_input($_POST["date_of_birth"]);
         $gender = sanitize_input($_POST["gender"]);
-        $street_address = sanitize_input($_POST["street_address"]);
+        $street_address = isValidStreetAddress(sanitize_input($_POST["street_address"]));
         $suburb_town = sanitize_input($_POST["suburb_or_town"]);
         $state = sanitize_input($_POST["state"]);
         $post_code = sanitize_input($_POST["post_code"]);
