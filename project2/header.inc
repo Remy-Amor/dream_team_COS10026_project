@@ -19,10 +19,6 @@
                 </nav>
             </div>
         </div>
-
-        <div class="header_contact">
-            <a href="mailto:105871858@student.swin.edu.au">Email Us</a>
-        </div>
     </div>
     
 </header>
