@@ -74,7 +74,6 @@ header {
   text-align: center;
   flex-grow: 1;
   margin: 0;
-  word-spacing: normal;
 }
 
 .header_center {
@@ -85,7 +84,7 @@ header {
  /* Logo */
 
  .header_logo img {
-     width: 350px;
+     width: 150px;
      height: auto;
 }
 
@@ -113,10 +112,11 @@ header {
  /* Navbar */
 
 
+ /* Use of Gen AI to generate method of creating gaps between links based on window size - clamp() */
  .header_navbar {
     display: flex;
     justify-content: center;
-    gap: 1.5em;
+    gap: clamp(1em, 5vw, 4em);
     flex-wrap: wrap;
 }
 
