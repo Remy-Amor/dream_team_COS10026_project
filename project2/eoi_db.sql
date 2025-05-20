@@ -42,18 +42,16 @@ CREATE TABLE `eoi_tb` (
   `software_developer_skills` tinyint(1) NOT NULL,
   `other_skills` varchar(300) DEFAULT NULL,
   `eoi_status` varchar(10) NOT NULL DEFAULT 'New',
-  `gender` enum('male','female','other') NOT NULL,
-  `dob` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `eoi_tb`
 --
 
-INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `post_code`, `email`, `phone_number`, `network_admin_skills`, `software_developer_skills`, `other_skills`, `status`, `gender`, `dob`) VALUES
-(2, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New', 'other', '0002-01-01'),
-(3, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New', 'other', '0002-01-01'),
-(4, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New', 'other', '0002-01-01');
+INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `post_code`, `email`, `phone_number`, `network_admin_skills`, `software_developer_skills`, `other_skills`, `status`) VALUES
+(2, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New'),
+(3, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New'),
+(4, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New');
 
 -- --------------------------------------------------------
 

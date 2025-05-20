@@ -14,8 +14,8 @@
         $street_address = sanitize_input($_POST["street_address"]);
         $suburb_town = sanitize_input($_POST["suburb_or_town"]);
         $state = sanitize_input($_POST["state"]);
-        $postcode = sanitize_input($_POST["postcode"]);
-        $email = filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $post_code = sanitize_input($_POST["post_code"]);
+        $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
         $phone_number = sanitize_input($_POST["phone_number"]);
         $network_admin_skills = isset($_POST['skills']);
         $software_developer_skills = isset($_POST['skills']);
