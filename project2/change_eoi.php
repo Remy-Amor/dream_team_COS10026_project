@@ -38,11 +38,11 @@
                          $record = $_POST['EOInumber'];
                          $sql = "UPDATE eoi_tb SET eoi_status = '$new_status' WHERE EOInumber = '$record'";
                          if (mysqli_query($conn, $sql)) {
-                              echo "Record updated successfully";
+                              header("Location: manage.php");
                           } else {
                               echo "Error: " . mysqli_error($conn);
                           }
-                         header("Location: manage.php");
+                         
                     }
                }
 
