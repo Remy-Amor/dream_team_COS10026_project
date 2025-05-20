@@ -150,9 +150,10 @@ header {
      text-align: center;
      font-weight: bold;
 
-     position: relative;    /* reset if you had fixed/absolute */
-    margin-top: auto;      /* push footer down if possible */
-    clear: both;
+     position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
  }
  
  footer a {
@@ -166,8 +167,8 @@ header {
      text-decoration: underline;
  }
  
-body > *:not(footer) {
-    flex-grow: 1; /* force content to grow and push footer down */
+body {
+    padding-bottom: 100px; /* Adjust this if your footer height changes */
 }
 
 /* Styling for apply.html specific */
