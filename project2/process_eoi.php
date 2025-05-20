@@ -2,32 +2,38 @@
      session_start();
      require("settings.php");
 
-     function isValidName($name) {
-    // Check if the name contains only letters and is 1 to 20 characters long
-    if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
-        return $name; 
-    }
 
-    return false;
+
+     // Use of AI to generate the following Validation Functions
+    function isValidName($name) {
+        if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
+            return $name; 
+        }
+
+        return false;
     }
 
     function isValidStreetAddress($address) {
-    // Regex: allows letters (a-zA-Z), numbers (0-9), commas, spaces; length 1 to 40
-    if (preg_match("/^[a-zA-Z0-9, ]{1,40}$/", $address)) {
-        return $address;
-    }
+        if (preg_match("/^[a-zA-Z0-9, ]{1,40}$/", $address)) {
+            return $address;
+        }
 
-    return false;
+        return false;
     }
 
     function isValidSuburbTown($suburb) {
-    if (preg_match("/^[a-zA-Z ]{1,40}$/", $suburb)) {
-        return $suburb;
-    }
-    return false;
+        if (preg_match("/^[a-zA-Z ]{1,40}$/", $suburb)) {
+            return $suburb;
+        }
+        return false;
     }
 
-
+    function validatePhoneNumber($phone) {
+        if (preg_match('/^[\d ]{8,12}$/', $phone)) {
+            return $phone;
+        }
+        return false;
+    }
 
 
      
@@ -44,11 +50,16 @@
         $state = sanitize_input($_POST["state"]);
         $post_code = sanitize_input($_POST["post_code"]);
         $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
-        $phone_number = sanitize_input($_POST["phone_number"]);
+        $phone_number = validatePhoneNumber(sanitize_input($_POST["phone_number"]));
         $network_admin_skills = isset($_POST['skills']);
         $software_developer_skills = isset($_POST['skills']);
         $other_skills = sanitize_input($_POST["other_skills"]);
 
+
+        if ($firstName === false || $lastName === false || $suburb === false || $email === false || $phone === false) {
+            header('Location: error_page.php');
+            exit();
+        }
         
         // Insert data into the database
         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, street_address, suburb_town, state, postcode, email, phone_number, network_admin_skills, software_developer_skills, other_skills) VALUES ('$job_ref_no', '$first_name', '$last_name', '$street_address', '$suburb_town', '$state', '$postcode', '$email', '$phone_number', '$network_admin_skills', '$software_developer_skills', '$other_skills')";
