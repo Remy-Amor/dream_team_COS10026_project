@@ -29,8 +29,12 @@ description: refers to index.html, jobs.html, apply.html, about.html
      font-style: italic;
 }
 
-header, .header_top, .header_navbar, .header_logo, .header_heading {
+ .header_top, .header_navbar, .header_logo, .header_heading {
     outline: 1px solid red;
+}
+
+header{
+     outline: 1px solid blue;
 }
 
 
