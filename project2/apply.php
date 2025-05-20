@@ -21,7 +21,7 @@
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
-          <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="apply_form" novalidate="novalidate">
+          <form action="process_eoi.php" method="POST" id="apply_form">
                          <p id="job_ref_field">
                               <label for="job_ref">Job Reference Number:</label>
                               <select name="job_ref" id="job_ref" required>
@@ -39,11 +39,11 @@
                          <legend id="details_legend">Your Details</legend>
                          <p>
                               <label for="first_name">First Name:</label>
-                              <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
+                              <input type="text" id="first_name" name="first_name" pattern="^[A-Za-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="last_name">Last Name:</label>
-                              <input type="text" id="last_name" name="last_name" pattern="^[a-z]{1,20}$" required>
+                              <input type="text" id="last_name" name="last_name" pattern="^[A-Za-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="date_of_birth">Date of birth:</label>
