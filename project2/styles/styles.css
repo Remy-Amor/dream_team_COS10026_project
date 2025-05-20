@@ -121,7 +121,7 @@ header {
  .header_navbar {
      display: flex;
     justify-content: center;
-    gap: clamp(2em, 5vw, 5em);
+    padding: 0 2em;
     flex-wrap: wrap;
 }
 
