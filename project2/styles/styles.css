@@ -87,6 +87,10 @@ header {
  .header_logo img {
      width: 150px;
      height: auto;
+     max-height: 100%;
+     overflow-y: auto;
+     flex-wrap: nowrap;  
+     display: flex;
 }
 
  .header_contact {
@@ -115,7 +119,10 @@ header {
 
  /* Use of Gen AI to generate method of creating gaps between links based on window size - clamp() */
  .header_navbar {
-    display: flex;
+     max-height: 100%;
+     overflow-y: auto;
+     flex-wrap: nowrap;  
+     display: flex;
     justify-content: center;
     gap: clamp(2em, 5vw, 5em);
     flex-wrap: wrap;
