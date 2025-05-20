@@ -29,6 +29,9 @@ description: refers to index.html, jobs.html, apply.html, about.html
      font-style: italic;
 }
 
+header, .header_top, .header_navbar, .header_logo, .header_heading {
+    outline: 1px solid red;
+}
 
 
 /* Style for whole site */
@@ -49,7 +52,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    max-height: 250px;
+    max-height: 150px;
+    overflow: hidden;
 }
 
 
@@ -119,9 +123,6 @@ header {
 
  /* Use of Gen AI to generate method of creating gaps between links based on window size - clamp() */
  .header_navbar {
-     max-height: 100%;
-     overflow-y: auto;
-     flex-wrap: nowrap;  
      display: flex;
     justify-content: center;
     gap: clamp(2em, 5vw, 5em);
