@@ -149,6 +149,10 @@ header {
      padding: 2em;
      text-align: center;
      font-weight: bold;
+
+     position: relative;    /* reset if you had fixed/absolute */
+    margin-top: auto;      /* push footer down if possible */
+    clear: both;
  }
  
  footer a {
