@@ -35,13 +35,13 @@ CREATE TABLE `eoi_tb` (
   `street_address` varchar(50) NOT NULL,
   `suburb_town` varchar(50) NOT NULL,
   `state` varchar(20) NOT NULL,
-  `post_code` varchar(4) DEFAULT NULL,
+  `postcode` varchar(4) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `phone_number` varchar(50) NOT NULL,
   `network_admin_skills` tinyint(1) NOT NULL,
   `software_developer_skills` tinyint(1) NOT NULL,
   `other_skills` varchar(300) DEFAULT NULL,
-  `status` varchar(10) NOT NULL DEFAULT 'New',
+  `eoi_status` varchar(10) NOT NULL DEFAULT 'New',
   `gender` enum('male','female','other') NOT NULL,
   `dob` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
