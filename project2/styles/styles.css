@@ -85,7 +85,7 @@ header {
  /* Logo */
 
  .header_logo img {
-     width: 150px;
+     width: 100px;
      height: auto;
      max-height: 100%;
      overflow-y: auto;
