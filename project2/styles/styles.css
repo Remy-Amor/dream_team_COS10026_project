@@ -150,12 +150,8 @@ header {
      text-align: center;
      font-weight: bold;
 
-     body {
-    padding-bottom: 100px; /* Adjust this if your footer height changes */
-     }
-     position: fixed;
+     position: sticky;
     bottom: 0;
-    left: 0;
     width: 100%;
  }
  
@@ -170,7 +166,6 @@ header {
      text-decoration: underline;
  }
  
-
 
 /* Styling for apply.html specific */
 
