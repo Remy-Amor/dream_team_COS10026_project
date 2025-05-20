@@ -21,7 +21,7 @@
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
-          <form action="process_eoi.php" method="POST" id="apply_form">
+          <form action="process_eoi.php" method="POST" id="apply_form" novalidate="novalidate">
                          <p id="job_ref_field">
                               <label for="job_ref">Job Reference Number:</label>
                               <select name="job_ref" id="job_ref" required>
