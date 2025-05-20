@@ -38,6 +38,8 @@
                          <th>email</th><th>Phone number</th><th>Network admin skills</th>
                          <th>Software developer skills</th><th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
+                         $network_admin = $row['network_admin_skills'] ? 'true' : 'false';
+                         $software_development = $row['software_developer_skills'] ? 'true' : 'false';
                          echo "<tr>
                          <td>" . $row['EOInumber'] . "</td>"
                          . "<td>" . $row['job_ref_no'] . "</td>"
@@ -49,8 +51,8 @@
                          . "<td>" . $row['postcode'] . "</td>
                          <td>" . $row['email'] . "</td>"
                          . "<td>" . $row['phone_number'] . "</td>"
-                         . "<td>" . $row['network_admin_skills'] . "</td>"
-                         . "<td>" . $row['software_developer_skills'] . "</td>"
+                         . "<td>" . $network_admin . "</td>"
+                         . "<td>" . $software_development . "</td>"
                          . "<td>" . $row['other_skills'] . "</td>"
                          . "<td>" . $row['eoi_status'] . "</td>"
                          . "<td> <form action='change_eoi.php' method='post' novalidate='novalidate'>
@@ -70,6 +72,29 @@
                     echo "<h3>No Records Found</h3>";
                }
           ?>
+
+          <h3>Make a Query</h3>
+          <h4 class="query-header">Display based on Job Reference Number</h4>
+          <form action="manage_results.php" method="post">
+               <label for="job_ref_search">Job Reference:</label>
+               <select name="job_ref_search" id="job_ref_search" required>
+                    <option value="">Select a job reference number</option>
+                    <option value="SE41B">SE41B</option>
+                    <option value=" NA23X"> NA23X</option>
+               </select>
+               <input type="submit" value="submit">
+          </form>
+          <br>
+          <h4 class="query-header">Display from name</h4>
+          <form action="manage_results.php" method="post">
+               <label for="job_ref_search">Job Reference:</label>
+               <select name="job_ref_search" id="job_ref_search" required>
+                    <option value="">Select a job reference number</option>
+                    <option value="SE41B">SE41B</option>
+                    <option value=" NA23X"> NA23X</option>
+               </select>
+               <input type="submit" value="submit">
+          </form>
           
      </main>
      <?php include("footer.inc"); ?>
