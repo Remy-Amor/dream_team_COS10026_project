@@ -149,10 +149,7 @@ header {
      padding: 2em;
      text-align: center;
      font-weight: bold;
-
-     position: sticky;
-    bottom: 0;
-    width: 100%;
+     width: 100%;
  }
  
  footer a {
@@ -165,6 +162,17 @@ header {
      color: #A3CEF1;
      text-decoration: underline;
  }
+
+ body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
  
 
 /* Styling for apply.html specific */
