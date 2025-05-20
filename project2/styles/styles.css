@@ -116,8 +116,6 @@ header {
  
  /* Navbar */
 
-
- /* Use of Gen AI to generate method of creating gaps between links based on window size - clamp() */
  .header_navbar {
      display: flex;
     justify-content: center;
@@ -125,6 +123,7 @@ header {
     flex-wrap: wrap;
 }
 
+ /* Use of Gen AI to generate method of creating gaps between links based on window size - margin: 0 1vw */
 .header_navbar a {
     color: white;
     text-decoration: none;
@@ -163,7 +162,9 @@ header {
      text-decoration: underline;
  }
  
-
+body > *:not(footer) {
+    flex-grow: 1; /* force content to grow and push footer down */
+}
 
 /* Styling for apply.html specific */
 
