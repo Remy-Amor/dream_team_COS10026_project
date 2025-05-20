@@ -21,16 +21,16 @@
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
-          <form action="process_eoi.php" method="POST" id="apply_form" novalidate="novalidate">
-                         <p id="job_ref_field">
-                              <label for="job_ref">Job Reference Number:</label>
-                              <select name="job_ref" id="job_ref" required>
-                                   <!-- Change sample1 and sample2 to the actual job reference numbers -->
-                                   <option value="">Select a job reference number</option>
-                                   <option value="SE41B">SE41B</option>
-                                   <option value=" NA23X"> NA23X</option>
-                              </select>
-                         </p>
+          <form action="process_eoi.php" method="POST" id="apply_form" novalidate>
+               <p id="job_ref_field">
+                    <label for="job_ref">Job Reference Number:</label>
+                    <select name="job_ref" id="job_ref" required>
+                         <!-- Change sample1 and sample2 to the actual job reference numbers -->
+                         <option value="">Select a job reference number</option>
+                         <option value="SE41B">SE41B</option>
+                         <option value=" NA23X"> NA23X</option>
+                    </select>
+               </p>
                <!-- fieldset for details -->
                <fieldset id="apply_form_fieldset">
                     <!-- below is grid div -->
