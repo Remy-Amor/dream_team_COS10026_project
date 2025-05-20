@@ -5,10 +5,10 @@
      function isValidName($name) {
     // Check if the name contains only letters and is 1 to 20 characters long
     if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
-        return $name; // Valid input returne
+        return $name; 
     }
 
-    return false; // Invalid input
+    return false;
     }
 
     function isValidStreetAddress($address) {
@@ -19,6 +19,14 @@
 
     return false;
     }
+
+    function isValidSuburbTown($suburb) {
+    if (preg_match("/^[a-zA-Z ]{1,40}$/", $suburb)) {
+        return $suburb;
+    }
+    return false;
+    }
+
 
 
 
@@ -32,7 +40,7 @@
         $dob = sanitize_input($_POST["date_of_birth"]);
         $gender = sanitize_input($_POST["gender"]);
         $street_address = isValidStreetAddress(sanitize_input($_POST["street_address"]));
-        $suburb_town = sanitize_input($_POST["suburb_or_town"]);
+        $suburb_town = isValidSuburbTown(sanitize_input($_POST["suburb_or_town"]));
         $state = sanitize_input($_POST["state"]);
         $post_code = sanitize_input($_POST["post_code"]);
         $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
