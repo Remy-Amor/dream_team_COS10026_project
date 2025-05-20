@@ -74,6 +74,7 @@ header {
   text-align: center;
   flex-grow: 1;
   margin: 0;
+  word-spacing: normal;
 }
 
 .header_center {
@@ -84,7 +85,7 @@ header {
  /* Logo */
 
  .header_logo img {
-     max-width: 100px;
+     width: 350px;
      height: auto;
 }
 

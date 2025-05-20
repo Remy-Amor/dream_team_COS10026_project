@@ -3,7 +3,7 @@
 
         <div class="header_top">
             <div class="header_logo">
-                    <img src="images/logo_transparent.png" alt="Company Logo">
+                    <img src="../project2/styles/images/logo_transparent.png" alt="Company Logo">
             </div>
 
             <div class="header_center">
