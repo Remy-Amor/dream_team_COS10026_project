@@ -84,6 +84,17 @@
                </select>
                <input type="submit" value="submit">
           </form>
+          <br>
+          <h4 class="query-header">Display from name</h4>
+          <form action="manage_results.php" method="post">
+               <label for="job_ref_search">Job Reference:</label>
+               <select name="job_ref_search" id="job_ref_search" required>
+                    <option value="">Select a job reference number</option>
+                    <option value="SE41B">SE41B</option>
+                    <option value=" NA23X"> NA23X</option>
+               </select>
+               <input type="submit" value="submit">
+          </form>
           
      </main>
      <?php include("footer.inc"); ?>
