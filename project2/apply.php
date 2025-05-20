@@ -39,11 +39,13 @@
                          <legend id="details_legend">Your Details</legend>
                          <p>
                               <label for="first_name">First Name:</label>
-                              <input type="text" id="first_name" name="first_name" pattern="^[A-Za-z]{1,20}$" required>
+                              <!-- <input type="text" id="first_name" name="first_name" pattern="^[A-Za-z]{1,20}$" required> -->
+                              <input type="text" id="first_name" name="first_name">
                          </p>
                          <p>
                               <label for="last_name">Last Name:</label>
-                              <input type="text" id="last_name" name="last_name" pattern="^[A-Za-z]{1,20}$" required>
+                              <input type="text" id="last_name" name="last_name">
+                              <!-- <input type="text" id="last_name" name="last_name" pattern="^[A-Za-z]{1,20}$" required> -->
                          </p>
                          <p>
                               <label for="date_of_birth">Date of birth:</label>
@@ -67,11 +69,13 @@
                     <div class="address_and_contact">
                          <p>
                               <label for="street_address">Street address:</label>
-                              <input id="street_address" name="street_address" type="text" pattern="^\w{1,40$}" required>
+                              <input id="street_address" name="street_address" type="text">
+                              <!-- <input id="street_address" name="street_address" type="text" pattern="^\w{1,40$}" required> -->
                          </p>
                          <p>
                               <label for="suburb_or_town">Suburb/town:</label>
-                              <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required>
+                              <input name="suburb_or_town" id="suburb_or_town" type="text">
+                              <!-- <input name="suburb_or_town" id="suburb_or_town" type="text" pattern="^\w{1,40$}" required> -->
                          </p>
                          <p id="state_and_postcode">
                               <label for="state">State:</label>
@@ -88,15 +92,18 @@
                               </select>
                               <div>
                                    <label for="post_code" id="postcode_label">Postcode:</label>
-                                   <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required>
+                                   <input type="text" name="post_code" id="post_code" placeholder="xxxx">
+                                   <!-- <input type="text" name="post_code" id="post_code" placeholder="xxxx" pattern="^\d{4}$" required> -->
                               </div>
                          </p>
                          <p id="form_contact">
                               <label for="email">Email address:</label>
-                              <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required>
+                               <input type="text" id="email" name="email" placeholder="exampleemailaddress@gmail.com">
+                              <!-- <input type="email" id="email" name="email" placeholder="exampleemailaddress@gmail.com" required> -->
                               <div>
                                    <label for="phone_number" id="phone_number_label">Phone number:</label>
-                                   <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required>
+                                   <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx">
+                                   <!-- <input type="text" id="phone_number" name="phone_number" placeholder="xxxx xxx xxx" pattern="^(\d| ){8,12}$" required> -->
                               </div>
                          </p>
                     </div>
