@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <?php include 'header.inc'; ?>
+
+    <main>
+        <div class="error-container">
+        <h1>Oops! Something went wrong.</h1>
+        <p>Your input was invalid. Please check your form and try again.</p>
+        <p><a href="javascript:history.back()">Go back to the form</a></p>
+    </div>
+    </main>
+    <?php include 'footer.inc'; ?>
+</body>
+</html>
