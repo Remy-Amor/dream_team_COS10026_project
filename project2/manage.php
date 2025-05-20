@@ -73,29 +73,41 @@
                }
           ?>
 
-          <h3>Make a Query</h3>
-          <h4 class="query-header">Display based on Job Reference Number</h4>
-          <form action="manage_results.php" method="post">
-               <label for="job_ref_search">Job Reference:</label>
+          <div class="query-div">
+          <form action="manage_results.php" method="post" class="query-form">
+               <legend>Search by Job Reference</legend>
                <select name="job_ref_search" id="job_ref_search" required>
                     <option value="">Select a job reference number</option>
                     <option value="SE41B">SE41B</option>
                     <option value=" NA23X"> NA23X</option>
                </select>
+               <br>
+               <br>
                <input type="submit" value="submit">
           </form>
-          <br>
-          <h4 class="query-header">Display from name</h4>
-          <form action="manage_results.php" method="post">
-               <label for="job_ref_search">Job Reference:</label>
-               <select name="job_ref_search" id="job_ref_search" required>
+          <form action="manage_results.php" method="post" class="query-form">
+               <legend>Delete Records</legend>
+               <select name="job_ref_delete" id="job_ref_delete" required>
                     <option value="">Select a job reference number</option>
                     <option value="SE41B">SE41B</option>
                     <option value=" NA23X"> NA23X</option>
                </select>
+               <br>
+               <br>
                <input type="submit" value="submit">
           </form>
-          
+          </div>
+          <div class="query-div">
+          <form action="manage_results.php" method="post" class="query-form">
+               <legend>Search by Name</legend>
+               <label for="first_name">First Name:</label>
+               <input type="text" name="first_name">
+               <br>
+               <label for="last_name">Last Name:</label>
+               <input type="text" name="last_name">
+               <input type="submit" value="submit">
+          </form>
+          </div>
      </main>
      <?php include("footer.inc"); ?>
 </body>
