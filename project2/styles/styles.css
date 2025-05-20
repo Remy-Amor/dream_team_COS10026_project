@@ -308,3 +308,13 @@ legend {
    }
 
 
+
+   /* Error Message styling */
+   .error-container {
+     border: 1px solid rgb(218, 157, 157);
+     background-color: #A3CEF1;
+     padding: 30px;
+     max-width: 400px;
+     margin: 0 auto;
+     border-radius: 8px;
+}
