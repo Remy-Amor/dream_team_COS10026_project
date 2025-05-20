@@ -21,16 +21,16 @@
      <main>
           <h2 id="apply_header">Apply Now!</h2>
           <!-- Application form, regex pattern validation included in each form field -->
-          <form action="process_eoi.php" method="POST" id="apply_form" novalidate="novalidate">
-                         <p id="job_ref_field">
-                              <label for="job_ref">Job Reference Number:</label>
-                              <select name="job_ref" id="job_ref" required>
-                                   <!-- Change sample1 and sample2 to the actual job reference numbers -->
-                                   <option value="">Select a job reference number</option>
-                                   <option value="SE41B">SE41B</option>
-                                   <option value=" NA23X"> NA23X</option>
-                              </select>
-                         </p>
+          <form action="process_eoi.php" method="POST" id="apply_form" novalidate>
+               <p id="job_ref_field">
+                    <label for="job_ref">Job Reference Number:</label>
+                    <select name="job_ref" id="job_ref" required>
+                         <!-- Change sample1 and sample2 to the actual job reference numbers -->
+                         <option value="">Select a job reference number</option>
+                         <option value="SE41B">SE41B</option>
+                         <option value=" NA23X"> NA23X</option>
+                    </select>
+               </p>
                <!-- fieldset for details -->
                <fieldset id="apply_form_fieldset">
                     <!-- below is grid div -->
@@ -39,11 +39,11 @@
                          <legend id="details_legend">Your Details</legend>
                          <p>
                               <label for="first_name">First Name:</label>
-                              <input type="text" id="first_name" name="first_name" pattern="^[A-Za-z]{1,20}$" required>
+                              <input type="text" id="first_name" name="first_name" pattern="^[a-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="last_name">Last Name:</label>
-                              <input type="text" id="last_name" name="last_name" pattern="^[A-Za-z]{1,20}$" required>
+                              <input type="text" id="last_name" name="last_name" pattern="^[a-z]{1,20}$" required>
                          </p>
                          <p>
                               <label for="date_of_birth">Date of birth:</label>
