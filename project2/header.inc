@@ -1,5 +1,5 @@
 <header>
-    <div class="grid_header">
+    
 
         <div class="header_top">
             <div class="header_logo">
@@ -26,6 +26,5 @@
                 <a href="mailto:105871858@student.swin.edu.au">Email Us</a>
             </div>
         </div>
-    </div>
     
 </header>
