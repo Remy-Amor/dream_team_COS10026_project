@@ -95,7 +95,7 @@
                     <option value=" NA23X"> NA23X</option>
                </select>
                <!-- Hidden input that sends data letting the server know which query to process -->
-               <input type="hidden" value="delete_by_job_ref">
+               <input type="hidden" name="delete_by_job_ref" value="delete_by_job_ref">
                <br>
                <br>
                <input type="submit" value="submit">
@@ -110,7 +110,7 @@
                <label for="search_last_name">Last Name:</label>
                <input type="text" name="search_last_name">
                <!-- Hidden input that sends data letting the server know which query to process -->
-               <input type="hidden" value="search_by_name">
+               <input type="hidden" name="search_by_name" value="search_by_name">
                <input type="submit" value="submit">
           </form>
           </div>
