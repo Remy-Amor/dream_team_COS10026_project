@@ -1,19 +1,22 @@
 <?php
-     $host = "localhost";         // because XAMPP runs the server locally
-     $user = "root";          // default username for XAMPP's MySQL
-     $pwd = "";              // default password is empty in XAMPP
-     $sql_db = "eoi_db";  // wont work unless eoi_db is created locally
+// Database connection settings
+$host = "localhost";
+$user = "root";              // XAMPP default username
+$pwd = "";                   // XAMPP default has no password
+$sql_db = "project_part_two_db";  // Agreed project database name
 
-     $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+// Establish the connection
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
-     if (!$conn) {
-     die("Connection failed: " . mysqli_connect_error());
-     }
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-     function sanitize_input($data) {
-          $data = trim($data);
-          $data = stripslashes($data);
-          $data = htmlspecialchars($data);
-          return $data;
-        }
+// Sanitize user input to prevent injection
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
