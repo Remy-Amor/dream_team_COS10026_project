@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";              // XAMPP default username
 $pwd = "";                   // XAMPP default has no password
-$sql_db = "project_part_two_db";  // Agreed project database name
+$sql_db = "eoi_db";  // Agreed project database name
 
 // Establish the connection
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
