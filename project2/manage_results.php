@@ -27,6 +27,11 @@
      <?php include("header.inc"); ?>
      <main>
      <?php
+          // prevents direct access
+          if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+               header("Location: about.php");
+               exit();
+          }
           if($_SERVER["REQUEST_METHOD"] == "POST") {
                // for searching by job ref
                if(isset($_POST["search_by_job_ref"])) {

@@ -27,6 +27,11 @@
      <?php include("header.inc"); ?>
      <main>
           <?php 
+               // prevents direct access
+               if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+                    header("Location: about.php");
+                    exit();
+               }
                if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $new_status = sanitize_input($_POST["status"]);
                     // if no status set
