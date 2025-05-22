@@ -1,3 +1,12 @@
+/*
+filename: manage_styles.css
+authors: William Anthony 
+created: 22/5/2025
+last modified: 22/5/2025
+description: refers to jobs.php
+*/
+
+
 /* WA: Job section bubble styling */
 .job-section {
     background-color: #fdfdfd;                 /* clean white bubble */
@@ -33,7 +42,7 @@
 
 /* WA: Responsive tweaks below (generated using Gen AI + refined manually) */
 
-/* makes things scale nicely on tablets and medium screens */
+/* Use of Gen Ai in order to scale on tablets and medium screens */
 @media (max-width: 768px) {
     .job-section {
         padding: 1.5em;
@@ -50,7 +59,7 @@
     }
 }
 
-/* mobile optimization — this hits when screens get real narrow */
+/* Use of Gen Ai to optimize viewing on small mobile screens */
 @media (max-width: 480px) {
     .job-section {
         padding: 1em;

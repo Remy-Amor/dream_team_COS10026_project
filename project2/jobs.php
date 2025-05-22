@@ -16,6 +16,7 @@ include 'header.inc';
 <head>
   <meta charset="UTF-8">
   <title>Job Listings</title>
+  <link rel="stylesheet" href="styles/responsive.css">
   <link rel="stylesheet" href="styles/jobs.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
