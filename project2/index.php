@@ -24,9 +24,11 @@
      <main>
           <!-- Introduction paragraph -->
           <p>At Dream Team IT Solutions, we don’t just embrace innovation—we create it. As a forward-thinking IT company, we specialize in developing cutting-edge technology solutions that drive businesses forward. From custom software development to AI-driven automation, we empower organizations with scalable, secure, and intelligent solutions tailored to their needs.</p>
-
+          <!--  Photo by <a href="https://unsplash.com/@fantasyflip?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Philipp Katzenberger</a> on <a href="https://unsplash.com/photos/closeup-photo-of-turned-on-blue-and-white-laptop-computer-iIJrUoeRoCQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
           <!-- Use of Chatgpt - How can I use div to float these two sections-->
          <div id="about-sections">
+         <img id="computer_image" src="images/computer_stock_image.jpg" alt="A photo of a computer half closed, its keyboard lit up">
+
                <div id="who_we_are">
                     <h2>Who We Are</h2>
                     <p>Dream Team IT Solutions was founded with a mission to redefine the digital landscape. Our team of expert developers, engineers, and consultants work collaboratively to solve complex challenges, delivering technology that transforms industries. We believe in the power of technology to simplify processes, enhance productivity, and unlock new opportunities.</p>
@@ -36,6 +38,7 @@
                     <p>To drive digital transformation through innovation, helping businesses harness the full potential of technology. We aim to create solutions that are not just efficient and secure but also future-proof, enabling businesses to thrive in an evolving digital world.</p>
                </div>
          
+               <br>
                <br>
                <h1 id="heading_toclear">What we do? </h1>
 
