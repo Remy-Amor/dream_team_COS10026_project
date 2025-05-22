@@ -32,7 +32,7 @@
 
     <section class="enhancement-card">
         <h2>3. Direct Access Prevention</h2>
-        <p><code>process_eoi.php</code> includes logic to block direct URL access. If accessed without a POST request, the user is redirected back to the form page.</p>
+        <p><code>process_eoi.php</code>, <code>manage_results.php</code>, <code>change_eoi.php</code> and <code>settings.php</code> include logic to block direct URL access. If accessed without a POST request, the user is redirected back to the form page.</p>
     </section>
 
     <section class="enhancement-card">

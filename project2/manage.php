@@ -89,7 +89,7 @@
           </form>
           <form action="manage_results.php" method="post" class="query-form">
                <legend>Delete Records</legend>
-               <select name="job_ref_delete" id="job_ref_delete" required>
+               <select name="delete_job_ref" id="delete_job_ref" required>
                     <option value="">Select a job reference number</option>
                     <option value="SE41B">SE41B</option>
                     <option value=" NA23X"> NA23X</option>
