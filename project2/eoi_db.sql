@@ -93,11 +93,13 @@ CREATE TABLE IF NOT EXISTS `jobs` (
     `salary`                     VARCHAR(50)   NOT NULL,
     `summary`                    TEXT          NOT NULL,
     `responsibilities`           TEXT          NOT NULL,
-    `essential_qualifications`   TEXT          NOT NULL,
-    `preferable_qualifications`  TEXT          NOT NULL,
+    `qualifications`   TEXT          NOT NULL,
+    `preferences`  TEXT          NOT NULL,
     `benefits`                   TEXT          NOT NULL,
     `closing_date`               DATE          NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
 
 --
 -- Dumping data for table `jobs`
