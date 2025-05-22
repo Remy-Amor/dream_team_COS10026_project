@@ -2,10 +2,6 @@
      session_start();
      require("settings.php");
 
-     function sanitize_input($data) {
-         return htmlspecialchars(stripslashes(trim($data)));
-     }
-
      // Use of AI to generate the following Validation Functions
      function isValidName($name) {
          if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
@@ -37,7 +33,7 @@
 
      // WA: Prevent direct access to process_eoi.php by checking request method
      if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-         header("Location: apply.php");
+         header("Location: about.php");
          exit();
      }
 
@@ -93,7 +89,7 @@
              other_skills TEXT,
              eoi_status VARCHAR(20) DEFAULT 'New'
          )";
-         mysqli_query($conn, $createSQL);
+         mysqli_query($conn, $createSQL);   
 
          // WA: Skill classification logic - marks "Yes" if matching skill exists in selection
          $network_admin_skills = in_array('network_diagnostics', $skills) || in_array('network_security', $skills) ? 'Yes' : 'No';
