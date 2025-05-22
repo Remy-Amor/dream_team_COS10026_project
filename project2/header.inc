@@ -16,6 +16,7 @@
                         <a href = "about.php">About</a> 
                         <a href="apply.php">Apply</a>
                         <a href="manage.php">Manage</a>
+                        <a href="enhancements.php">Enhancements</a>
                 </nav>
             </div>
         </div>
