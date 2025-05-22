@@ -1,11 +1,4 @@
 <?php
-
-// prevents direct access
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: about.php");
-    exit();
-}
-
 // Database connection settings
 $host = "localhost";
 $user = "root";              // XAMPP default username
