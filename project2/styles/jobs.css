@@ -1,24 +1,69 @@
-/* 
-CSS Job description
-Group:Dread_Team_COS10026
-Name:William Anthony
-Date started: 5/04/2025
-Date finished:
-*/
-
-.horizontal {
-    width: 60%;
-    margin-left: 0;
+/* WA: Job section bubble styling */
+.job-section {
+    background-color: #fdfdfd;                 /* clean white bubble */
+    border: 2px solid #274C77;                 /* consistent blue border from our palette */
+    border-radius: 16px;                       /* soft rounded edges for the bubble look */
+    padding: 2em;                              /* spacing inside the bubble */
+    margin: 2em auto;                          /* space around each job listing */
+    max-width: 900px;                          /* restricts width to keep it readable */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* subtle drop shadow for depth */
+    transition: transform 0.3s ease;           /* hover animation */
 }
 
-header hr {
-    Width: 20%;
-    margin-left: 0;
+.job-section:hover {
+    transform: scale(1.01);                    /* slightly lifts the card on hover */
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-    border-radius: 10px; 
-  }
+.job-section a {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: #274C77;
+    color: white;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.job-section a:hover {
+    background-color: #A3CEF1;
+    color: #000;
+}
+
+/* WA: Responsive tweaks below (generated using Gen AI + refined manually) */
+
+/* makes things scale nicely on tablets and medium screens */
+@media (max-width: 768px) {
+    .job-section {
+        padding: 1.5em;
+        margin: 1.5em 1em; /* reduces horizontal space so bubbles don't get crushed */
+    }
+
+    .job-section h2 {
+        font-size: 1.4em; /* scales title a bit smaller */
+    }
+
+    .job-section ul,
+    .job-section p {
+        font-size: 0.95em;
+    }
+}
+
+/* mobile optimization — this hits when screens get real narrow */
+@media (max-width: 480px) {
+    .job-section {
+        padding: 1em;
+        border-width: 1px; /* tightens up borders for small screens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-section h2 {
+        font-size: 1.2em;
+    }
+
+    .job-section a {
+        padding: 0.5em 1em;
+        font-size: 0.95em; /* makes button text slightly smaller for touch-friendliness */
+    }
+}
