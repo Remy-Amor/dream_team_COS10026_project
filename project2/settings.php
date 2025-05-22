@@ -12,7 +12,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Sanitize user input to prevent injection
+// Sanitize user input to prevent malicious injection
 function sanitize_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
