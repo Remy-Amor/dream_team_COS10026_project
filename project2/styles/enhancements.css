@@ -4,6 +4,17 @@
 */
 
 /* Container for the icon + title */
+#enhancements_flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: centre;
+}
+
+#enhancements_icon {
+    width: 2rem;
+    height: auto;
+    border: 8px;
+}
 #enhancements {
   display: flex;                /* lay out icon + text in a row */
   align-items: center;          /* vertically center them */
@@ -16,13 +27,6 @@
   padding: 1rem;                /* give the contents some breathing room */
   max-width: 50%;
   margin: 1rem auto;            /* center the whole box on the page */
-}
-
-/* Icon sizing & spacing */
-#enhancements img {
-  height: 1em;      /* same height as the H1 text */
-  width: auto;      /* keep its aspect ratio */
-  margin-right: 0.5em; /* gap between icon and text */
 }
 
 /* Title styling */

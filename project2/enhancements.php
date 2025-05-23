@@ -16,11 +16,14 @@
 <?php include 'header.inc'; ?>
 
 <main>
-    <div id="enhancements">
-        <img src="styles/images/enhancements_icon.png" alt="enhancements icon">
-        <h1>Project Enhancements</h1>
-     </div>
-
+    <div id=enhancements_flexbox">
+        <div id="enhancements_icon">
+            <img src="styles/images/enhancements_icon.png" alt="enhancements icon"> 
+            </div>
+        <div id="enhancements">
+            <h1>Project Enhancements</h1>
+        </div>
+    </div>
     <section class="enhancement-card">
         <h2>1. Server-Side Validation</h2>
         <p>All form inputs on <code>apply.php</code> are validated on the server in <code>process_eoi.php</code> to ensure that data meets expected formats and constraints. This includes regex checks, dropdown selections, email format, and conditional logic for skill selections.</p>
