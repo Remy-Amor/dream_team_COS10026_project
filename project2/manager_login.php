@@ -63,7 +63,9 @@
                     $query = "SELECT * FROM manager_details_tb WHERE username = '$manager_username'";
                     $result = mysqli_query($conn, $query);
                     $user = mysqli_fetch_assoc($result);
-                    $password_correct = password_verify($manager_password, $user['password']);
+                    if (isset($user)) {
+                         $password_correct = password_verify($manager_password, $user['password']);
+                    }
                     if (($user)&&$password_correct) {
                          $_SESSION['manager_username'] = $user['username'];
                          // reset number of login attempts
