@@ -51,7 +51,7 @@
          $post_code = sanitize_input($_POST["post_code"]);
          $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
          $phone_number = validatePhoneNumber(sanitize_input($_POST["phone_number"]));
-         $skills = $_POST['skills'] ?? [];
+         $skills = $_POST['skills'];
          $other_skills = sanitize_input($_POST["other_skills"]);
 
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error
@@ -70,26 +70,7 @@
          if (count($skills) === 0 && empty($other_skills)) {
              header('Location: error_page.php');
              exit();
-         }
-
-         // WA: Creates eoi_tb table if it doesn't already exist (attribution: Gen AI assisted)
-         $createSQL = "CREATE TABLE IF NOT EXISTS eoi_tb (
-             EOInumber INT AUTO_INCREMENT PRIMARY KEY,
-             job_ref_no VARCHAR(10),
-             first_name VARCHAR(20),
-             last_name VARCHAR(20),
-             street_address VARCHAR(40),
-             suburb_town VARCHAR(40),
-             state VARCHAR(3),
-             postcode VARCHAR(4),
-             email VARCHAR(100),
-             phone_number VARCHAR(15),
-             network_admin_skills VARCHAR(50),
-             software_developer_skills VARCHAR(50),
-             other_skills TEXT,
-             eoi_status VARCHAR(20) DEFAULT 'New'
-         )";
-         mysqli_query($conn, $createSQL);   
+         }  
 
          // WA: Skill classification logic - marks "Yes" if matching skill exists in selection
          $network_admin_skills = in_array('network_diagnostics', $skills) || in_array('network_security', $skills) ? 'Yes' : 'No';
