@@ -51,7 +51,7 @@
          $post_code = sanitize_input($_POST["post_code"]);
          $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
          $phone_number = validatePhoneNumber(sanitize_input($_POST["phone_number"]));
-         $skills = array_map('htmlspecialchars', $_POST['skills']);
+         $skills = $_POST['skills'];
          $other_skills = sanitize_input($_POST["other_skills"]);
 
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error
