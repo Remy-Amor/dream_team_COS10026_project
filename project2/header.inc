@@ -9,7 +9,7 @@
                 <h1>Welcome to Dream Team IT Solutions</h1>
             </div>
         
-            <?php include("header.inc"); ?>
+            <?php include("nav.inc"); ?>
         </div>
     </div>
     
