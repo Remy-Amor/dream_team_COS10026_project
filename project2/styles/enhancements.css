@@ -1,45 +1,53 @@
-/*
-File: enhancements.css
-Purpose: Styles for the enhancements.php page.
-Author: Dream Team IT Solutions
+/* File: enhancements.css
+   Purpose: Styles for the enhancements.php page - WA
+   Author: Dream Team IT Solutions
 */
 
-/* Enhancement card styling now mirrors job card layout from jobs.css */
-.enhancement-card {
-    background-color: #f9f9f9; /* match job card background */
-    border: 1px solid #ccc; /* match job card border */
-    border-radius: 8px; /* match job card border radius */
-    padding: 1rem; /* match job card padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* match job card shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 80%;
-    margin: 1rem auto; /* centres boxes*/
-}
-
-.enhancement-card:hover {  /* hovering over bubble alters appearence */
-    transform: scale(1.02); /*increases size by 2% */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* adds shadows on bottom an left/right */
-    border-color: #007acc;
-}
-
-.enhancement-card h2 {
-    margin-top: 0;
-    color: #274C77;
-}
-
+/* Container for the icon + title */
 #enhancements {
-    background-color: #f9f9f9;
-    border: 4px solid #274C77; /* WA: Adds a thicker top border for emphasis */
-    border-radius: 8px;
-    max-width: 50%;
-    margin: 1rem auto;
-    text-align: center; /* WA: Center the text inside the box */
+  display: flex;                /* lay out icon + text in a row */
+  align-items: center;          /* vertically center them */
+  justify-content: center;      /* horizontally center the flex items */
+  
+  background-color: #f9f9f9;    /* page-wide style */
+  border: 4px solid #274C77;    /* thick top border for emphasis */
+  border-radius: 8px;
+  
+  padding: 1rem;                /* give the contents some breathing room */
+  max-width: 50%;
+  margin: 1rem auto;            /* center the whole box on the page */
 }
 
+/* Icon sizing & spacing */
+#enhancements img {
+  height: 1em;      /* same height as the H1 text */
+  width: auto;      /* keep its aspect ratio */
+  margin-right: 0.5em; /* gap between icon and text */
+}
+
+/* Title styling */
 #enhancements h1 {
-    margin: 0;                       /* Override any margin from styles.css */
-    padding: 1rem;                      /* Prevent unexpected top gaps */
-    font-size: 2em;                  /* makes it bold and centered */
+  margin: 0;       /* reset any default margins */
+  font-size: 2em;  
+  color: #274C77;  /* match your border color for consistency */
 }
 
-/* i cant push here for some reason */
+.enhancement-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 80%;
+  margin: 1rem auto;
+}
+.enhancement-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  border-color: #007acc;
+}
+.enhancement-card h2 {
+  margin-top: 0;
+  color: #274C77;
+}

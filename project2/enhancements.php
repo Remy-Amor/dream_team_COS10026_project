@@ -17,6 +17,7 @@
 
 <main>
     <div id="enhancements">
+        <img src="styles/images/enhancements_icon.png" alt="enhancements icon">
         <h1>Project Enhancements</h1>
      </div>
 
