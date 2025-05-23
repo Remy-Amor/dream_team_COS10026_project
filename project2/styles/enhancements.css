@@ -21,7 +21,7 @@
 
 /* Icon sizing & spacing */
 #enhancements img {
-  height: 2rem;     /* fixed to 2 × root font-size (≈32px) */
+  height: 2.5rem;     /* fixed to 2 × root font-size (≈32px) */
   width: auto;      /* keep aspect ratio */
   margin-right: 0.5rem;
 }
