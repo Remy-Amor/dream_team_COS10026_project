@@ -3,39 +3,37 @@
    Author: Dream Team IT Solutions
 */
 
-/* Container for the icon + title */
-#enhancements_flexbox {
-    display: flex;
-    align-items: center;
-    justify-content: centre;
-}
-
-#enhancements_icon {
-    width: 2rem;
-    height: auto;
-    border: 8px;
-}
+/* Container for icon + title */
 #enhancements {
-  display: flex;                /* lay out icon + text in a row */
-  align-items: center;          /* vertically center them */
-  justify-content: center;      /* horizontally center the flex items */
-  
-  background-color: #f9f9f9;    /* page-wide style */
-  border: 4px solid #274C77;    /* thick top border for emphasis */
+  display: flex;               /* row layout */
+  flex-direction: row;         /* ensure children sit side-by-side */
+  align-items: center;         /* vertical centering */
+  justify-content: center;     /* horizontal centering */
+
+  background-color: #f9f9f9;
+  border: 4px solid #274C77;
   border-radius: 8px;
-  
-  padding: 1rem;                /* give the contents some breathing room */
+
+  padding: 1rem;
   max-width: 50%;
-  margin: 1rem auto;            /* center the whole box on the page */
+  margin: 1rem auto;
 }
 
-/* Title styling */
+/* Icon sizing & spacing */
+#enhancements img {
+  height: 2rem;     /* fixed to 2 × root font-size (≈32px) */
+  width: auto;      /* keep aspect ratio */
+  margin-right: 0.5rem;
+}
+
+/* Heading styling */
 #enhancements h1 {
-  margin: 0;       /* reset any default margins */
-  font-size: 2em;  
-  color: #274C77;  /* match your border color for consistency */
+  margin: 0;
+  font-size: 2rem;  /* fixed to 2 × root font-size */
+  color: #274C77;
 }
 
+/* Enhancement card styling */
 .enhancement-card {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -46,11 +44,13 @@
   max-width: 80%;
   margin: 1rem auto;
 }
+
 .enhancement-card:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   border-color: #007acc;
 }
+
 .enhancement-card h2 {
   margin-top: 0;
   color: #274C77;
