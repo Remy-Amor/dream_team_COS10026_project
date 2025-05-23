@@ -26,6 +26,15 @@
 <body>
      <?php include("header.inc"); ?>
      <main>
+          <?php
+               //  require users to be logged in
+               if(isset($_SESSION['manager_username'])) {
+                    echo "<p> Username is ". $_SESSION['manager_username'] . "</p>";
+               }
+               else {
+                    header("Location: manager_login.php");
+               }
+          ?>
           <h1>Manage Expressions of Interest</h1>
           <h2>EOI Table</h2>
           <?php

@@ -106,3 +106,15 @@ h1, h2, h3, .query-header {
   .query-form input[type="submit"]:hover {
     background-color: #5e81a8;
   }
+
+
+  /* For login and signup fields */
+
+  .login-signup-form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
