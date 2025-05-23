@@ -1,6 +1,15 @@
 <?php
      session_start();
      require("settings.php");
+
+     if (isset($_SESSION["locked"])) {
+          $difference = time() - $_SESSION["locked"];
+          if ($difference > 30)
+          {
+               unset($_SESSION["locked"]);
+               $_SESSION["login_attempt_no"] = 0;
+          }
+     }
 ?>
 
 
@@ -47,12 +56,20 @@
                     $query = "SELECT * FROM manager_details_tb WHERE username = '$manager_username'";
                     $result = mysqli_query($conn, $query);
                     $user = mysqli_fetch_assoc($result);
-                    if ($user && password_verify($manager_password,$user['password'])) {
-                    $_SESSION['manager_username'] = $user['manager_username'];
+                    if (($user) and password_verify($manager_password,$user['password'])===true) {
+                    $_SESSION['manager_username'] = $user['username'];
+                    // reset number of login attempts
+                    $_SESSION['login_attempt_no'] = 0;
+                    // user will be logged out after 30 minutes
+                    $_SESSION['expires_at'] = time() + 1800;
                     header("Location: manage.php");
                     exit();
                     } else {
-                    echo "<p>Incorrect username or password. Please Try Again</p>";
+                    $_SESSION['login_attempt_no'] += 1;
+                    if ($_SESSION['login_attempt_no'] == 3) {
+                         echo "<p>Login has been locked for 30 seconds</p>";
+                    }
+                    echo "<p>Incorrect username or password. " . $_SESSION['login_attempt_no'] . "attempts remain </p>";
                     }
                }
                ?>

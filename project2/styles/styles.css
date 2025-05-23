@@ -411,6 +411,23 @@ main > p:first-of-type:hover, .new-user:hover {
     font-family: 'Segoe UI', sans-serif;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+
+/* for displaying current user and offering option to sign out */
+.username-display {
+    font-size: 0.8em;
+    margin: 1em auto 2em auto;
+    line-height: 0;
+    max-width: 0;
+    text-align: justify;
+    color: #333;
+    background-color: #f5f9ff;
+    padding: 0;
+    border-left: 0;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
 /* Servises List Styling - Aman*/
 #heading_toclear{
     clear: both;
