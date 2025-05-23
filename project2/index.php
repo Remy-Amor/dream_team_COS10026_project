@@ -40,6 +40,8 @@
          
                <br>
                <br>
+               <br>
+               <br>
                <h1 id="heading_toclear">What we do? </h1>
 
                <!-- List of services offered -->
