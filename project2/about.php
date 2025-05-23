@@ -53,6 +53,10 @@
                <dl class="definition-list">
                     <dt>Remy</dt>
                     <dd>HTML and CSS for apply.html and about.html, group coordinator</dd>
+                    <dd>Coded and styled all manage pages, which handled eoi records display and management, manager login, signup</dd>
+                    <dd>Handled enhancement requirements such as locking user out after 3 incorrect logins, sorting records</dd>
+                    <dd>Added image to index.php and adjusted styles for apply.php</dd>
+                    <dd>Coded settings.php setting up connection to database</dd>
                     
                     <dt>William</dt>
                     <dd>HTML and CSS for jobs.html, logo design</dd>

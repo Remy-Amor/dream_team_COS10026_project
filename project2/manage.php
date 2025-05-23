@@ -37,8 +37,25 @@
           ?>
           <h1>Manage Expressions of Interest</h1>
           <h2>EOI Table</h2>
+          <form action="manage.php" class="sort_form" method="post">
+               <label for="sort_by">Sort by:</label>
+               <select name="sort_by" id="sort_by">
+                    <option value="">Select Sort Value</option>
+                    <option value="first_name">First name</option>
+                    <option value="last_name">Last name</option>
+                    <option value="network_admin_skills">Network Admin Skills</option>
+                    <option value="software_developer_skills">Software Developer Skills</option>
+                    <option value="eoi_status">Status</option>
+               </select>
+               <input type="submit" value="sort">
+          </form>
           <?php
                $sql = "SELECT * from eoi_tb";
+               //  this if statement will determine whether or not the ORDER BY is appended to the sql query
+               if(isset($_POST['sort_by'])) {
+                    $column = $_POST['sort_by'];
+                    $sql .= " ORDER BY $column ASC";
+               }
                $result = mysqli_query($conn, $sql);
                if(mysqli_num_rows($result)>0) {
                          echo "<div class='table-wrapper'><table>";
