@@ -44,17 +44,23 @@
           if($_SERVER["REQUEST_METHOD"] == "POST") {
                // Get form data
                $manager_username = trim($_POST['manager_username']);
-               $manager_hashed_password = password_hash(trim($_POST['manager_password']),PASSWORD_DEFAULT);
-               // Insert user into the database
-               $query = "INSERT INTO manager_details_tb (username, password) VALUES ('$manager_username', '$manager_hashed_password')";
-               // check for duplicate username
-               try {
-                    $result = mysqli_query($conn, $query);
+               $manager_password = trim($_POST['manager_password']);
+               $manager_hashed_password = password_hash($manager_password,PASSWORD_DEFAULT);
+               $confirm_manager_password = trim($_POST['confirm_manager_password']);
+               if ($confirm_manager_password == $manager_password){
+                    // Insert user into the database
+                    $query = "INSERT INTO manager_details_tb (username, password) VALUES ('$manager_username', '$manager_hashed_password')";
+                    // check for duplicate username
+                    try {
+                         $result = mysqli_query($conn, $query);
+                    }
+                    catch(exception) {
+                         echo "<p class='new-user'> username already exists</p>";
+                    }
+               } else {
+                    echo "<p class='new-user'>Passwords must match</p>";
                }
-               catch(exception) {
-                    echo "<p class='new-user'> username already exists</p>";
-               }
-               if ($result) {
+               if (isset($result)) {
                echo "<p class='new-user'>Signup successful. You can now <a href='manager_login.php'>login</a>.</p>";
                } else {
                echo "<p class='new-user'>Signup failed. Please try again.</p>";
