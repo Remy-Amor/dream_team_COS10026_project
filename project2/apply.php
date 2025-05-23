@@ -114,7 +114,7 @@
                     </div>
                     <div class="apply_skills">
                          <fieldset>
-                              <legend>Technical Skills</legend>
+                              <legend id="technical-skills-legend">Technical Skills</legend>
                               <fieldset>
                                    <legend>Network Administration Skills</legend>
                                    <p>
