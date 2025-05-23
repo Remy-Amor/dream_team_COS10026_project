@@ -58,8 +58,13 @@
                     <dd>HTML and CSS for jobs.html, logo design</dd>
 
                     <dt>Amanuial</dt>
-                    <dd>Part 1 - HTML and CSS for the homepage, header and footer</dd>
-                    <dd>Part 2 - Changing files to .php and pluging in Include files, Header and Footer further styling, process_eoi.php and error_page.php, Server Side validation of user inputs. </dd>
+                    <dd> HTML and CSS for the homepage, header and footer. </dd>
+                    <dd> Changing files to .php and pluging in Include files, </dd>
+                    <dd> Header and Footer further styling, </dd>
+                    <dd> Developing process_eoi.php that processes all Exoressions of Interest, </dd>
+                    <dd> Server Side validation of all user inputs,</dd>
+                    <dd> Development error_page.php, page that is used throughout the project to redirect with invalid user input. </dd>
+
                </dl>
           </div>
           <div class="interests_table">
