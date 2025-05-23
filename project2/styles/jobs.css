@@ -75,4 +75,60 @@ description: refers to jobs.php
         padding: 0.5em 1em;
         font-size: 0.95em; /* makes button text slightly smaller for touch-friendliness */
     }
+
+    }
+    /* Intro section styling */
+.jobs-intro {
+  background-color: #EAF1F8;       /* light, professional backdrop */
+  border: 6px solid #274C77;       /* thick border in brand blue tone */
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.jobs-intro h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.5rem;
+  color: #274C77;
+  line-height: 1.2;
+}
+
+.jobs-intro p {
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .jobs-intro {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+    border-width: 5px;
+  }
+  .jobs-intro h1 {
+    font-size: 2rem;
+  }
+  .jobs-intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-intro {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-width: 4px;
+  }
+  .jobs-intro h1 {
+    font-size: 1.75rem;
+  }
+  .jobs-intro p {
+    font-size: 0.95rem;
+  }
 }

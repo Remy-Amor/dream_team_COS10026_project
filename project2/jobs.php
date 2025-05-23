@@ -23,6 +23,10 @@ include 'header.inc';
 </head>
 
 <main>
+    <section class="jobs-intro">
+        <h1>Current Opportunities</h1>
+        <p>Welcome to Dream Team IT Solutions! We’re always on the lookout for great talent. Browse our open roles below and see where you could make an impact.</p>
+    </section>
     <div class="jobs-container">
     <?php
     $sql = "SELECT * FROM jobs ORDER BY job_ref";
