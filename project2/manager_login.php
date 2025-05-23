@@ -27,19 +27,18 @@
      <?php include("header.inc"); ?>
      <main>
           <h1>Login</h1>
-          <form action="login.php" novalidate method="post" class="login-signup-form">
-          <div>
+          <div class="login-signup-div">
+          <form action="manager_login.php" class="login-signup-form" novalidate="novalidate" method="post">
                <label for="manager_username">Username: </label>
                <input type="text" id="manager_username" name="manager_username">
-          </div>
-          <div>
+               <br>
                <label for="manager_password">Password: </label>
                <input type="password" id="manager_password" name="manager_password">
-          </div>
-          <div>
-          <input type="submit" value="login">
-          </div>
+               <br>
+               <input type="submit" value="login">
           </form>
+          </div>
+          <p>New user? <a href="manager_signup.php">sign up here</a>!</p>
      </main>
      <?php include("footer.inc"); ?>
 </body>
