@@ -38,7 +38,26 @@
                <input type="submit" value="login">
           </form>
           </div>
-          <p>New user? <a href="manager_signup.php">sign up here</a>!</p>
+          <?php
+               if($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // Get user input
+                    $manager_username = trim($_POST['manager_username']);
+                    $manager_password = password_hash(trim($_POST['manager_password']),PASSWORD_DEFAULT);
+                    // Simple query to check credentials
+                    $query = "SELECT * FROM manager_details_tb WHERE username = '$manager_username'";
+                    $result = mysqli_query($conn, $query);
+                    $user = mysqli_fetch_assoc($result);
+                    if ($user && password_verify($manager_password,$user['password'])) {
+                    $_SESSION['manager_username'] = $user['manager_username'];
+                    header("Location: manage.php");
+                    exit();
+                    } else {
+                    echo "<p>Incorrect username or password. Please Try Again</p>";
+                    }
+               }
+               ?>
+
+          <p class="new-user">New user? <a href="manager_signup.php">sign up here</a>!</p>
      </main>
      <?php include("footer.inc"); ?>
 </body>
