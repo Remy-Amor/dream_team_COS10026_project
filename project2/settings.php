@@ -19,4 +19,10 @@ function sanitize_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-?>
+
+
+
+
+
+
+ 

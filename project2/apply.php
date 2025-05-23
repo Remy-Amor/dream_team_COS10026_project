@@ -1,3 +1,8 @@
+<?php 
+     require('settings.php');
+     session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +32,15 @@
                     <select name="job_ref" id="job_ref" required>
                          <!-- Change sample1 and sample2 to the actual job reference numbers -->
                          <option value="">Select a job reference number</option>
-                         <option value="SE41B">SE41B</option>
-                         <option value=" NA23X"> NA23X</option>
+                         <?php
+                              //  list of job reference numbers
+                              $sql = "SELECT job_ref FROM jobs";
+                              $result = mysqli_query($conn, $sql);
+                              while($row = mysqli_fetch_assoc($result)) {
+                                   $value = htmlspecialchars($row['job_ref']);
+                                   echo "<option value='$value'>$value</option>";
+                              }
+                         ?>
                     </select>
                </p>
                <!-- fieldset for details -->
