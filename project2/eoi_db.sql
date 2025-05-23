@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `jobs` (
 
 INSERT INTO `jobs` (
     job_ref, title, location, job_type, department, reports_to, salary,
-    summary, responsibilities, essential_qualifications, preferable_qualifications, benefits, closing_date
+    summary, responsibilities, qualifications, preferences, benefits, closing_date
 ) VALUES
 ('NA23X', 'Network Administrator', 'John St, Hawthorn VIC 3122', 'Full-Time', 'IT Administration', 'IT Manager / Senior Network Engineer', '$85,000 - $105,000 AUD',
  'The Network Administrator ensures the secure and efficient operation of network infrastructure including LANs, WANs, VPNs, and cloud-based systems.',

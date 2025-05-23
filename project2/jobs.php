@@ -18,8 +18,8 @@ include 'header.inc';
     <meta name="keywords" content="Jobs page inc requirements">
     <title>Dream Team IT Solutions - Jobs Page</title>
     <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/jobs.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/jobs.css">
 </head>
 
 <main>
