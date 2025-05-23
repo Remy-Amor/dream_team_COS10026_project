@@ -26,6 +26,15 @@
 <body>
      <?php include("header.inc"); ?>
      <main>
+          <?php
+               //  require users to be logged in
+               if(isset($_SESSION['manager_username'])) {
+                    echo "<p> Username is ". $_SESSION['manager_username'] . "</p>";
+               }
+               else {
+                    header("Location: manager_login.php");
+               }
+          ?>
           <h1>Manage Expressions of Interest</h1>
           <h2>EOI Table</h2>
           <?php
@@ -78,8 +87,15 @@
                <legend>Search by Job Reference</legend>
                <select name="search_job_ref" id="search_job_ref" required>
                     <option value="">Select a job reference number</option>
-                    <option value="SE41B">SE41B</option>
-                    <option value="NA23X"> NA23X</option>
+                    <?php
+                              //  list of job reference numbers
+                              $sql = "SELECT job_ref FROM jobs";
+                              $result = mysqli_query($conn, $sql);
+                              while($row = mysqli_fetch_assoc($result)) {
+                                   $value = htmlspecialchars($row['job_ref']);
+                                   echo "<option value='$value'>$value</option>";
+                              }
+                         ?>
                </select>
                <!-- Hidden input that sends data letting the server know which query to process -->
                <input type="hidden" name="search_by_job_ref"value="search_by_job_ref">
@@ -91,8 +107,15 @@
                <legend>Delete Records</legend>
                <select name="delete_job_ref" id="delete_job_ref" required>
                     <option value="">Select a job reference number</option>
-                    <option value="SE41B">SE41B</option>
-                    <option value=" NA23X"> NA23X</option>
+                    <?php
+                              //  list of job reference numbers
+                              $sql = "SELECT job_ref FROM jobs";
+                              $result = mysqli_query($conn, $sql);
+                              while($row = mysqli_fetch_assoc($result)) {
+                                   $value = htmlspecialchars($row['job_ref']);
+                                   echo "<option value='$value'>$value</option>";
+                              }
+                         ?>
                </select>
                <!-- Hidden input that sends data letting the server know which query to process -->
                <input type="hidden" name="delete_by_job_ref" value="delete_by_job_ref">

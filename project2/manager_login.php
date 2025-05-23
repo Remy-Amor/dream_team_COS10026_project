@@ -19,12 +19,26 @@
 
      <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
+     <!-- link the manage styles -->
+     <link rel="stylesheet" href="styles/manage_styles.css">
      <title>Manager Login</title>
 </head>
 <body>
      <?php include("header.inc"); ?>
      <main>
-
+          <h1>Login</h1>
+          <div class="login-signup-div">
+          <form action="manager_login.php" class="login-signup-form" novalidate="novalidate" method="post">
+               <label for="manager_username">Username: </label>
+               <input type="text" id="manager_username" name="manager_username">
+               <br>
+               <label for="manager_password">Password: </label>
+               <input type="password" id="manager_password" name="manager_password">
+               <br>
+               <input type="submit" value="login">
+          </form>
+          </div>
+          <p>New user? <a href="manager_signup.php">sign up here</a>!</p>
      </main>
      <?php include("footer.inc"); ?>
 </body>
