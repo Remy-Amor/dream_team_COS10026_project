@@ -1,6 +1,17 @@
 <?php
      session_start();
      require("settings.php");
+     
+     // checks time, if more than 30 seconds elapsed reset login attempt number
+     if (isset($_SESSION["locked"])) {
+          echo "<p>Login has been locked for 30 seconds</p>";
+          $difference = time() - $_SESSION["locked"];
+          if ($difference > 30)
+          {
+               unset($_SESSION["locked"]);
+               $_SESSION["login_attempt_no"] = 0;
+          }
+     }
 ?>
 
 
@@ -35,10 +46,43 @@
                <label for="manager_password">Password: </label>
                <input type="password" id="manager_password" name="manager_password">
                <br>
-               <input type="submit" value="login">
+               <?php
+                    if(!isset($_SESSION['locked'])) {
+                         echo "<input type='submit' value='login'>";
+                         }
+               ?>
           </form>
           </div>
-          <p>New user? <a href="manager_signup.php">sign up here</a>!</p>
+          <!-- processing login -->
+<?php
+               if($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // Get user input
+                    $manager_username = trim($_POST['manager_username']);
+                    $manager_password = trim($_POST['manager_password']);
+                    // Simple query to check credentials
+                    $query = "SELECT * FROM manager_details_tb WHERE username = '$manager_username'";
+                    $result = mysqli_query($conn, $query);
+                    $user = mysqli_fetch_assoc($result);
+                    $password_correct = password_verify($manager_password, $user['password']);
+                    if (($user)&&$password_correct) {
+                         $_SESSION['manager_username'] = $user['username'];
+                         // reset number of login attempts
+                         $_SESSION['login_attempt_no'] = 0;
+                         // user will be logged out after 30 minutes
+                         $_SESSION['expires_at'] = time() + 1800;
+                         header("Location: manage.php");
+                         exit();
+                    } else {
+                    $_SESSION['login_attempt_no'] += 1;
+                    if ($_SESSION['login_attempt_no'] == 3) {
+                         $_SESSION['locked'] = time();
+                         header("Location: manager_login.php");
+                    }
+                    echo "<p class='new-user'>Incorrect username or password. " . (3 - $_SESSION['login_attempt_no']) . " attempts remaining </p>";
+                    }
+               }
+               ?>
+          <p class="new-user">New user? <a href="manager_signup.php">sign up here</a>!</p>
      </main>
      <?php include("footer.inc"); ?>
 </body>
