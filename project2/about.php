@@ -58,7 +58,8 @@
                     <dd>HTML and CSS for jobs.html, logo design</dd>
 
                     <dt>Amanuial</dt>
-                    <dd>HTML and CSS for the homepage, header and footer</dd>
+                    <dd>Part 1 - HTML and CSS for the homepage, header and footer</dd>
+                    <dd>Part 2 - Changing files to .php and pluging in Include files, Header and Footer further styling, process_eoi.php and error_page.php, Server Side validation of user inputs. </dd>
                </dl>
           </div>
           <div class="interests_table">
