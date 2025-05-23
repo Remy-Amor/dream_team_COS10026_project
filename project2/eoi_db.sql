@@ -60,7 +60,7 @@ INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `str
 
 CREATE TABLE `manager_details_tb` (
   `username` varchar(25) NOT NULL,
-  `password` varchar(25) NOT NULL,
+  `password` varchar(60) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `password` (`password`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
