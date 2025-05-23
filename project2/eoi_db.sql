@@ -37,8 +37,7 @@ CREATE TABLE `eoi_tb` (
   `postcode`        varchar(4)         DEFAULT NULL,
   `email`           varchar(50)        NOT NULL,
   `phone_number`    varchar(50)        NOT NULL,
-  `network_admin_skills`    tinyint(1) NOT NULL,
-  `software_developer_skills` tinyint(1) NOT NULL,
+  `skills`          varchar(255)       NOT NULL,
   `other_skills`    varchar(300)       DEFAULT NULL,
   `eoi_status`      varchar(10)        NOT NULL DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -47,10 +46,10 @@ CREATE TABLE `eoi_tb` (
 -- Dumping data for table `eoi_tb`
 --
 
-INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `post_code`, `email`, `phone_number`, `network_admin_skills`, `software_developer_skills`, `other_skills`, `status`) VALUES
-(2, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New'),
-(3, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New'),
-(4, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 0, 0, 'Hellowoow', 'New');
+INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `post_code`, `email`, `phone_number`, `skills`, `other_skills`, `status`) VALUES
+(2, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New'),
+(3, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New'),
+(4, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New');
 
 -- --------------------------------------------------------
 

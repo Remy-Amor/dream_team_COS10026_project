@@ -51,7 +51,7 @@
          $post_code = sanitize_input($_POST["post_code"]);
          $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
          $phone_number = validatePhoneNumber(sanitize_input($_POST["phone_number"]));
-         $skills = $_POST['skills'];
+         $skills = array_map('htmlspecialchars', $_POST['skills']);
          $other_skills = sanitize_input($_POST["other_skills"]);
 
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error
@@ -67,17 +67,17 @@
          }
 
          // WA: Validates that at least one skill or the other_skills text area is filled
-         if (count($skills) === 0 && empty($other_skills)) {
+         if (empty($skills) && empty($other_skills)) {
              header('Location: error_page.php');
              exit();
          }  
-
-         // WA: Skill classification logic - marks "Yes" if matching skill exists in selection
-         $network_admin_skills = in_array('network_diagnostics', $skills) || in_array('network_security', $skills) ? 'Yes' : 'No';
-         $software_developer_skills = in_array('programming', $skills) || in_array('version_control', $skills) ? 'Yes' : 'No';
-
+        // skills get concatenated 
+        $skills_concatenated = implode(', ', $skills);
          // Insert data into the database
-         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, street_address, suburb_town, state, postcode, email, phone_number, network_admin_skills, software_developer_skills, other_skills) VALUES ('$job_ref_no', '$first_name', '$last_name', '$street_address', '$suburb_town', '$state', '$post_code', '$email', '$phone_number', '$network_admin_skills', '$software_developer_skills', '$other_skills')";
+         $sql = "INSERT INTO eoi_tb (job_ref_no, first_name, last_name, street_address, suburb_town, state,
+          postcode, email, phone_number, skills, other_skills) 
+          VALUES ('$job_ref_no', '$first_name', '$last_name', '$street_address', '$suburb_town', '$state', '$post_code',
+           '$email', '$phone_number', '$skills_concatenated', '$other_skills')";
      }
 
      if (mysqli_query($conn, $sql)) {

@@ -71,11 +71,9 @@
                     echo "<div class='table-wrapper'><table>";
                     echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
                     <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th>
-                    <th>email</th><th>Phone number</th><th>Network admin skills</th>
-                    <th>Software developer skills</th><th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
+                    <th>email</th><th>Phone number</th><th>Skills</th>
+                    <th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
                while ($row = mysqli_fetch_assoc($result)) {
-                    $network_admin = $row['network_admin_skills'] ? 'true' : 'false';
-                    $software_development = $row['software_developer_skills'] ? 'true' : 'false';
                     echo "<tr>
                     <td>" . $row['EOInumber'] . "</td>"
                     . "<td>" . $row['job_ref_no'] . "</td>"
@@ -87,8 +85,7 @@
                     . "<td>" . $row['postcode'] . "</td>
                     <td>" . $row['email'] . "</td>"
                     . "<td>" . $row['phone_number'] . "</td>"
-                    . "<td>" . $network_admin . "</td>"
-                    . "<td>" . $software_development . "</td>"
+                    . "<td>" . $row['skills'] . "</td>"
                     . "<td>" . $row['other_skills'] . "</td>"
                     . "<td>" . $row['eoi_status'] . "</td>"
                     . "<td> <form action='change_eoi.php' method='post' novalidate='novalidate'>
