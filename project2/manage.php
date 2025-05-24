@@ -43,8 +43,7 @@
                     <option value="">Select Sort Value</option>
                     <option value="first_name">First name</option>
                     <option value="last_name">Last name</option>
-                    <option value="network_admin_skills">Network Admin Skills</option>
-                    <option value="software_developer_skills">Software Developer Skills</option>
+                    <option value="skills">Skills</option>
                     <option value="eoi_status">Status</option>
                </select>
                <input type="submit" value="sort">
