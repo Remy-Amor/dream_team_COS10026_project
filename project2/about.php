@@ -61,7 +61,7 @@
                     <dd> HTML and CSS for the homepage, header and footer. </dd>
                     <dd> Changing files to .php and pluging in Include files, </dd>
                     <dd> Header and Footer further styling, </dd>
-                    <dd> Developing process_eoi.php that processes all Exoressions of Interest, </dd>
+                    <dd> Developing process_eoi.php that processes all Expressions of Interest, </dd>
                     <dd> Server Side validation of all user inputs,</dd>
                     <dd> Development error_page.php, page that is used throughout the project to redirect with invalid user input. </dd>
 
