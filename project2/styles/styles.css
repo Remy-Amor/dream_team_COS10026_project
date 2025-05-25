@@ -534,7 +534,3 @@ div.error-messages p:hover {
     background: linear-gradient(145deg, #e7ecff, #dbe9f5);
     transform: scale(1.01);
 }
-
-p {
-  border: 2px solid red;
-}
