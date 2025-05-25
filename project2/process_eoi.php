@@ -57,20 +57,22 @@
          $errors = [];
 
         //  Use of GEN AI to generate the following error validations 
-        if (empty($first_name)) $errors[] = "First name is required.";
-        if (empty($last_name)) $errors[] = "Last name is required.";
-        if (empty($street_address)) $errors[] = "Street address is required.";
-        if (empty($suburb_town)) $errors[] = "Suburb or town is required.";
-        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Valid email is required.";
-        if (empty($phone_number) || !preg_match('/^[\d ]{8,12}$/', $phone_number)) $errors[] = "Valid phone number is required.";
         if (empty($job_ref_no)) $errors[] = "Job reference number is required.";
+        if (empty($first_name) || $first_name == false) $errors[] = "Valid First name is required.";
+        if (empty($last_name) || $last_name == false) $errors[] = "Valid Last name is required.";
+        if (empty($street_address) || $street_address == false) $errors[] = "Valid Street address is required.";
+        if (empty($suburb_town) || $suburb_town == false) $errors[] = "Valid Suburb or town is required.";
+        if (empty($email) || $email == false) $errors[] = "Valid email is required.";
+        if (empty($phone_number) || $phone_number == false) $errors[] = "Valid phone number is required.";
         if (empty($dob)) $errors[] = "Date of birth is required.";
         if (empty($gender)) $errors[] = "Gender is required.";
         if (empty($state)) $errors[] = "State is required.";
         if (empty($post_code)) $errors[] = "Post code is required.";
 
+
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error
          if (!empty($errors) || $first_name === false || $last_name === false || $suburb_town === false || $email === false || $phone_number === false) {
+             $_SESSION['errors'] = $errors;
              header('Location: error_page.php');
              exit();
          }
