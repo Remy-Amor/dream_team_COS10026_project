@@ -21,7 +21,7 @@ include 'header.inc';
 
 <main>
     <div id="enhancements">
-        <!-- WA- Image generated using ChatGPT-4 image generation tools -->
+        <!-- WA- All images in enhancements have been generated using ChatGPT-4 image generation tools -->
         <img src="styles/images/enhancements_icon.png" alt="Enhancements icon">
         <h1>Project Enhancements</h1>
     </div>
