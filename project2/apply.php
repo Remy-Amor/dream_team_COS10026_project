@@ -120,38 +120,38 @@
                                    <legend>Network Administration Skills</legend>
                                    <p>
                                         <label for="cloud_technologies">Working with cloud technologies (AWS, Azure, Google Cloud)</label>
-                                        <input type="checkbox" name="skills[]" id="cloud_technologies">
+                                        <input type="checkbox" name="skills[]" id="cloud_technologies" value="cloud_technologies">
                                    </p>
                                    <p>
                                         <label for="network_diagnostics">Network diagnostic and troubleshooting skills</label>
-                                        <input type="checkbox" name="skills[]" id="network_diagnostics">
+                                        <input type="checkbox" name="skills[]" id="network_diagnostics" value="network_diagnostics">
                                    </p>
                                    <p>
                                         <label for="network_security">Network security protocols</label>
-                                        <input type="checkbox" name="skills[]" id="network_security">
+                                        <input type="checkbox" name="skills[]" id="network_security" value="network_security">
                                    </p>
                                    <p>
                                         <label for="network_configuration">Network configuration practices</label>
-                                        <input type="checkbox" name="skills[]" id="network_configuration">
+                                        <input type="checkbox" name="skills[]" id="network_configuration" value="network_configuration">
                                    </p>
                               </fieldset>
                               <fieldset>
                                    <legend>Software Development Skills</legend>
                                    <p>
                                         <label for="programming">Programming languages (C/C++, JS, Java)</label>
-                                        <input type="checkbox" name="skills[]" id="programming">
+                                        <input type="checkbox" name="skills[]" id="programming" value="programming">
                                    </p>
                                    <p>
                                         <label for="version_control">Version control (i.e. git)</label>
-                                        <input type="checkbox" name="skills[]" id="version_control">
+                                        <input type="checkbox" name="skills[]" id="version_control" value="version_control">
                                    </p>
                                    <p>
                                         <label for="database_management">Database management (SQL, NoSQL)</label>
-                                        <input type="checkbox" name="skills[]" id="database_management">
+                                        <input type="checkbox" name="skills[]" id="database_management" value="database_management">
                                    </p>
                                    <p>
                                         <label for="development_lifecycle">Software development lifecycle (agile methodologies, TDD)</label>
-                                        <input type="checkbox" name="skills[]" id="development_lifecycle">
+                                        <input type="checkbox" name="skills[]" id="development_lifecycle" value="development_lifecycle">
                                    </p>
                               </fieldset>
                          </fieldset>
