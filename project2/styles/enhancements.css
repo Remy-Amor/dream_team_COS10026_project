@@ -43,6 +43,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 80%;
   margin: 1rem auto;
+
+  /* WA- Enable icon positioning inside card */
+  position: relative;
+  padding-right: 80px; /* WA- Reserve space on the right for icon */
 }
 
 .enhancement-card:hover {
@@ -54,4 +58,14 @@
 .enhancement-card h2 {
   margin-top: 0;
   color: #274C77;
+}
+
+/* WA- Consistent styling for enhancement icons */
+.enhancement-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }

@@ -27,27 +27,31 @@ include 'header.inc';
     </div>
 
     <section class="enhancement-card">
+        <!-- WA- Enhancement-specific icon -->
+        <img src="styles/images/manager_registration_icon.png" alt="Manager registration icon" class="enhancement-icon">
         <h2>1. Manager Registration</h2>
         <p>Signup is configured at <code>manager_signup.php</code>, and new manager details are added to the <code>manager_details_tb</code> table (password is hashed). Usernames cannot be duplicated.</p>
-        <!-- WA- Relates to backend form validation and password encryption logic -->
     </section>
 
     <section class="enhancement-card">
+        <!-- WA- Enhancement-specific icon -->
+        <img src="styles/images/manager_login_icon.png" alt="Manager login icon" class="enhancement-icon">
         <h2>2. Manager Login</h2>
         <p>The <code>manager_login.php</code> page allows managers to log in using credentials from the signup page. On unsuccessful login, a message is displayed. <code>manage.php</code> and associated result-processing pages are protected unless a manager is logged in.</p>
-        <!-- WA- Controlled via PHP session handling and access control logic -->
     </section>
 
     <section class="enhancement-card">
+        <!-- WA- Enhancement-specific icon -->
+        <img src="styles/images/login_locking_icon.png" alt="Login locking icon" class="enhancement-icon">
         <h2>3. Login Locking</h2>
         <p>After three unsuccessful login attempts, the user is blocked from logging in for 30 seconds, and a message is shown. After 30 seconds, refreshing the page will reveal the login button again.</p>
-        <!-- WA- Involves session/cookie timing logic, possibly stored in server memory or a DB field -->
     </section>
 
     <section class="enhancement-card">
+        <!-- WA- Enhancement-specific icon -->
+        <img src="styles/images/record_sorting_icon.png" alt="Record sorting icon" class="enhancement-icon">
         <h2>4. Sorting Records</h2>
         <p>For each EOI record display, the user has a dropdown option to sort records by fields such as first name, last name, and skills.</p>
-        <!-- WA- Likely implemented using GET parameters and SQL ORDER BY in the backend -->
     </section>
 </main>
 
