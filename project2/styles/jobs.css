@@ -6,64 +6,66 @@ last modified: 22/5/2025
 description: refers to jobs.php
 */
 
-
 /* WA: Job section bubble styling */
 .job-section {
-    background-color: #fdfdfd;                 /* clean white bubble */
-    border: 2px solid #274C77;                 /* consistent blue border from our palette */
-    border-radius: 16px;                       /* soft rounded edges for the bubble look */
-    padding: 2em;                              /* spacing inside the bubble */
-    margin: 2em auto;                          /* space around each job listing */
-    max-width: 900px;                          /* restricts width to keep it readable */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* subtle drop shadow for depth */
-    transition: transform 0.3s ease;           /* hover animation */
+    background-color: #fdfdfd;                /* Light background to separate from page */
+    border: 2px solid #274C77;                /* Blue border matching brand palette */
+    border-radius: 16px;                      /* Rounded edges for a "card" look */
+    padding: 2em;                             /* Internal spacing */
+    margin: 2em auto;                         /* External spacing and center alignment */
+    max-width: 900px;                         /* Limits width for readability */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease;          /* Smooth hover scaling */
 }
 
 .job-section:hover {
-    transform: scale(1.01);                    /* slightly lifts the card on hover */
+    transform: scale(1.01);                   /* Slight pop effect on hover */
 }
 
 .job-section a {
     display: inline-block;
     margin-top: 1em;
-    background-color: #274C77;
+    background-color: #274C77;                /* Dark blue button */
     color: white;
     padding: 0.6em 1.2em;
-    border-radius: 8px;
+    border-radius: 8px;                       /* Rounded button */
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .job-section a:hover {
-    background-color: #A3CEF1;
-    color: #000;
+    background-color: #A3CEF1;                /* Light blue hover */
+    color: #000;                              /* Better contrast when hovered */
 }
 
-/* WA: Responsive tweaks below (generated using Gen AI + refined manually) */
+/* 
+Responsive tweaks below were generated using Gen AI 
+and manually refined to ensure compatibility across screen sizes 
+*/
 
-/* Use of Gen Ai in order to scale on tablets and medium screens */
+/* Tablet and medium screen adaptations */
 @media (max-width: 768px) {
     .job-section {
         padding: 1.5em;
-        margin: 1.5em 1em; /* reduces horizontal space so bubbles don't get crushed */
+        margin: 1.5em 1em;                    /* Less horizontal margin for smaller viewports */
     }
 
     .job-section h2 {
-        font-size: 1.4em; /* scales title a bit smaller */
+        font-size: 1.4em;                     /* Slightly smaller headings */
     }
 
     .job-section ul,
     .job-section p {
-        font-size: 0.95em;
+        font-size: 0.95em;                    /* Reduce text size slightly for fit */
     }
 }
 
-/* Use of Gen Ai to optimize viewing on small mobile screens */
+/* Mobile-specific layout adjustments */
 @media (max-width: 480px) {
     .job-section {
         padding: 1em;
-        border-width: 1px; /* tightens up borders for small screens */
+        border-width: 1px;                    /* Thinner borders on small screens */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -73,62 +75,70 @@ description: refers to jobs.php
 
     .job-section a {
         padding: 0.5em 1em;
-        font-size: 0.95em; /* makes button text slightly smaller for touch-friendliness */
+        font-size: 0.95em;                    /* More compact button text for touch devices */
     }
+}
 
-    }
-    /* Intro section styling */
+/* WA: Intro section styling for jobs page */
 .jobs-intro {
-  background-color: #EAF1F8;       
-  border: 6px solid #274C77; 
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
-  margin: 2rem auto;
-  max-width: 70%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #EAF1F8;                /* Light blue for section background */
+    border: 6px solid #274C77;                /* Prominent border for visual grouping */
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 70%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);/* Subtle depth to lift it off the page */
 }
 
 .jobs-intro h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2.5rem;
-  color: #274C77;
-  line-height: 1.2;
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem;
+    color: #274C77;
+    line-height: 1.2;
 }
 
 .jobs-intro p {
-  margin: 0 auto;
-  font-size: 1.125rem;
-  color: #333;
-  line-height: 1.6;
-  max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
 }
 
-/* Responsive adjustments */
+/* 
+Responsive styles for the intro section 
+(also AI-assisted and manually refined) 
+*/
+
 @media (max-width: 768px) {
-  .jobs-intro {
-    padding: 1.5rem 1rem;
-    margin: 1.5rem auto;
-    border-width: 5px;
-  }
-  .jobs-intro h1 {
-    font-size: 2rem;
-  }
-  .jobs-intro p {
-    font-size: 1rem;
-  }
+    .jobs-intro {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+        border-width: 5px;
+    }
+
+    .jobs-intro h1 {
+        font-size: 2rem;
+    }
+
+    .jobs-intro p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .jobs-intro {
-    padding: 1rem;
-    margin: 1rem auto;
-    border-width: 4px;
-  }
-  .jobs-intro h1 {
-    font-size: 1.75rem;
-  }
-  .jobs-intro p {
-    font-size: 0.95rem;
-  }
+    .jobs-intro {
+        padding: 1rem;
+        margin: 1rem auto;
+        border-width: 4px;
+    }
+
+    .jobs-intro h1 {
+        font-size: 1.75rem;
+    }
+
+    .jobs-intro p {
+        font-size: 0.95rem;
+    }
 }

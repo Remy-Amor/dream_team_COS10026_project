@@ -59,7 +59,11 @@
                     <dd>Coded settings.php setting up connection to database</dd>
                     
                     <dt>William</dt>
-                    <dd>HTML and CSS for jobs.html, logo design</dd>
+                    <dd>HTML and CSS for jobs.html, website logo design</dd>
+                    <dd>Coded the php for jobs allowing it to echo job requirements from the jobs table, <br> and created MYSQL table for utilised by jobs.php </dd>
+                    <dd>Coded and styles enhancements page front end</dd
+                    <dd>Generated and added images for enhancements page </dd>
+
 
                     <dt>Amanuial</dt>
                     <dd> HTML and CSS for the homepage, header and footer. </dd>
