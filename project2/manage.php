@@ -52,8 +52,13 @@
                $sql = "SELECT * from eoi_tb";
                //  this if statement will determine whether or not the ORDER BY is appended to the sql query
                if(isset($_POST['sort_by'])) {
+                    if($_POST['sort_by'] == "skills") {
+                         $column = $_POST['sort_by'];
+                         $sql .= " ORDER BY CHAR_LENGTH($column) ASC ";
+                    } else {
                     $column = $_POST['sort_by'];
                     $sql .= " ORDER BY $column ASC";
+                    }
                }
                $result = mysqli_query($conn, $sql);
                if(mysqli_num_rows($result)>0) {
