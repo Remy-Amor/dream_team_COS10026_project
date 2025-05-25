@@ -2,7 +2,7 @@
      session_start();
      require("settings.php");
 
-     // Use of AI to generate the following Validation Functions
+     // Use of Gen AI to generate the following Validation Functions
      function isValidName($name) {
          if (preg_match("/^[a-zA-Z]{1,20}$/", $name)) {
              return $name; 
@@ -54,20 +54,25 @@
          $skills = $_POST['skills'];
          $other_skills = sanitize_input($_POST["other_skills"]);
 
+         $errors = [];
+
+        //  Use of GEN AI to generate the following error validations 
+        if (empty($job_ref_no)) $errors[] = "Job reference number is required.";
+        if (empty($first_name) || $first_name == false) $errors[] = "Valid First name is required.";
+        if (empty($last_name) || $last_name == false) $errors[] = "Valid Last name is required.";
+        if (empty($street_address) || $street_address == false) $errors[] = "Valid Street address is required.";
+        if (empty($suburb_town) || $suburb_town == false) $errors[] = "Valid Suburb or town is required.";
+        if (empty($email) || $email == false) $errors[] = "Valid email is required.";
+        if (empty($phone_number) || $phone_number == false) $errors[] = "Valid phone number is required.";
+        if (empty($dob)) $errors[] = "Date of birth is required.";
+        if (empty($gender)) $errors[] = "Gender is required.";
+        if (empty($state)) $errors[] = "State is required.";
+        if (empty($post_code)) $errors[] = "Post code is required.";
+
+
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error
-         if ($first_name === false || $last_name === false || $suburb_town === false || $email === false || $phone_number === false) {
-             header('Location: error_page.php');
-             exit();
-         }
-
-         // WA: Validates gender radio selection for allowed values only
-         if (!in_array($gender, ['male', 'female', 'other'])) {
-             header('Location: error_page.php');
-             exit();
-         }
-
-         // WA: Validates that at least one skill or the other_skills text area is filled
-         if (empty($skills) && empty($other_skills)) {
+         if (!empty($errors) || $first_name === false || $last_name === false || $suburb_town === false || $email === false || $phone_number === false) {
+             $_SESSION['errors'] = $errors;
              header('Location: error_page.php');
              exit();
          }  
