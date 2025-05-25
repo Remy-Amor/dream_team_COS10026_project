@@ -4,7 +4,6 @@
      
      // checks time, if more than 30 seconds elapsed reset login attempt number
      if (isset($_SESSION["locked"])) {
-          echo "<p>Login has been locked for 30 seconds</p>";
           $difference = time() - $_SESSION["locked"];
           if ($difference > 30)
           {
@@ -49,6 +48,8 @@
                <?php
                     if(!isset($_SESSION['locked'])) {
                          echo "<input type='submit' value='login'>";
+                         } else {
+                              echo "<p>Login has been locked for 30 seconds</p>";
                          }
                ?>
           </form>
@@ -60,7 +61,8 @@
                     $manager_username = trim($_POST['manager_username']);
                     $manager_password = trim($_POST['manager_password']);
                     // Simple query to check credentials
-                    $query = "SELECT * FROM manager_details_tb WHERE username = '$manager_username'";
+                    $query = "SELECT * FROM manager_details_tb 
+                    WHERE username = '$manager_username'";
                     $result = mysqli_query($conn, $query);
                     $user = mysqli_fetch_assoc($result);
                     if (isset($user)) {
