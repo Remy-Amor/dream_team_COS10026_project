@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/error.css">
+    <!-- Error tyles page -->
+    <link rel="stylesheet" href="styles/error_styles.css">
+
 </head>
 <body>
     <?php include 'header.inc'; ?>
