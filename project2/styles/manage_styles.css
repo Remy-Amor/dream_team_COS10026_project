@@ -52,6 +52,54 @@ h1, h2, h3, .query-header {
    
    /*  following is form styling, generated partially by chatgpt using the prompt "style this with css" */
 
+
+   .sort_form {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+   }
+
+   .sort_form label {
+    font-weight: 600;
+    margin-right: 8px;
+   }
+
+   .sort_form select {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    background-color: #f7fafc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+   }
+
+   .sort_form select:focus {
+    border-color: #5e81a8;
+    outline: none;
+   }
+
+   .sort_form input[type="submit"] {
+    background-color: #395a80;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .sort_form input[type="submit"]:hover {
+    background-color: #5e81a8;
+  }
+
    .query-div {
     display: flex;
     justify-content: space-evenly;

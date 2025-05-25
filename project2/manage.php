@@ -37,18 +37,32 @@
           ?>
           <h1>Manage Expressions of Interest</h1>
           <h2>EOI Table</h2>
+          <form action="manage.php" class="sort_form" method="post">
+               <label for="sort_by">Sort by:</label>
+               <select name="sort_by" id="sort_by">
+                    <option value="">Select Sort Value</option>
+                    <option value="first_name">First name</option>
+                    <option value="last_name">Last name</option>
+                    <option value="skills">Skills</option>
+                    <option value="eoi_status">Status</option>
+               </select>
+               <input type="submit" value="sort">
+          </form>
           <?php
                $sql = "SELECT * from eoi_tb";
+               //  this if statement will determine whether or not the ORDER BY is appended to the sql query
+               if(isset($_POST['sort_by'])) {
+                    $column = $_POST['sort_by'];
+                    $sql .= " ORDER BY $column ASC";
+               }
                $result = mysqli_query($conn, $sql);
                if(mysqli_num_rows($result)>0) {
                          echo "<div class='table-wrapper'><table>";
                          echo "<tr><th>EOI number</th><th>Job Reference</th><th>First Name</th><th>Last Name</th>
                          <th>Street address</th><th>Suburb/town</th><th>State</th><th>Post Code</th>
-                         <th>email</th><th>Phone number</th><th>Network admin skills</th>
-                         <th>Software developer skills</th><th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
+                         <th>email</th><th>Phone number</th><th>Skills</th>
+                         <th>Other skills</th><th>Change status</th><th>Change Status</th></tr>";
                     while ($row = mysqli_fetch_assoc($result)) {
-                         $network_admin = $row['network_admin_skills'] ? 'true' : 'false';
-                         $software_development = $row['software_developer_skills'] ? 'true' : 'false';
                          echo "<tr>
                          <td>" . $row['EOInumber'] . "</td>"
                          . "<td>" . $row['job_ref_no'] . "</td>"
@@ -60,8 +74,7 @@
                          . "<td>" . $row['postcode'] . "</td>
                          <td>" . $row['email'] . "</td>"
                          . "<td>" . $row['phone_number'] . "</td>"
-                         . "<td>" . $network_admin . "</td>"
-                         . "<td>" . $software_development . "</td>"
+                         . "<td>" . $row['skills'] . "</td>"
                          . "<td>" . $row['other_skills'] . "</td>"
                          . "<td>" . $row['eoi_status'] . "</td>"
                          . "<td> <form action='change_eoi.php' method='post' novalidate='novalidate'>
