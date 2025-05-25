@@ -287,59 +287,59 @@ legend {
  /* jobs container and left/right - WA */
  
  .jobs-container {
-     display: flex;
-     gap: 30px; /* gap of 30 px between sections */
-     align-items: flex-start; /* Alighned to the top of the container */
-     justify-content: space-between; /* Evenly space out sections */
-     flex-wrap: wrap; /* wrap on small screens */
-   }
-   
-   #left, #right {
-     flex: 1 1 45%; /* makes sections adaptive */
-     box-sizing: border-box; /* borders and padding are now in the element rather than out */
-     padding: 15px; /* Adds padding for the content in each section */
-     border-radius: 8px; /*  rounded corners */
-   }
+    display: flex;
+    gap: 30px; /* gap of 30 px between sections */
+    align-items: flex-start; /* Alighned to the top of the container */
+    justify-content: space-between; /* Evenly space out sections */
+    flex-wrap: wrap; /* wrap on small screens */
+}
 
-   #left a {
-     color: green ;
-     text-decoration: none; /* removes bottom line */
-     border: 4px solid green;
-     border-radius: 8px; 
-     display:inline-block; /* border and padding are around text */
-   }
+#left, #right {
+    flex: 1 1 45%; /* makes sections adaptive */
+    box-sizing: border-box; /* borders and padding are now in the element rather than out */
+    padding: 15px; /* Adds padding for the content in each section */
+    border-radius: 8px; /*  rounded corners */
+}
 
-   #right a {
-     color: green ;
-     text-decoration: none;
-     border: 4px solid green;
-     border-radius: 8px;
-     display:inline-block;
-   }
+#left a {
+    color: green ;
+    text-decoration: none; /* removes bottom line */
+    border: 4px solid green;
+    border-radius: 8px; 
+    display:inline-block; /* border and padding are around text */
+}
 
-   #left a:hover {
-     background-color: skyblue;
-     border-color: blue;
-     color: black;
-   }
+#right a {
+    color: green ;
+    text-decoration: none;
+    border: 4px solid green;
+    border-radius: 8px;
+    display:inline-block;
+}
 
-   /* when hovering over the hyperlinks the border and background will change colour*/
-   #right a:hover {
-     background-color: skyblue;
-     border-color: blue; 
-     color: black;
-   }
+#left a:hover {
+    background-color: skyblue;
+    border-color: blue;
+    color: black;
+}
+
+/* when hovering over the hyperlinks the border and background will change colour*/
+#right a:hover {
+    background-color: skyblue;
+    border-color: blue; 
+    color: black;
+}
 
 
 
-   /* Error Message styling */
-   .error-container {
-     border: 1px solid rgb(218, 157, 157);
-     background-color: #A3CEF1;
-     padding: 30px;
-     max-width: 400px;
-     margin: 0 auto;
-     border-radius: 8px;
+/* Error Message styling */
+.error-container {
+    border: 1px solid rgb(218, 157, 157);
+    background-color: #A3CEF1;
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 /* AMAN Index.php styling */
@@ -516,7 +516,7 @@ h1{
 }
 
 /* Error Page styling */
-.error_message p{
+div.error-messages p {
     font-size: 1.2em;
     margin: 1em auto 2em auto;
     line-height: 1.6em;
@@ -530,7 +530,11 @@ h1{
     font-family: 'Segoe UI', sans-serif;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-.error_message:hover {
+div.error-messages p:hover {
     background: linear-gradient(145deg, #e7ecff, #dbe9f5);
     transform: scale(1.01);
+}
+
+p {
+  border: 2px solid red;
 }

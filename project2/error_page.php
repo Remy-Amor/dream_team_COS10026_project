@@ -14,7 +14,7 @@
         <h1>Oops! Something went wrong.</h1>
         <p>Your input was invalid. Please check your form and try again.</p>
         <p><a href="apply.php">Go back to the form</a></p>
-
+        </div>
         <?php
             session_start();
 
@@ -23,15 +23,14 @@
                 
                 $i = 0;
                 while ($i < count($_SESSION['errors'])) {
-                    echo "<p style='color: red;'>" . $_SESSION['errors'][$i] . "</p>";
+                    echo "<p>" . $_SESSION['errors'][$i] . "</p>";
                     $i++;
                 }
 
                 echo '</div>';
                 unset($_SESSION['errors']); // Clear errors after displaying
             }
-        ?>
-    </div>
+            ?>
     </main>
     <?php include 'footer.inc'; ?>
 </body>
