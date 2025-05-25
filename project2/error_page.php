@@ -33,7 +33,6 @@
                 }
 
                 echo '</div>';
-                unset($_SESSION['errors']); // Clear errors after displaying
             }
             ?>
     </main>

@@ -1,6 +1,7 @@
 <?php 
      require('settings.php');
      session_start();
+     unset($_SESSION['errors']); // clears any previous errors
 ?>
 
 <!DOCTYPE html>
