@@ -56,7 +56,13 @@
 
          $errors = [];
 
-        //  Use of GEN AI to generate the following error validations
+        //  Use of GEN AI to generate the following error validations 
+        if (empty($first_name)) $errors[] = "First name is required.";
+        if (empty($last_name)) $errors[] = "Last name is required.";
+        if (empty($street_address)) $errors[] = "Street address is required.";
+        if (empty($suburb_town)) $errors[] = "Suburb or town is required.";
+        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Valid email is required.";
+        if (empty($phone_number) || !preg_match('/^[\d ]{8,12}$/', $phone_number)) $errors[] = "Valid phone number is required.";
         if (empty($job_ref_no)) $errors[] = "Job reference number is required.";
         if (empty($dob)) $errors[] = "Date of birth is required.";
         if (empty($gender)) $errors[] = "Gender is required.";
