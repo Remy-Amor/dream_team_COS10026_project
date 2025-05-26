@@ -31,6 +31,16 @@
          return false;
      }
 
+
+        function validatePostcode($post_code) {
+            // Check if the postcode is a 4-digit number and the first digit is not 0
+            if (preg_match('/^[1-9]\d{3}$/', $post_code)) {
+                return $post_code;
+            }
+            return false;
+        }
+
+
      // WA: Prevent direct access to process_eoi.php by checking request method
      if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
          header("Location: about.php");
@@ -48,7 +58,7 @@
          $street_address = isValidStreetAddress(sanitize_input($_POST["street_address"]));
          $suburb_town = isValidSuburbTown(sanitize_input($_POST["suburb_or_town"]));
          $state = sanitize_input($_POST["state"]);
-         $post_code = sanitize_input($_POST["post_code"]);
+         $post_code = validatePostcode(sanitize_input($_POST["post_code"]));
          $email = filter_var(filter_var(sanitize_input($_POST["email"]), FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);
          $phone_number = validatePhoneNumber(sanitize_input($_POST["phone_number"]));
          $skills = $_POST['skills'];
@@ -67,7 +77,7 @@
         if (empty($dob)) $errors[] = "Date of birth is required.";
         if (empty($gender)) $errors[] = "Gender is required.";
         if (empty($state)) $errors[] = "State is required.";
-        if (empty($post_code)) $errors[] = "Post code is required.";
+        if (empty($post_code) || $post_code == false) $errors[] = "Valid Post code is required.";
 
 
          // WA: Ensures required fields meet format requirements; otherwise, redirect to error

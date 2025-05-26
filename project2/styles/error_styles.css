@@ -16,5 +16,4 @@
 .error-messages p:hover {
     background: linear-gradient(145deg, #e7ecff, #dbe9f5);
     transform: scale(1.01);
-    transition: background 0.2s ease, transform 0.2s ease;
 }
