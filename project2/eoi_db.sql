@@ -43,17 +43,6 @@ CREATE TABLE `eoi_tb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `eoi_tb`
---
-
-INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `post_code`, `email`, `phone_number`, `skills`, `other_skills`, `status`) VALUES
-(2, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New'),
-(3, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New'),
-(4, 'NA23X', 'Aman', 'ingewp', 'eoign', 'igoen', 'VIC', '3000', 'enidvvn@gmial.com', '0404040404', 'test', 'Hellowoow', 'New');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `manager_details_tb`
 --
 
