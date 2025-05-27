@@ -23,6 +23,12 @@ $preferences     = sanitize_input($_POST['preferences']);
 $benefits        = sanitize_input($_POST['benefits']);
 $closing_date    = sanitize_input($_POST['closing_date']);
 
+// WA - Validate job reference: must be at least 5 characters, only letters/numbers
+if (!preg_match('/^[A-Za-z0-9]{5,}$/', $job_ref)) {
+    header("Location: descriptions.php?insert=invalidref");
+    exit();
+}
+
 // WA - Basic validation: ensure no required fields are empty
 if (
     empty($job_ref) || empty($title) || empty($location) || empty($job_type) ||

@@ -98,3 +98,17 @@ form input[type="submit"]:hover {
   background-color: #183b5c;
 }
 /* No responsive flex styles required (forms stack vertically) */   
+
+/* This styling was ai-generated using the prompt "generate styling for this error message" */  
+#reference_error_message {
+  color: #b00020;                /* A strong red for errors */
+  background-color: #fdd;        /* Light red background for emphasis */
+  border: 1px solid #b00020;     /* Match the text color for the border */
+  padding: 0.75em 1em;           /* Spacing inside the box */
+  border-radius: 6px;            /* Rounded corners */
+  font-weight: bold;            /* Emphasize text */
+  max-width: 600px;             /* Limit width for readability */
+  margin: 1em auto;             /* Center with spacing */
+  text-align: center;           /* Center the error text */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

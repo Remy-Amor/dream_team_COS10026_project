@@ -9,9 +9,6 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>WA - Database connection failure: " . mysqli_connect_error() . "</p>");
 }
-
-// WA - Include the shared site header (e.g., nav, logo)
-include 'header.inc';
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +29,16 @@ include 'header.inc';
 </head>
 
 <body>
+    <?php
+    // WA - Include the shared site header (e.g., nav, logo)
+    include 'header.inc';
+    
+    // prevents direct access
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header("Location: about.php");
+        exit();
+    }
+    ?>
     <h1>Edit Job Descriptions</h1><br>
 
     <!-- WA - Feedback messages for job insert/delete outcomes (This feedback section was generated using chat-gpt "show me how to add feedback when the user is returned to descriptioons.php") -->
@@ -41,6 +48,12 @@ include 'header.inc';
 
     <?php if (isset($_GET['delete']) && $_GET['delete'] === 'success'): ?>
         <p style="color: darkred; font-weight: bold;">🗑️ Job was successfully deleted.</p>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['insert']) && $_GET['insert'] === 'invalidref'): ?>
+    <p id="reference_error_message">
+        ❌ Job Reference must be at least 5 characters long and contain only letters and numbers.
+    </p>
     <?php endif; ?>
 
     <!-- WA - Wrapper for the two main form sections -->
