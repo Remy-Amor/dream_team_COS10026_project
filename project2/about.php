@@ -63,6 +63,7 @@
                     <dd>Coded the php for jobs allowing it to echo job requirements from the jobs table, <br> and created MYSQL table for utilised by jobs.php </dd>
                     <dd>Coded and styles enhancements page front end</dd>
                     <dd>Generated and added images for enhancements page </dd>
+                    <dd>php ans css for descriptions.php and creation of delete_job.php and insert_job.php</dd>
 
 
                     <dt>Amanuial</dt>
