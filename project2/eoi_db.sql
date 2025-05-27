@@ -58,7 +58,7 @@ INSERT INTO `eoi_tb` (`EOInumber`, `job_ref_no`, `first_name`, `last_name`, `str
 --
 
 CREATE TABLE `jobs` (
-  `job_ref` varchar(10) NOT NULL,
+  `job_ref` varchar(5) NOT NULL,
   `title` varchar(100) NOT NULL,
   `location` varchar(100) NOT NULL,
   `job_type` varchar(50) NOT NULL,
