@@ -31,7 +31,7 @@ mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
 // WA - Simulation of post method to return user to descriptions.php - done with chat gpt using the prompt " How to redirect user back to descriptins with post method"
-// WA - POST redirect to descriptions.php with insert=success flag
+
 echo '
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ echo '
 </head>
 <body>
     <form id="postBackForm" action="descriptions.php" method="post">
-        <input type="hidden" name="insert_status" value="success">
+        <input type="hidden" name="delete_status" value="success">
     </form>
     <script>
         document.getElementById("postBackForm").submit();

@@ -61,8 +61,7 @@ mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
 // WA - Simulation of post method to return user to descriptions.php - done with chat gpt using the prompt " How to redirect user back to descriptins with post method"
-<?php
-// WA - POST redirect to descriptions.php with insert=success flag
+
 echo '
 <!DOCTYPE html>
 <html lang="en">
