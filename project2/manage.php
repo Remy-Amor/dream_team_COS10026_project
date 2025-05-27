@@ -3,7 +3,6 @@
      require("settings.php");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +11,9 @@
      <meta name="author" content="Remy Amor, William Anthony, Amanuial Ashagrie">
      <meta name="description" content="Homepage of Dream Team IT Solutions">
      <meta name="keywords" content="homepage, IT, software, software development, network, network administrator, jobs">
-     <!-- link to styles.css -->
      <link rel="stylesheet" href="project1/styles/styles.css">
      <link rel="stylesheet" href="styles/styles.css">
-     <!-- <link rel="stylesheet" href="styles/aman_styles.css"> -->
-
-     <!-- link to responsive css -->
      <link rel="stylesheet" href="styles/responsive.css">
-     <!-- link to manage_styles.css -->
      <link rel="stylesheet" href="styles/manage_styles.css">
      <title>Manage</title>
 </head>
@@ -27,9 +21,13 @@
      <?php include("header.inc"); ?>
      <main>
           <?php
-               //  require users to be logged in
                if(isset($_SESSION['manager_username'])) {
                     echo "<p class='username-display'> Username is ". $_SESSION['manager_username'] . ", <a href='signout.php'>Sign out?</a></p>";
+
+                    // ✅ NEW: Add or Delete Job Listings button
+                    echo "<div class='manage-jobs-link'>
+                            <a href='descriptions.php' class='button-link'>➕ Add or Delete Job Listings</a>
+                          </div>";
                }
                else {
                     header("Location: manager_login.php");
@@ -50,7 +48,6 @@
           </form>
           <?php
                $sql = "SELECT * from eoi_tb";
-               //  this if statement will determine whether or not the ORDER BY is appended to the sql query
                if(isset($_POST['sort_by'])) {
                     $column = $_POST['sort_by'];
                     $sql .= " ORDER BY $column ASC";
@@ -94,14 +91,12 @@
                     echo "<h3>No Records Found</h3>";
                }
           ?>
-
           <div class="query-div">
           <form action="manage_results.php" method="post" class="query-form">
                <legend>Search by Job Reference</legend>
                <select name="search_job_ref" id="search_job_ref" required>
                     <option value="">Select a job reference number</option>
                     <?php
-                              //  list of job reference numbers
                               $sql = "SELECT job_ref FROM jobs";
                               $result = mysqli_query($conn, $sql);
                               while($row = mysqli_fetch_assoc($result)) {
@@ -110,10 +105,8 @@
                               }
                          ?>
                </select>
-               <!-- Hidden input that sends data letting the server know which query to process -->
                <input type="hidden" name="search_by_job_ref"value="search_by_job_ref">
-               <br>
-               <br>
+               <br><br>
                <input type="submit" value="submit">
           </form>
           <form action="manage_results.php" method="post" class="query-form">
@@ -121,7 +114,6 @@
                <select name="delete_job_ref" id="delete_job_ref" required>
                     <option value="">Select a job reference number</option>
                     <?php
-                              //  list of job reference numbers
                               $sql = "SELECT job_ref FROM jobs";
                               $result = mysqli_query($conn, $sql);
                               while($row = mysqli_fetch_assoc($result)) {
@@ -130,10 +122,8 @@
                               }
                          ?>
                </select>
-               <!-- Hidden input that sends data letting the server know which query to process -->
                <input type="hidden" name="delete_by_job_ref" value="delete_by_job_ref">
-               <br>
-               <br>
+               <br><br>
                <input type="submit" value="submit">
           </form>
           </div>
@@ -145,7 +135,6 @@
                <br>
                <label for="search_last_name">Last Name:</label>
                <input type="text" name="search_last_name">
-               <!-- Hidden input that sends data letting the server know which query to process -->
                <input type="hidden" name="search_by_name" value="search_by_name">
                <input type="submit" value="submit">
           </form>

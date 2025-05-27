@@ -77,4 +77,24 @@ form input[type="submit"]:hover {
   background-color: #183b5c;
 }
 
+.back-to-manage {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.button-link {
+  background-color: #274C77;
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #183b5c;
+}
 /* No responsive flex styles required (forms stack vertically) */   

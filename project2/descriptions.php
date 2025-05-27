@@ -111,6 +111,10 @@ include 'header.inc';
         </section>
     </div>
 
+<div class="back-to-manage">
+    <a href="manage.php" class="button-link">⬅ Back to Manage Page</a>
+</div>
+
 <?php 
 // WA - Include the common site footer
 include 'footer.inc'; 
