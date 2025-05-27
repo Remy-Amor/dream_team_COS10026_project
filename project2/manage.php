@@ -54,10 +54,12 @@
           </form>
 
           <?php
-               $sql = "SELECT * FROM eoi_tb";
-               if (isset($_POST['sort_by']) && $_POST['sort_by'] !== '') {
-                    $column = mysqli_real_escape_string($conn, $_POST['sort_by']);
+               $sql = "SELECT * from eoi_tb";
+               //  this if statement will determine whether or not the ORDER BY is appended to the sql query
+               if(isset($_POST['sort_by'])) {
+                    $column = $_POST['sort_by'];
                     $sql .= " ORDER BY $column ASC";
+                    }
                }
 
                $result = mysqli_query($conn, $sql);

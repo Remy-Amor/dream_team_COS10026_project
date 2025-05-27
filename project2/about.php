@@ -61,7 +61,7 @@
                     <dt>William</dt>
                     <dd>HTML and CSS for jobs.html, website logo design</dd>
                     <dd>Coded the php for jobs allowing it to echo job requirements from the jobs table, <br> and created MYSQL table for utilised by jobs.php </dd>
-                    <dd>Coded and styles enhancements page front end</dd
+                    <dd>Coded and styles enhancements page front end</dd>
                     <dd>Generated and added images for enhancements page </dd>
 
 
@@ -69,7 +69,7 @@
                     <dd> HTML and CSS for the homepage, header and footer. </dd>
                     <dd> Changing files to .php and pluging in Include files, </dd>
                     <dd> Header and Footer further styling, </dd>
-                    <dd> Developing process_eoi.php that processes all Exoressions of Interest, </dd>
+                    <dd> Developing process_eoi.php that processes all Expressions of Interest, </dd>
                     <dd> Server Side validation of all user inputs,</dd>
                     <dd> Development error_page.php, page that is used throughout the project to redirect with invalid user input. </dd>
 
