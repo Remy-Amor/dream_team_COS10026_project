@@ -1,6 +1,6 @@
 <?php
 // Database connection settings
-$host = "localhost";
+$host = "127.0.0.1"; // works same as localhost, can append port number to it 
 $user = "root";              // XAMPP default username
 $pwd = "";                   // XAMPP default has no password
 $sql_db = "eoi_db";  // Agreed project database name
