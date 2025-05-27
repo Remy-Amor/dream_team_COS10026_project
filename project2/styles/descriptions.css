@@ -1,58 +1,80 @@
 /* File: descriptions.css
-   Purpose: Styling for the descriptions.php page
-   Author: Dream Team IT Solutions
+   Purpose: Styles for the descriptions.php page (stacked layout)
+   Author: William Anthony, Dream Team IT Solutions
 */
 
-#job-form-section,
-#delete-job-section {
+/* Container for both forms - centered and padded */
+.job-description-wrapper {
+  display: block;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+/* Section styling - shared layout for both forms */
+.add-job-form,
+.delete-job-form {
+  width: 100%;
   background-color: #fdfdfd;
   border: 2px solid #274C77;
   border-radius: 12px;
-  padding: 2em;
-  margin: 2em auto;
-  max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
-#job-form-section h2,
-#delete-job-section h2 {
+/* Form heading styles */
+.add-job-form h2,
+.delete-job-form h2 {
   color: #274C77;
   margin-top: 0;
+  font-size: 1.3rem;
 }
 
+/* Label styling for all form fields */
 form label {
-  font-weight: bold;
+  font-weight: 600;
   display: block;
   margin-top: 1em;
+  font-size: 0.95rem;
 }
 
+/* General input, date, select, and textarea styling */
 form input[type="text"],
 form input[type="date"],
 form textarea,
 form select {
   width: 100%;
-  padding: 0.75em;
+  padding: 0.5em;
   margin-top: 0.25em;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1em;
+  font-size: 0.95rem;
 }
 
+/* Enable vertical resize for textareas */
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit button styling */
 form input[type="submit"] {
   background-color: #274C77;
   color: white;
   border: none;
-  padding: 0.75em 1.5em;
+  padding: 0.5em 1em;
   margin-top: 1.5em;
   cursor: pointer;
   border-radius: 6px;
-  font-size: 1em;
+  font-size: 0.95rem;
 }
 
+/* Submit button hover effect */
 form input[type="submit"]:hover {
   background-color: #183b5c;
 }
 
-hr {
-  margin: 3em 0;
-}
+/* No responsive flex styles required (forms stack vertically) */   
