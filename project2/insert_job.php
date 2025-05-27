@@ -35,6 +35,7 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
-header("Location: description.php");
+// Redirect with success flag
+header("Location: descriptions.php?insert=success");
 exit();
 ?>

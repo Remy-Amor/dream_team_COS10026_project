@@ -67,6 +67,7 @@ include 'header.inc';
             echo "<h3>Qualifications & Skills</h3><h4>Essential</h4><ul>" . htmlspecialchars($job['qualifications']) . "</ul>";
             echo "<h4>Preferable</h4><ul>" . htmlspecialchars($job['preferences']) . "</ul>";
             echo "<h3>Benefits</h3><ul>" . htmlspecialchars($job['benefits']) . "</ul>";
+            echo "<h3>closing_date</h3><ul>" . htmlspecialchars($job['closing_date']) . "</ul>";
             
             // WA- Link to application page
             echo '<aside><p><a href="apply.php">Join Us Now</a></p></aside>';

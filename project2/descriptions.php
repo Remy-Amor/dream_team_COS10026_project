@@ -25,14 +25,18 @@ include 'header.inc';
     <title>Dream Team IT Solutions - Jobs Page</title>
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/descriptions.css">
 </head>
 
 <body>
     <h1>Edit Job Descriptions</h1><br>
+    <?php if (isset($_GET['insert']) && $_GET['insert'] === 'success'): ?>
+  <p style="color: green; font-weight: bold;">✅ Job was successfully added.</p>
+<?php endif; ?>
 
     <section id="job-form-section"> 
       <h2>Post a New Job</h2>
-      <form action="C:\xampp\htdocs\dream_team_COS10026_project\project2\insert_job.php" method="post">
+      <form action="insert_job.php" method="post">
         <label for="job_ref">Job Reference Number:</label><br>
         <input type="text" id="job_ref" name="job_ref" required><br><br>
 
@@ -80,7 +84,10 @@ include 'header.inc';
 
     <section id="delete-job-section">
       <h2>Delete a Job</h2>
-      <form action="project2/delete_job.php" method="post">
+      <?php if (isset($_GET['delete']) && $_GET['delete'] === 'success'): ?>
+  <p style="color: darkred; font-weight: bold;">🗑️ Job was successfully deleted.</p>
+<?php endif; ?>
+      <form action="delete_job.php" method="post">
         <label for="job_ref">Select Job Reference to Delete:</label><br>
         <select id="job_ref" name="job_ref" required>
           <option value="">-- Select Job Reference --</option>
