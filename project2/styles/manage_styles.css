@@ -205,3 +205,26 @@ h1, h2, h3, .query-header {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+/* This is for the link to description.php it was styled using chat gpt "style this button matching the overall aesthetic of the website" - WA */
+
+.manage-jobs-link {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.button-link {
+  background-color: #274C77;        /* primary theme blue */
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #183b5c;        /* darker on hover */
+}

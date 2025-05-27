@@ -1,0 +1,145 @@
+<?php
+// WA - Setup database connection using credentials from settings.php
+require_once "settings.php";
+
+// WA - Establish a connection to the database
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
+// WA - Exit gracefully if connection fails
+if (!$conn) {
+    die("<p>WA - Database connection failure: " . mysqli_connect_error() . "</p>");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- WA - Page meta information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Remy Amor, William Anthony, Amanuial Ashagrie">
+    <meta name="description" content="Job Descriptions manage page">
+    <meta name="keywords" content="Jobs page inc requirements">
+
+    <!-- WA - Page title and linked stylesheets -->
+    <title>Dream Team IT Solutions - Jobs Page</title>
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/descriptions.css">
+</head>
+
+<body>
+    <?php
+    // WA - Include the shared site header (e.g., nav, logo)
+    include 'header.inc';
+    
+    // prevents direct access
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header("Location: about.php");
+        exit();
+    }
+    ?>
+    <h1>Edit Job Descriptions</h1><br>
+
+    <!-- WA - Feedback messages for job insert/delete outcomes (This feedback section was generated using chat-gpt "show me how to add feedback when the user is returned to descriptioons.php via post") -->
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['insert_status']) && $_POST['insert_status'] === 'success'): ?>
+    <p class="success-message">✅ Job was successfully added.</p>
+    <?php endif; ?>
+
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_status']) && $_POST['delete_status'] === 'success'): ?>
+    <p class="delete-message">🗑️ Job was successfully deleted.</p>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['insert']) && $_GET['insert'] === 'invalidref'): ?>
+    <p id="reference_error_message">
+        ❌ Job Reference must be at least 5 characters long and contain only letters and numbers.
+    </p>
+    <?php endif; ?>
+
+    <!-- WA - Wrapper for the two main form sections -->
+    <div class="job-description-wrapper">
+        <!-- WA - Add job form -->
+        <section class="add-job-form"> 
+            <h2>Post a New Job</h2>
+            <form action="insert_job.php" method="post">
+                <label for="job_ref">Job Reference Number:</label>
+                <input type="text" id="job_ref" name="job_ref" required>
+
+                <label for="title">Job Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="job_type">Job Type:</label>
+                <input type="text" id="job_type" name="job_type" required>
+
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="reports_to">Reports To:</label>
+                <input type="text" id="reports_to" name="reports_to" required>
+
+                <label for="salary">Salary:</label>
+                <input type="text" id="salary" name="salary" required>
+
+                <label for="summary">Job Summary:</label>
+                <textarea id="summary" name="summary" rows="4" required></textarea>
+
+                <label for="responsibilities">Responsibilities:</label>
+                <textarea id="responsibilities" name="responsibilities" rows="4" required></textarea>
+
+                <label for="qualifications">Qualifications:</label>
+                <textarea id="qualifications" name="qualifications" rows="4" required></textarea>
+
+                <label for="preferences">Preferences:</label>
+                <textarea id="preferences" name="preferences" rows="4" required></textarea>
+
+                <label for="benefits">Benefits:</label>
+                <textarea id="benefits" name="benefits" rows="4" required></textarea>
+
+                <label for="closing_date">Closing Date:</label>
+                <input type="date" id="closing_date" name="closing_date" required>
+
+                <input type="submit" value="Submit Job">
+            </form>
+        </section>
+
+        <!-- WA - Delete job form -->
+        <section class="delete-job-form">
+            <h2>Delete a Job</h2>
+            <form action="delete_job.php" method="post">
+                <label for="job_ref">Select Job Reference to Delete:</label>
+                <select id="job_ref" name="job_ref" required>
+                    <option value="">-- Select Job Reference --</option>
+                    <?php
+                    // WA - Fetch job reference numbers from database
+                    $query = "SELECT job_ref FROM jobs ORDER BY job_ref ASC";
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value=\"" . htmlspecialchars($row['job_ref']) . "\">" . htmlspecialchars($row['job_ref']) . "</option>";
+                        }
+                    } else {
+                        echo "<option value=\"\">No jobs available</option>";
+                    }
+                    ?>
+                </select>
+
+                <input type="submit" value="Delete Job">
+            </form>
+        </section>
+    </div>
+
+    <!-- WA - Link back to the manager dashboard -->
+    <div class="back-to-manage">
+        <a href="manage.php" class="button-link">⬅ Back to Manage Page</a>
+    </div>
+
+    <?php 
+    // WA - Include the common site footer
+    include 'footer.inc'; 
+    ?>
+</body>
+</html>

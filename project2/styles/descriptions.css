@@ -1,0 +1,114 @@
+/* File: descriptions.css
+   Purpose: Styles for the descriptions.php page (stacked layout)
+   Author: William Anthony, Dream Team IT Solutions
+*/
+
+/* Container for both forms - centered and padded */
+.job-description-wrapper {
+  display: block;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+/* Section styling - shared layout for both forms */
+.add-job-form,
+.delete-job-form {
+  width: 100%;
+  background-color: #fdfdfd;
+  border: 2px solid #274C77;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+/* Form heading styles */
+.add-job-form h2,
+.delete-job-form h2 {
+  color: #274C77;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* Label styling for all form fields */
+form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 1em;
+  font-size: 0.95rem;
+}
+
+/* General input, date, select, and textarea styling */
+form input[type="text"],
+form input[type="date"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.25em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Enable vertical resize for textareas */
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+  background-color: #274C77;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Submit button hover effect */
+form input[type="submit"]:hover {
+  background-color: #183b5c;
+}
+
+.back-to-manage {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.button-link {
+  background-color: #274C77;
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #183b5c;
+}
+/* No responsive flex styles required (forms stack vertically) */   
+
+/* This styling was ai-generated using the prompt "generate styling for this error message" */  
+#reference_error_message {
+  color: #b00020;                /* A strong red for errors */
+  background-color: #fdd;        /* Light red background for emphasis */
+  border: 1px solid #b00020;     /* Match the text color for the border */
+  padding: 0.75em 1em;           /* Spacing inside the box */
+  border-radius: 6px;            /* Rounded corners */
+  font-weight: bold;            /* Emphasize text */
+  max-width: 600px;             /* Limit width for readability */
+  margin: 1em auto;             /* Center with spacing */
+  text-align: center;           /* Center the error text */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
