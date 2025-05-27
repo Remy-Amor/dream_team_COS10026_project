@@ -6,7 +6,7 @@ $pwd = "";                   // XAMPP default has no password
 $sql_db = "eoi_db";  // Agreed project database name
 
 // Establish the connection
-$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
