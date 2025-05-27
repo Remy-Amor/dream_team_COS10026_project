@@ -59,8 +59,8 @@
                if(isset($_POST['sort_by'])) {
                     $column = $_POST['sort_by'];
                     $sql .= " ORDER BY $column ASC";
-                    }
-                    
+               }
+               
 
                $result = mysqli_query($conn, $sql);
                if (mysqli_num_rows($result) > 0) {
