@@ -2,23 +2,26 @@
 // WA - Setup database connection using credentials from settings.php
 require_once "settings.php";
 
+// WA - Establish a connection to the database
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
+// WA - Exit gracefully if connection fails
 if (!$conn) {
-    die("<p>Database connection failure: " . mysqli_connect_error() . "</p>");
+    die("<p>WA - Database connection failure: " . mysqli_connect_error() . "</p>");
 }
 
-// WA - Include the common site header
+// WA - Include the shared site header (e.g., nav, logo)
 include 'header.inc';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- WA - Meta tags for responsive design and author info -->
+    <!-- WA - Page meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Remy Amor, William Anthony, Amanuial Ashagrie">
-    <meta name="description" content="Jobs page for dream_team_COS10026">
+    <meta name="description" content="Job Descriptions manage page">
     <meta name="keywords" content="Jobs page inc requirements">
 
     <!-- WA - Page title and linked stylesheets -->
@@ -31,6 +34,7 @@ include 'header.inc';
 <body>
     <h1>Edit Job Descriptions</h1><br>
 
+    <!-- WA - Feedback messages for job insert/delete outcomes (This feedback section was generated using chat-gpt "show me how to add feedback when the user is returned to descriptioons.php") -->
     <?php if (isset($_GET['insert']) && $_GET['insert'] === 'success'): ?>
         <p style="color: green; font-weight: bold;">✅ Job was successfully added.</p>
     <?php endif; ?>
@@ -39,7 +43,9 @@ include 'header.inc';
         <p style="color: darkred; font-weight: bold;">🗑️ Job was successfully deleted.</p>
     <?php endif; ?>
 
+    <!-- WA - Wrapper for the two main form sections -->
     <div class="job-description-wrapper">
+        <!-- WA - Add job form -->
         <section class="add-job-form"> 
             <h2>Post a New Job</h2>
             <form action="insert_job.php" method="post">
@@ -86,6 +92,7 @@ include 'header.inc';
             </form>
         </section>
 
+        <!-- WA - Delete job form -->
         <section class="delete-job-form">
             <h2>Delete a Job</h2>
             <form action="delete_job.php" method="post">
@@ -93,6 +100,7 @@ include 'header.inc';
                 <select id="job_ref" name="job_ref" required>
                     <option value="">-- Select Job Reference --</option>
                     <?php
+                    // WA - Fetch job reference numbers from database
                     $query = "SELECT job_ref FROM jobs ORDER BY job_ref ASC";
                     $result = mysqli_query($conn, $query);
 
@@ -111,13 +119,14 @@ include 'header.inc';
         </section>
     </div>
 
-<div class="back-to-manage">
-    <a href="manage.php" class="button-link">⬅ Back to Manage Page</a>
-</div>
+    <!-- WA - Link back to the manager dashboard -->
+    <div class="back-to-manage">
+        <a href="manage.php" class="button-link">⬅ Back to Manage Page</a>
+    </div>
 
-<?php 
-// WA - Include the common site footer
-include 'footer.inc'; 
-?>
+    <?php 
+    // WA - Include the common site footer
+    include 'footer.inc'; 
+    ?>
 </body>
 </html>
