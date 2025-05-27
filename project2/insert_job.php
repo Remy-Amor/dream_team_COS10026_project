@@ -60,7 +60,24 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
-// WA - Redirect with success flag - success flag done with chat gpt
-header("Location: descriptions.php?insert=success");
+// WA - Simulation of post method to return user to descriptions.php - done with chat gpt using the prompt " How to redirect user back to descriptins with post method"
+<?php
+// WA - POST redirect to descriptions.php with insert=success flag
+echo '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <form id="postBackForm" action="descriptions.php" method="post">
+        <input type="hidden" name="insert_status" value="success">
+    </form>
+    <script>
+        document.getElementById("postBackForm").submit();
+    </script>
+</body>
+</html>';
 exit();
 ?>

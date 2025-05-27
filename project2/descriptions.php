@@ -41,13 +41,13 @@ if (!$conn) {
     ?>
     <h1>Edit Job Descriptions</h1><br>
 
-    <!-- WA - Feedback messages for job insert/delete outcomes (This feedback section was generated using chat-gpt "show me how to add feedback when the user is returned to descriptioons.php") -->
-    <?php if (isset($_GET['insert']) && $_GET['insert'] === 'success'): ?>
-        <p style="color: green; font-weight: bold;">✅ Job was successfully added.</p>
+    <!-- WA - Feedback messages for job insert/delete outcomes (This feedback section was generated using chat-gpt "show me how to add feedback when the user is returned to descriptioons.php via post") -->
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['insert_status']) && $_POST['insert_status'] === 'success'): ?>
+    <p class="success-message">✅ Job was successfully added.</p>
     <?php endif; ?>
 
-    <?php if (isset($_GET['delete']) && $_GET['delete'] === 'success'): ?>
-        <p style="color: darkred; font-weight: bold;">🗑️ Job was successfully deleted.</p>
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_status']) && $_POST['delete_status'] === 'success'): ?>
+    <p class="delete-message">🗑️ Job was successfully deleted.</p>
     <?php endif; ?>
 
     <?php if (isset($_GET['insert']) && $_GET['insert'] === 'invalidref'): ?>
